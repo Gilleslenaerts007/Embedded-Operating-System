@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Tue Nov 12 13:10:12 2019
+--Date        : Tue Nov 12 14:49:02 2019
 --Host        : Gilles-Lenaerts running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -34,9 +34,12 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    GPIO_0_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     d_out_0 : out STD_LOGIC;
     led_g_0 : out STD_LOGIC;
-    led_r_0 : out STD_LOGIC
+    led_r_0 : out STD_LOGIC;
+    sonar_echo_0 : in STD_LOGIC;
+    sonar_trig_0 : out STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -66,7 +69,10 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    sonar_echo_0 : in STD_LOGIC;
+    sonar_trig_0 : out STD_LOGIC;
+    GPIO_0_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component design_1;
 begin
@@ -93,8 +99,11 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      GPIO_0_tri_i(1 downto 0) => GPIO_0_tri_i(1 downto 0),
       d_out_0 => d_out_0,
       led_g_0 => led_g_0,
-      led_r_0 => led_r_0
+      led_r_0 => led_r_0,
+      sonar_echo_0 => sonar_echo_0,
+      sonar_trig_0 => sonar_trig_0
     );
 end STRUCTURE;

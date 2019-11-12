@@ -12,6 +12,7 @@
 
 u16 result;
 
+
 int main()
 {
     init_platform();

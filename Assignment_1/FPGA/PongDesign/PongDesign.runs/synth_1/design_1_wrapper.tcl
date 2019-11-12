@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 create_project -in_memory -part xc7z007sclg225-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,6 +40,10 @@ set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operat
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc]
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
