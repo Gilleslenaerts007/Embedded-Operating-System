@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.3 (64-bit)
+# SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
+# IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
+# Start of session at: Tue Nov  5 21:05:59 2019
+# Process ID: 18036
+# Current directory: C:/FPGA/Assignment_1/FPGA/PongDesign
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent940 C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.xpr
+# Log file: C:/FPGA/Assignment_1/FPGA/PongDesign/vivado.log
+# Journal file: C:/FPGA/Assignment_1/FPGA/PongDesign\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  5 21:06:35 2019...

@@ -1,0 +1,7 @@
+19:27:45 **** Clean-only build of configuration Debug for project Digiled ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  Digiled.elf.size  Digiled.elf
+' '
+
+19:27:46 Build Finished (took 197ms)
+

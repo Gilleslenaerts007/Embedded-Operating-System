@@ -1,0 +1,548 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.3 (64-bit)
+# SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
+# IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
+# Start of session at: Tue Nov  5 21:29:48 2019
+# Process ID: 7108
+# Current directory: C:/FPGA/Assignment_1/FPGA/PongDesign
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13720 C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.xpr
+# Log file: C:/FPGA/Assignment_1/FPGA/PongDesign/vivado.log
+# Journal file: C:/FPGA/Assignment_1/FPGA/PongDesign\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_WS2812_0_4
+
+update_compile_order -fileset sources_1
+create_peripheral xilinx.com user WS2812 1.0 -dir C:/FPGA/Assignment_1/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:WS2812:1.0]
+set_property VALUE 70 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core xilinx.com:user:WS2812:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core xilinx.com:user:WS2812:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:WS2812:1.0]
+set_property  ip_repo_paths  {C:/FPGA/Assignment_1/ip_repo/WS2812_1.0 C:/FPGA/Assignment_1/ip_repo} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+ipx::edit_ip_in_project -upgrade true -name edit_WS2812_v1_0 -directory C:/FPGA/Assignment_1/ip_repo c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/src C:/FPGA/Assignment_1/FPGA/PongDesign/WS2812.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project PongDesign
+open_bd_design {C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:user:WS2812:1.0 - WS2812_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <design_1> from BD file <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1424.793 ; gain = 44.043
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:WS2812:1.0 [get_ips  design_1_WS2812_0_4] -log ip_upgrade.log
+Upgrading 'C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '9' to '8' has been ignored for IP 'design_1_WS2812_0_4'
+INFO: [IP_Flow 19-3422] Upgraded design_1_WS2812_0_4 (WS2812_v1.0 1.0) from revision 11 to revision 1
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'clk'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_WS2812_0_4'.
+WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_araddr' width 9 differs from original width 8
+WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_awaddr' width 9 differs from original width 8
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'clk'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'd_out'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_WS2812_0_4'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'clk' is not found on the upgraded version of the cell '/WS2812_0'. Its connection to the net 'processing_system7_0_FCLK_CLK0' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'd_out' is not found on the upgraded version of the cell '/WS2812_0'. Its connection to the net 'WS2812_0_d_out' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_WS2812_0_4' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <WS2812_0_d_out> has no source
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_WS2812_0_4] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells WS2812_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:WS2812:1.0 WS2812_0
+endgroup
+delete_bd_objs [get_bd_cells WS2812_0]
+set_property  ip_repo_paths  c:/FPGA/Assignment_1/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/src/WS2812.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0_S00_AXI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/src/WS2812.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0_S00_AXI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:WS2812:1.0 WS2812_0
+endgroup
+current_project edit_WS2812_v1_0
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project PongDesign
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+report_ip_status -name ip_status
+current_project edit_WS2812_v1_0
+current_project PongDesign
+upgrade_ip [get_ips  design_1_WS2812_0_6] -log ip_upgrade.log
+Upgrading 'C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_WS2812_0_6 (WS2812_v1.0 1.0) from revision 1 to revision 3
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'clk' (xilinx.com:signal:clock:1.0)
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_WS2812_0_6'.
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'clk'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'd_out'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_WS2812_0_6'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_WS2812_0_6' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <WS2812_0_d_out> has no source
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_WS2812_0_6] -no_script -sync -force -quiet
+set_property location {2.5 874 144} [get_bd_cells WS2812_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/WS2812_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins WS2812_0/S00_AXI]
+Slave segment </WS2812_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins WS2812_0/clk]
+endgroup
+connect_bd_net [get_bd_ports d_out_0] [get_bd_pins WS2812_0/d_out]
+save_bd_design
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block WS2812_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 4f284402344172e4; cache size = 25.959 MB.
+[Tue Nov  5 21:59:33 2019] Launched design_1_WS2812_0_6_synth_1, synth_1...
+Run output will be captured here:
+design_1_WS2812_0_6_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_WS2812_0_6_synth_1/runme.log
+synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/runme.log
+[Tue Nov  5 21:59:33 2019] Launched impl_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1469.551 ; gain = 0.000
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+current_project edit_WS2812_v1_0
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/FPGA/Assignment_1/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'
+ipx::edit_ip_in_project -upgrade true -name WS2812_v1_0_project -directory C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.tmp/WS2812_v1_0_project c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/FPGA/Assignment_1/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'
+ipx::edit_ip_in_project -upgrade true -name WS2812_v1_0_project -directory C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.tmp/WS2812_v1_0_project c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+close_project
+upgrade_ip -vlnv xilinx.com:user:WS2812:1.0 [get_ips  design_1_WS2812_0_6] -log ip_upgrade.log
+Upgrading 'C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_WS2812_0_6 (WS2812_v1.0 1.0) from revision 3 to revision 5
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'latch'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_WS2812_0_6'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_WS2812_0_6' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_WS2812_0_6] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/WS2812_0/latch
+
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block WS2812_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 4f284402344172e4; cache size = 28.515 MB.
+[Tue Nov  5 22:40:54 2019] Launched design_1_processing_system7_0_3_synth_1, design_1_WS2812_0_6_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_3_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_processing_system7_0_3_synth_1/runme.log
+design_1_WS2812_0_6_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_WS2812_0_6_synth_1/runme.log
+synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/runme.log
+[Tue Nov  5 22:40:54 2019] Launched impl_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1697.922 ; gain = 0.000
+reset_run synth_1
+reset_run design_1_processing_system7_0_3_synth_1
+reset_run design_1_WS2812_0_6_synth_1
+ipx::edit_ip_in_project -upgrade true -name WS2812_v1_0_project -directory C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.tmp/WS2812_v1_0_project c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/FPGA/Assignment_1/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'
+upgrade_ip -vlnv xilinx.com:user:WS2812:1.0 [get_ips  design_1_WS2812_0_6] -log ip_upgrade.log
+Upgrading 'C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_WS2812_0_6 (WS2812_v1.0 1.0) from revision 5 to revision 6
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'latch'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_WS2812_0_6'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_WS2812_0_6' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_WS2812_0_6] -no_script -sync -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block WS2812_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 4f284402344172e4; cache size = 28.515 MB.
+[Tue Nov  5 22:44:32 2019] Launched design_1_processing_system7_0_3_synth_1, design_1_WS2812_0_6_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_3_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_processing_system7_0_3_synth_1/runme.log
+design_1_WS2812_0_6_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_WS2812_0_6_synth_1/runme.log
+synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/runme.log
+[Tue Nov  5 22:44:32 2019] Launched impl_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/runme.log
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ipx::edit_ip_in_project -upgrade true -name WS2812_v1_0_project -directory C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.tmp/WS2812_v1_0_project c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml' ignored by IP packager.
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project PongDesign
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+report_ip_status -name ip_status
+current_project WS2812_v1_0_project
+current_project PongDesign
+upgrade_ip -vlnv xilinx.com:user:WS2812:1.0 [get_ips  design_1_WS2812_0_6] -log ip_upgrade.log
+Upgrading 'C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_WS2812_0_6 (WS2812_v1.0 1.0) from revision 6 to revision 7
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_WS2812_0_6] -no_script -sync -force -quiet
+generate_target all [get_files  C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block WS2812_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_WS2812_0_6] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 4f284402344172e4; cache size = 31.747 MB.
+export_ip_user_files -of_objects [get_files C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 14 design_1_WS2812_0_6_synth_1
+[Tue Nov  5 23:08:46 2019] Launched design_1_WS2812_0_6_synth_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_WS2812_0_6_synth_1/runme.log
+export_simulation -of_objects [get_files C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.ip_user_files/sim_scripts -ip_user_files_dir C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.ip_user_files -ipstatic_source_dir C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.cache/compile_simlib/modelsim} {questa=C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.cache/compile_simlib/questa} {riviera=C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.cache/compile_simlib/riviera} {activehdl=C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+write_hwdef -force  -file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+[Tue Nov  5 23:12:29 2019] Launched synth_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/runme.log
+[Tue Nov  5 23:12:29 2019] Launched impl_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ipx::edit_ip_in_project -upgrade true -name WS2812_v1_0_project -directory C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.tmp/WS2812_v1_0_project c:/FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml
+ERROR: [Ipptcl 7-561] A project named 'WS2812_v1_0_project' is already opened.
+ERROR: [Common 17-39] 'ipx::edit_ip_in_project' failed due to earlier errors.
+current_project WS2812_v1_0_project
+close_project
+create_peripheral xilinx.com user NeoTestPixel 1.0 -dir C:/FPGA/Assignment_1/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:NeoTestPixel:1.0]
+set_property VALUE 12 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core xilinx.com:user:NeoTestPixel:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:NeoTestPixel:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:NeoTestPixel:1.0]
+set_property  ip_repo_paths  {C:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0 c:/FPGA/Assignment_1/ip_repo} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+ipx::edit_ip_in_project -upgrade true -name edit_NeoTestPixel_v1_0 -directory C:/FPGA/Assignment_1/ip_repo c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [Ip 78-125] Tcl Error in evaluating proc can_apply_rule : ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [Ip 78-125] Tcl Error in evaluating proc can_apply_rule : ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [Ip 78-125] Tcl Error in evaluating proc can_apply_rule : ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0/src C:/FPGA/Assignment_1/FPGA/PongDesign/NeoPixel.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project PongDesign
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:NeoTestPixel:1.0 NeoTestPixel_0
+endgroup
+current_project edit_NeoTestPixel_v1_0
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project PongDesign
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/FPGA/Assignment_1/ip_repo/NeoTestPixel_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Assignment_1/ip_repo'.
+report_ip_status -name ip_status
+current_project edit_NeoTestPixel_v1_0
+current_project PongDesign
+upgrade_ip [get_ips  design_1_NeoTestPixel_0_0] -log ip_upgrade.log
+Upgrading 'C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_NeoTestPixel_0_0 (NeoTestPixel_v1.0 1.0) from revision 1 to revision 3
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'clk' (xilinx.com:signal:clock:1.0)
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_NeoTestPixel_0_0'.
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'clk'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'd_out'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_NeoTestPixel_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_NeoTestPixel_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/FPGA/Assignment_1/FPGA/PongDesign/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_NeoTestPixel_0_0] -no_script -sync -force -quiet
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/NeoTestPixel_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins NeoTestPixel_0/S00_AXI]
+Slave segment </NeoTestPixel_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C1_0000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins NeoTestPixel_0/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins NeoTestPixel_0/d_out]
+endgroup
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs impl_1 -jobs 14
+Wrote  : <C:\FPGA\Assignment_1\FPGA\PongDesign\PongDesign.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block WS2812_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block NeoTestPixel_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 4f284402344172e4; cache size = 34.303 MB.
+[Tue Nov  5 23:34:46 2019] Launched design_1_NeoTestPixel_0_0_synth_1, design_1_xbar_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_NeoTestPixel_0_0_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_NeoTestPixel_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/design_1_xbar_0_synth_1/runme.log
+synth_1: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/runme.log
+[Tue Nov  5 23:34:46 2019] Launched impl_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1784.789 ; gain = 59.953
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+INFO: [Netlist 29-17] Analyzing 532 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.641 . Memory (MB): peak = 2621.289 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.642 . Memory (MB): peak = 2621.289 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2621.289 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2819.715 ; gain = 1034.926
+place_ports d_out_1 L15
+set_property IOSTANDARD LVCMOS33 [get_ports [list d_out_1]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+[Tue Nov  5 23:42:51 2019] Launched impl_1...
+Run output will be captured here: C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/runme.log
+close_design
+file copy -force C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  5 23:52:08 2019...
