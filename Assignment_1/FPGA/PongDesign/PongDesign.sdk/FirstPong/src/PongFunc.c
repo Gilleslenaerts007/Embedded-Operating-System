@@ -128,6 +128,8 @@ void hitdetect()
 }
 
 void drawPixel(int X, int Y) {
+
+	WS2812_mWriteReg(WS2812ADR, , 0x000000);
     
    if (Y<=bigY*8 && X<=bigX*8 && X>0 && Y>0) {
       if (Y>8) X=X+(bigX*8)*((Y-1)/8);
@@ -171,34 +173,7 @@ void DrawGame(int BallX, int BallY)
 }
 
 
-    void drawLine (int x1, int y1, int x2, int y2) {      //draw a line from x1,y1 to x2,y2
-   int dx, dy, sx, sy, err, e2;
-
-   dx = abs (x2-x1);
-   dy = abs (y2-y1);
-   if (x1<x2) sx = 1;
-      else sx = -1;
-   if (y1<y2) sy = 1;
-      else sy = -1;
-   err = dx-dy;
-   do {
-      drawPixel (x1, y1);
-      if ((x1 == x2) && (y1 == y2))
-         break;
-      e2 = 2*err;
-      if (e2 > -dy) {
-         err = err - dy;
-		 x1 = x1+sx;
-      }
-      if (e2 < dx) {
-         err = err + dx;
-		 y1 = y1 + sy;
-      }
-   } while (1);
-	return;
-}
-
-void drawLine (int x1, int y1, int x2, int y2) {      //draw a line from x1,y1 to x2,y2
+   void drawLine (int x1, int y1, int x2, int y2) {      //draw a line from x1,y1 to x2,y2
    int dx, dy, sx, sy, err, e2;
 
    dx = abs (x2-x1);

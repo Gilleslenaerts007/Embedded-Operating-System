@@ -36,6 +36,9 @@
 #include "xil_printf.h"
 #include "xparameters.h"
 /*user includes */
+#include "xparameters.h"
+#include "xil_io.h"
+#include "sleep.h"
 #include "gpio.h"
 #include "gpioPS.h"
 #include "PongHead.h"
@@ -71,6 +74,15 @@ XGpio Gpio;
 XGpioPs GpioPS;
 u32 Input_Pin; /* Switch button */
 void startGPIOPS();
+
+static void vTimerCallback( TimerHandle_t pxTimer )
+{
+	long lTimerId;
+	configASSERT( pxTimer );
+
+	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
+
+}
 
 int main( void )
 {
@@ -177,7 +189,10 @@ static void GamePongTask( void *pvParameters )
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueue,				/* The queue being read. */
+		xQueueReceive( 	xQueuePlayer1,				/* The queue being read. */
+						Recdstring,	/* Data is read into this address. */
+						portMAX_DELAY );	/* Wait without a timeout for data. */
+		xQueueReceive( 	xQueuePlayer2,				/* The queue being read. */
 						Recdstring,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
