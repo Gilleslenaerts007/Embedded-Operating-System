@@ -5,7 +5,7 @@
       "device": "xc7z007sclg225-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1.3",
+      "tool_version": "2019.1",
       "validated": "true"
     },
     "design_tree": {
@@ -16,7 +16,6 @@
         }
       },
       "rst_ps7_0_50M": "",
-      "ila_0": "",
       "WS2812_0": ""
     },
     "interface_ports": {
@@ -1366,16 +1365,16 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "s00_couplers/M_AXI"
-            ]
-          },
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "s00_couplers/M_AXI"
             ]
           }
         },
@@ -1409,27 +1408,6 @@
       "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_50M_0"
-      },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_ila_0_1",
-        "parameters": {
-          "C_DATA_DEPTH": {
-            "value": "4096"
-          },
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "1"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "24"
-          }
-        }
       },
       "WS2812_0": {
         "vlnv": "xilinx.com:user:WS2812:1.0",
@@ -1471,7 +1449,6 @@
           "rst_ps7_0_50M/slowest_sync_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "ila_0/clk",
           "WS2812_0/clk",
           "WS2812_0/s00_axi_aclk"
         ]
@@ -1494,8 +1471,7 @@
       "WS2812_0_d_out": {
         "ports": [
           "WS2812_0/d_out",
-          "d_out_0",
-          "ila_0/probe0"
+          "d_out_0"
         ]
       },
       "WS2812_0_led_r": {

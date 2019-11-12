@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/FPGA/Assignment_1/FPGA/PongDesign/PongDesign.srcs/constrs_1/new/WS2812NeoPixel.xdc rfile:../../../PongDesign.srcs/constrs_1/new/WS2812NeoPixel.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/constrs_1/new/WS2812NeoPixel.xdc rfile:../../../PongDesign.srcs/constrs_1/new/WS2812NeoPixel.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R11 [get_ports d_out_0]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]

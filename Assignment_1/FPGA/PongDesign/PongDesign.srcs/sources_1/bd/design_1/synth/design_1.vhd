@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
---Date        : Sat Nov  9 23:45:51 2019
---Host        : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+--Date        : Tue Nov 12 13:10:12 2019
+--Host        : Gilles-Lenaerts running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -616,7 +616,7 @@ entity design_1 is
     led_r_0 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -736,12 +736,6 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_50M_0;
-  component design_1_ila_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 23 downto 0 )
-  );
-  end component design_1_ila_0_1;
   component design_1_WS2812_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -935,34 +929,6 @@ WS2812_0: component design_1_WS2812_0_0
       s00_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID
-    );
-ila_0: component design_1_ila_0_1
-     port map (
-      clk => processing_system7_0_FCLK_CLK0,
-      probe0(23) => WS2812_0_d_out,
-      probe0(22) => WS2812_0_d_out,
-      probe0(21) => WS2812_0_d_out,
-      probe0(20) => WS2812_0_d_out,
-      probe0(19) => WS2812_0_d_out,
-      probe0(18) => WS2812_0_d_out,
-      probe0(17) => WS2812_0_d_out,
-      probe0(16) => WS2812_0_d_out,
-      probe0(15) => WS2812_0_d_out,
-      probe0(14) => WS2812_0_d_out,
-      probe0(13) => WS2812_0_d_out,
-      probe0(12) => WS2812_0_d_out,
-      probe0(11) => WS2812_0_d_out,
-      probe0(10) => WS2812_0_d_out,
-      probe0(9) => WS2812_0_d_out,
-      probe0(8) => WS2812_0_d_out,
-      probe0(7) => WS2812_0_d_out,
-      probe0(6) => WS2812_0_d_out,
-      probe0(5) => WS2812_0_d_out,
-      probe0(4) => WS2812_0_d_out,
-      probe0(3) => WS2812_0_d_out,
-      probe0(2) => WS2812_0_d_out,
-      probe0(1) => WS2812_0_d_out,
-      probe0(0) => WS2812_0_d_out
     );
 processing_system7_0: component design_1_processing_system7_0_0
      port map (

@@ -31,6 +31,17 @@
  
  
 /******************************************************************/
+/* Definitions for driver NEOTESTPIXEL */
+#define XPAR_NEOTESTPIXEL_NUM_INSTANCES 1
+
+/* Definitions for peripheral NEOTESTPIXEL_0 */
+#define XPAR_NEOTESTPIXEL_0_DEVICE_ID 0
+#define XPAR_NEOTESTPIXEL_0_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_NEOTESTPIXEL_0_S00_AXI_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver WS2812 */
 #define XPAR_WS2812_NUM_INSTANCES 1
 
@@ -190,6 +201,29 @@
 /* Definitions for peripheral PS7_QSPI_LINEAR_0 */
 #define XPAR_PS7_QSPI_LINEAR_0_S_AXI_BASEADDR 0xFC000000
 #define XPAR_PS7_QSPI_LINEAR_0_S_AXI_HIGHADDR 0xFCFFFFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver GPIO */
+#define XPAR_XGPIO_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_GPIO_0 */
+#define XPAR_AXI_GPIO_0_BASEADDR 0x41200000
+#define XPAR_AXI_GPIO_0_HIGHADDR 0x4120FFFF
+#define XPAR_AXI_GPIO_0_DEVICE_ID 0
+#define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_0_IS_DUAL 0
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_GPIO_0 */
+#define XPAR_GPIO_0_BASEADDR 0x41200000
+#define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_0_IS_DUAL 0
 
 
 /******************************************************************/
