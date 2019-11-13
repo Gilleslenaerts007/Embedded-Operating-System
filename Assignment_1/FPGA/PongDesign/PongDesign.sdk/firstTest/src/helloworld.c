@@ -12,6 +12,7 @@
 //#include "xgpio.h"
 
 #define WS2812ADR XPAR_WS2812_0_S00_AXI_BASEADDR
+#define COLOUR_INTENSITY 10
 
 u16 result;
 
@@ -23,64 +24,92 @@ struct pixelColour
 	uint8_t green, red, blue;
 };
 
+//--globals--
 int GameArray[64];
 struct pixelColour colourArray[8][8];
 
-int color = 0x0f0000;
-int arraypos=0;
+int BalkHit, LokatieBalkL, LokatieBalkR, BallX, BallY, BalkLinks, BalkRechts, BallMovex, BallMovey;
 
 void drawPixel(int X, int Y);
 void drawLine(int x1, int y1, int x2, int y2);
+void initPongLevel();
 void drawGame();
+void hitdetect();
+void clearArray();
 
 int main()
 {
+    LokatieBalkL = 0;
+    LokatieBalkR = 7;
+    BalkRechts= 3;
+    BalkLinks = 3;
+    BallX=4;
+	BallY=4;
+	BallMovex = 1;
+
     init_platform();
-    int readreg, Status;
-    int itel;
     printf("Starting Pong.\n\r");
-
-	for(;;){
-
-		//WS2812_mWriteReg(WS2812ADR,WS2812_S00_AXI_SLV_REG0_OFFSET, 0xFF0000);
-		//WS2812_mWriteReg(WS2812ADR,WS2812_S00_AXI_SLV_REG1_OFFSET, 0x00FF00);
-		//WS2812_mWriteReg(WS2812ADR,WS2812_S00_AXI_SLV_REG2_OFFSET, 0x0000FF);
-		drawLine(0, 0, 7, 7);
-		drawGame();
-		break;
+	for(;;)
+	{
+		//colourArray[0][0].blue = 100;
+		//drawGame();
+		initPongLevel();
+		sleep(1);
+	    drawGame();
+	    hitdetect();
+	    clearArray();
+		BallX = BallX + BallMovex;
+	    BallY = BallY + BallMovey;
 	}
 
     cleanup_platform();
     return 0;
 }
 
-void drawPixel(int X, int Y){
-	colourArray[Y][X].red = 1;
+void update()
+{
+
 }
+
+//draws one pixel in screenbuf
+void drawPixel(int X, int Y)
+{
+
+	colourArray[Y][X].red = COLOUR_INTENSITY;
+}
+
+void initPongLevel(){
+
+	//color=GROEN
+	drawLine(LokatieBalkL, BalkLinks, LokatieBalkL, BalkLinks+2);
+	//color=BLUE
+	drawLine(LokatieBalkR, BalkRechts, LokatieBalkR, BalkRechts+2);
+	//Color=RED
+	drawPixel(BallX,BallY);
+}
+
+//draws to screen buffer
 void drawGame()
 {
-	/*
-	int rgbByte=0;
-	for (int i=0; i<=252; i=i+4)
-	{
-		WS2812_mWriteReg(WS2812ADR,i,GameArray[rgbByte]);
-		//printf("%d \n\r", i);
-		//sleep(3);
-		if (rgbByte < 63){
-		rgbByte++;
-		}
-		else break;
-		//printf("Stuck in loop");
-
-
-	}
-	 */
 	for(int y = 0; y <= 8; ++y)
 	{
 		for(int x = 0; x <= 8; ++x)
 		{
 			int data = (colourArray[y][x].green << 16) + (colourArray[y][x].red << 8) + colourArray[y][x].blue;
 			WS2812_mWriteReg(WS2812ADR,((x*4)+(y*32)), data);
+		}
+	}
+}
+
+void clearArray()
+{
+	for(int y = 0; y <= 8; ++y)
+	{
+		for(int x = 0; x <= 8; ++x)
+		{
+			colourArray[y][x].blue = 0;
+			colourArray[y][x].green = 0;
+			colourArray[y][x].red = 0;
 		}
 	}
 }
@@ -110,4 +139,56 @@ do {
    }
 } while (1);
 	return;
+}
+
+void hitdetect()
+{
+  if(	BallMovex == 1 && BallX == ((LokatieBalkR-1))  )
+	{
+		if (BallY == BalkRechts || BallY == BalkRechts+1)
+		{
+		BallMovex = BallMovex * -1;
+		BallMovey = -1;
+            BalkHit++;
+		}
+		else if (BallY == BalkRechts+2 || BallY == BalkRechts+3)
+		{
+		BallMovex = BallMovex * -1;
+		BallMovey = 0;
+            BalkHit++;
+		}
+		else if (BallY == BalkRechts+4 || BallY == BalkRechts+5)
+		{
+		BallMovex = BallMovex * -1;
+		BallMovey = 1;
+             BalkHit++;
+		}
+
+	}
+	else if ( BallMovex == -1 && BallX == (LokatieBalkL+1))
+	{
+		if (BallY == BalkLinks || BallY == BalkLinks+1)
+		{
+		BallMovex = BallMovex * -1;
+		BallMovey = -1;
+             BalkHit++;
+		}
+		else if (BallY == BalkLinks+2 || BallY == BalkLinks+3)
+		{
+		BallMovex = BallMovex * -1;
+		BallMovey = 0;
+             BalkHit++;
+		}
+		else if (BallY == BalkLinks+4 || BallY == BalkLinks+5)
+		{
+		BallMovex = BallMovex * -1;
+		BallMovey = 1;
+             BalkHit++;}
+	}
+
+    if (BallY == 7 || BallY == 0)
+    {
+        BallMovey = BallMovey * -1;
+    }
+
 }
