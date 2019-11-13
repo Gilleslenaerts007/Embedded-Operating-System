@@ -30,7 +30,7 @@ int color = 0x0f0000;
 int arraypos=0;
 
 void drawPixel(int X, int Y);
-void drawLine(int x1, int y1, int x2, int y2);
+void drawline(int x1, int y1, int x2, int y2);
 void drawGame();
 
 int main()
@@ -45,7 +45,7 @@ int main()
 		//WS2812_mWriteReg(WS2812ADR,WS2812_S00_AXI_SLV_REG0_OFFSET, 0xFF0000);
 		//WS2812_mWriteReg(WS2812ADR,WS2812_S00_AXI_SLV_REG1_OFFSET, 0x00FF00);
 		//WS2812_mWriteReg(WS2812ADR,WS2812_S00_AXI_SLV_REG2_OFFSET, 0x0000FF);
-		drawLine(0, 0, 7, 7);
+		drawline(1, 1, 8, 8);
 		drawGame();
 		break;
 	}
@@ -55,7 +55,7 @@ int main()
 }
 
 void drawPixel(int X, int Y){
-	colourArray[Y][X].red = 1;
+	colourArray[Y][X].red = 50;
 }
 void drawGame()
 {

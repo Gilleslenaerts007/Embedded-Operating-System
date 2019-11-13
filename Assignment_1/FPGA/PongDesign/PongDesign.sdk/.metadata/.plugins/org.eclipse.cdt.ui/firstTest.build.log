@@ -1,4 +1,4 @@
-14:00:09 **** Incremental Build of configuration Debug for project firstTest ****
+14:19:44 **** Incremental Build of configuration Debug for project firstTest ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -9,15 +9,19 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcp
  typedef struct uint24_t __attribute__((packed)) uint24_t;
                 ^~~~~~~~
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:39:9: warning: unused variable 'itel' [-Wunused-variable]
+../src/helloworld.c:40:9: warning: unused variable 'itel' [-Wunused-variable]
      int itel;
          ^~~~
-../src/helloworld.c:38:18: warning: unused variable 'Status' [-Wunused-variable]
+../src/helloworld.c:39:18: warning: unused variable 'Status' [-Wunused-variable]
      int readreg, Status;
                   ^~~~~~
-../src/helloworld.c:38:9: warning: unused variable 'readreg' [-Wunused-variable]
+../src/helloworld.c:39:9: warning: unused variable 'readreg' [-Wunused-variable]
      int readreg, Status;
          ^~~~~~~
+../src/helloworld.c: In function 'drawLine':
+../src/helloworld.c:91:6: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+ dx = abs (x2-x1);
+      ^~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: firstTest.elf'
@@ -28,9 +32,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size firstTest.elf  |tee "firstTest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  57020	   2584	  23776	  83380	  145b4	firstTest.elf
+  57340	   2584	  23776	  83700	  146f4	firstTest.elf
 'Finished building: firstTest.elf.size'
 ' '
 
-14:00:10 Build Finished (took 1s.94ms)
+14:19:45 Build Finished (took 1s.151ms)
 

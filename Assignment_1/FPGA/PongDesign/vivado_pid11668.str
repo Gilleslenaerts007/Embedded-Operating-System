@@ -413,3 +413,5 @@ dismissDialog("Close Hardware Target"); // n (cl)
 // TclEventType: HW_SYSMON_CHANGE
 // TclEventType: HW_DEVICE_UPDATE
 // TclEventType: HW_DEVICE_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 27 ms. Decreasing delay to 2027 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,937 MB. GUI used memory: 56 MB. Current time: 11/13/19, 2:20:46 PM CET

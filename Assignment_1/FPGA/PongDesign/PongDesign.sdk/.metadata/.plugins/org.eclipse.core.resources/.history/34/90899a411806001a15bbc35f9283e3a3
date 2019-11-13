@@ -55,7 +55,7 @@ int main()
 }
 
 void drawPixel(int X, int Y){
-	colourArray[Y][X].red = 1;
+	colourArray[Y][X].red = 50;
 }
 void drawGame()
 {
