@@ -7,6 +7,7 @@
 #include "xil_io.h"
 #include "sleep.h"
 #include "math.h"
+#include "time.h"
 #include <stdint.h>
 //#include "typedef.h"
 //#include "xgpio.h"
@@ -36,15 +37,17 @@ void initPongLevel();
 void drawGame();
 void hitdetect();
 void clearArray();
+void updateGame();
 
 int main()
 {
+	srand((unsigned) time(0));
     LokatieBalkL = 0;
     LokatieBalkR = 7;
     BalkRechts= 3;
     BalkLinks = 3;
-    BallX=4;
-	BallY=4;
+    BallX=rand(4)+2;
+	BallY=rand(7);
 	BallMovex = 1;
 
     init_platform();
@@ -52,23 +55,23 @@ int main()
 	for(;;)
 	{
 		//colourArray[0][0].blue = 100;
-		//drawGame();
-		initPongLevel();
-		sleep(1);
-	    drawGame();
-	    hitdetect();
-	    clearArray();
-		BallX = BallX + BallMovex;
-	    BallY = BallY + BallMovey;
+		updateGame();
+
 	}
 
     cleanup_platform();
     return 0;
 }
 
-void update()
+void updateGame()
 {
-
+	initPongLevel();
+	//sleep(1);
+    drawGame();
+    hitdetect();
+    clearArray();
+	BallX = BallX + BallMovex;
+    BallY = BallY + BallMovey;
 }
 
 //draws one pixel in screenbuf
@@ -145,41 +148,43 @@ void hitdetect()
 {
   if(	BallMovex == 1 && BallX == ((LokatieBalkR-1))  )
 	{
-		if (BallY == BalkRechts || BallY == BalkRechts+1)
+		if (BallY == BalkRechts)
 		{
 		BallMovex = BallMovex * -1;
 		BallMovey = -1;
             BalkHit++;
 		}
-		else if (BallY == BalkRechts+2 || BallY == BalkRechts+3)
+		else if (BallY == BalkRechts+1)
 		{
 		BallMovex = BallMovex * -1;
 		BallMovey = 0;
             BalkHit++;
 		}
-		else if (BallY == BalkRechts+4 || BallY == BalkRechts+5)
+
+		else if (BallY == BalkRechts+2)
 		{
 		BallMovex = BallMovex * -1;
 		BallMovey = 1;
              BalkHit++;
 		}
 
+
 	}
 	else if ( BallMovex == -1 && BallX == (LokatieBalkL+1))
 	{
-		if (BallY == BalkLinks || BallY == BalkLinks+1)
+		if (BallY == BalkLinks)
 		{
 		BallMovex = BallMovex * -1;
 		BallMovey = -1;
              BalkHit++;
 		}
-		else if (BallY == BalkLinks+2 || BallY == BalkLinks+3)
+		else if (BallY == BalkLinks+1)
 		{
 		BallMovex = BallMovex * -1;
 		BallMovey = 0;
              BalkHit++;
 		}
-		else if (BallY == BalkLinks+4 || BallY == BalkLinks+5)
+		else if (BallY == BalkLinks+2)
 		{
 		BallMovex = BallMovex * -1;
 		BallMovey = 1;
