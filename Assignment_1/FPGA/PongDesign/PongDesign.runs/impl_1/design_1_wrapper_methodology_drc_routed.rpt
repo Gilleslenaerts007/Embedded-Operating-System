@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Nov 13 11:45:04 2019
-| Host         : Dennis-Merken running 64-bit major release  (build 9200)
+| Date         : Wed Nov 20 14:24:00 2019
+| Host         : Gilles-Lenaerts running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xc7z007sclg225-1
@@ -44,7 +44,7 @@ Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on sonar_echo_0 relative to clock(s) clk_fpga_0
+An input delay is missing on sonar_echo_0 relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#4 Warning
@@ -64,7 +64,7 @@ Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on sonar_trig_0 relative to clock(s) clk_fpga_0
+An output delay is missing on sonar_trig_0 relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Nov 13 11:45:07 2019
-| Host             : Dennis-Merken running 64-bit major release  (build 9200)
+| Date             : Wed Nov 20 14:24:01 2019
+| Host             : Gilles-Lenaerts running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z007sclg225-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.306        |
+| Total On-Chip Power (W)  | 1.308        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.188        |
+| Dynamic (W)              | 1.190        |
 | Device Static (W)        | 0.118        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 69.9         |
@@ -52,19 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.004 |        4 |       --- |             --- |
-| Slice Logic             |     0.002 |     6783 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     2156 |     14400 |           14.97 |
+| Clocks                  |     0.006 |        4 |       --- |             --- |
+| Slice Logic             |     0.002 |     7185 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     2210 |     14400 |           15.35 |
 |   CARRY4                |    <0.001 |       75 |      4400 |            1.70 |
-|   Register              |    <0.001 |     3405 |     28800 |           11.82 |
+|   Register              |    <0.001 |     3678 |     28800 |           12.77 |
 |   F7/F8 Muxes           |    <0.001 |      681 |     17600 |            3.87 |
-|   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   Others                |     0.000 |      166 |       --- |             --- |
-| Signals                 |     0.003 |     4706 |       --- |             --- |
+|   LUT as Shift Register |    <0.001 |       63 |      6000 |            1.05 |
+|   Others                |     0.000 |      215 |       --- |             --- |
+| Signals                 |     0.003 |     4990 |       --- |             --- |
 | I/O                     |    <0.001 |        7 |        54 |           12.96 |
 | PS7                     |     1.178 |        1 |       --- |             --- |
 | Static Power            |     0.118 |          |           |                 |
-| Total                   |     1.306 |          |           |                 |
+| Total                   |     1.308 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.010 |      0.006 |
+| Vccint    |       1.000 |     0.018 |       0.012 |      0.006 |
 | Vccaux    |       1.800 |     0.007 |       0.000 |      0.007 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,6 +138,7 @@ Table of Contents
 | Clock      | Domain                                                      | Constraint (ns) |
 +------------+-------------------------------------------------------------+-----------------+
 | clk_fpga_0 | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
+| clk_fpga_1 | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |            10.0 |
 +------------+-------------------------------------------------------------+-----------------+
 
 
@@ -150,13 +151,15 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.188 |
-|   design_1_i             |     1.188 |
-|     WS2812_0             |     0.006 |
-|       U0                 |     0.006 |
+| design_1_wrapper         |     1.190 |
+|   design_1_i             |     1.190 |
+|     Hcsr04_Sensor_0      |     0.001 |
+|       U0                 |     0.001 |
+|     WS2812_0             |     0.005 |
+|       U0                 |     0.005 |
 |     processing_system7_0 |     1.179 |
 |       inst               |     1.179 |
-|     ps7_0_axi_periph     |     0.002 |
+|     ps7_0_axi_periph     |     0.003 |
 |       s00_couplers       |     0.002 |
 +--------------------------+-----------+
 
