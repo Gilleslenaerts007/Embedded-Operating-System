@@ -47,10 +47,10 @@ set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operat
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1.xdc]
 set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -12,6 +12,7 @@
 #include "Hcsr04_Sensor.h"
 #include "xparameters.h"
 #include "xil_io.h"
+#include "xgpio.h"
 
 /************************** IP Block Definitions *****************************/
 #define WS2812ADR XPAR_WS2812_0_S00_AXI_BASEADDR

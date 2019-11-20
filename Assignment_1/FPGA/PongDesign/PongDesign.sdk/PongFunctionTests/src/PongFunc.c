@@ -27,23 +27,41 @@ void getPlayer1Move()
 	static int oldDistance = 0;
 	distance=0;
 	distance =  HCSR04_SENSOR_mReadReg(XPAR_HCSR04_SENSOR_0_S00_AXI_BASEADDR,HCSR04_SENSOR_S00_AXI_SLV_REG3_OFFSET);
-	if(distance > 30)
-	{
-		distance = 30;
-	}
-
 	printf("%d cm\n\r", distance);
+	if(distance > 40)
+	{
+		distance = 40;
+	}
+	/*
+	if(distance < 26)
+	{
+		distance = 26;
+	}
+	BalkLinks = 6 - ((distance / 2) - 32);
+	*/
+	printf("%d edit\n\r", distance);
 
-	if(BalkLinks > 1 && BalkLinks < 8)
+
+	//Naar boven
+	if(BalkLinks > 0)
 	{
 		if (distance > oldDistance)
 		{
 			BalkLinks--;
 		}
-		else BalkLinks++;
+	}
+
+	//naar onder
+	if(BalkLinks < 5)
+	{
+		if (distance < oldDistance)
+		{
+			BalkLinks++;
+		}
 	}
 
 	oldDistance = distance;
+
 }
 
 void getPlayer2Move()

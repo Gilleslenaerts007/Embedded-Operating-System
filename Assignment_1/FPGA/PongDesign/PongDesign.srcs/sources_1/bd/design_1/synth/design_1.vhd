@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Nov 20 14:20:16 2019
+--Date        : Wed Nov 20 15:13:08 2019
 --Host        : Gilles-Lenaerts running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -170,7 +170,7 @@ entity m01_couplers_imp_XU9C55 is
 end m01_couplers_imp_XU9C55;
 
 architecture STRUCTURE of m01_couplers_imp_XU9C55 is
-  component design_1_auto_cc_1 is
+  component design_1_auto_cc_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -215,7 +215,7 @@ architecture STRUCTURE of m01_couplers_imp_XU9C55 is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_cc_1;
+  end component design_1_auto_cc_0;
   signal M_ACLK_1 : STD_LOGIC;
   signal M_ARESETN_1 : STD_LOGIC;
   signal S_ACLK_1 : STD_LOGIC;
@@ -301,7 +301,7 @@ begin
   m01_couplers_to_auto_cc_WDATA(31 downto 0) <= S_AXI_wdata(31 downto 0);
   m01_couplers_to_auto_cc_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   m01_couplers_to_auto_cc_WVALID <= S_AXI_wvalid;
-auto_cc: component design_1_auto_cc_1
+auto_cc: component design_1_auto_cc_0
      port map (
       m_axi_aclk => M_ACLK_1,
       m_axi_araddr(3 downto 0) => auto_cc_to_m01_couplers_ARADDR(3 downto 0),
@@ -519,7 +519,7 @@ entity s00_couplers_imp_UYSKKA is
 end s00_couplers_imp_UYSKKA;
 
 architecture STRUCTURE of s00_couplers_imp_UYSKKA is
-  component design_1_auto_pc_2 is
+  component design_1_auto_pc_0 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -581,7 +581,7 @@ architecture STRUCTURE of s00_couplers_imp_UYSKKA is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_pc_2;
+  end component design_1_auto_pc_0;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
   signal auto_pc_to_s00_couplers_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -701,7 +701,7 @@ begin
   s00_couplers_to_auto_pc_WLAST <= S_AXI_wlast;
   s00_couplers_to_auto_pc_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   s00_couplers_to_auto_pc_WVALID <= S_AXI_wvalid;
-auto_pc: component design_1_auto_pc_2
+auto_pc: component design_1_auto_pc_0
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
