@@ -20,6 +20,29 @@ void updateGame()
     BallY = BallY + BallMoveY;
     drawGame();
     clearArray();
+
+    //Check for score
+	if (scoreFlag)
+	{
+		scoreFlag=0;
+		printf("------------ SCORE -----------\n\rPlayer1: %d\n\rPlayer2: %d\n\r", scorePlayer1, scorePlayer2);
+		printf("Resetting positions");
+		clearArray();
+		startPositions();
+		drawGame();
+
+		if ( (scorePlayer1>=10) || (scorePlayer2>=10) )
+		{
+			//Wait for ps input next start?
+			scorePlayer1= 0;
+			scorePlayer2= 0;
+			sleep(5);
+			//while( (GPIOSPS_ReadPin) = 0 )
+		}
+
+		sleep(1);
+		clearArray();
+	}
 }
 
 void getPlayer1Move()
@@ -27,7 +50,7 @@ void getPlayer1Move()
 	static int oldDistance = 0;
 	distance=0;
 	distance =  HCSR04_SENSOR_mReadReg(XPAR_HCSR04_SENSOR_0_S00_AXI_BASEADDR,HCSR04_SENSOR_S00_AXI_SLV_REG3_OFFSET);
-	printf("%d cm\n\r", distance);
+	//printf("%d cm\n\r", distance);
 	if(distance > 40)
 	{
 		distance = 40;
@@ -39,7 +62,7 @@ void getPlayer1Move()
 	}
 	BalkLinks = 6 - ((distance / 2) - 32);
 	*/
-	printf("%d edit\n\r", distance);
+	//printf("%d edit\n\r", distance);
 
 
 	//Naar boven
@@ -66,6 +89,16 @@ void getPlayer1Move()
 
 void getPlayer2Move()
 {
+	inputbutton = 0x00;
+	inputbutton = XGpio_DiscreteRead(&Gpio, BUTTONS_CHANNEL);
+	if (inputbutton & 0b01)
+	{
+		BalkRechts++;
+	}
+	else if (inputbutton & 0b10)
+	{
+		BalkRechts--;
+	}
 
 }
 
@@ -107,7 +140,7 @@ void clearArray()		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere
 //Add more colisions, like ball on edge contact from below to up
 void hitDetect()
 {
-  if(	BallMoveX == 1 && BallX == ((LokatieBalkR-1))  )
+  if( BallMoveX == 1 && BallX == (LokatieBalkR-1) )
 	{
 		if (BallY == BalkRechts)
 		{
@@ -128,9 +161,8 @@ void hitDetect()
 		BallMoveY = 1;
              BalkHit++;
 		}
-
-
 	}
+
 	else if ( BallMoveX == -1 && BallX == (LokatieBalkL+1))
 	{
 		if (BallY == BalkLinks)
@@ -157,6 +189,17 @@ void hitDetect()
         BallMoveY = BallMoveY * -1;
     }
 
+    //Check for score
+    if (BallX == (LokatieBalkR))
+    {
+    	scorePlayer1++;
+    	scoreFlag++;
+    }
+    else if (BallX == (LokatieBalkL))
+    {
+    	scorePlayer2++;
+    	scoreFlag++;
+    }
 }
 
 void drawPixel(int X, int Y)
@@ -202,5 +245,19 @@ void drawLine (int x1, int y1, int x2, int y2)
 	   }
 	} while (1);
 		return;
+}
+
+void startGPIO()
+{
+	int Status;
+
+	Status = XGpio_Initialize(&Gpio, GPIO_BUTTONS);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	//Set data as input
+	XGpio_SetDataDirection(&Gpio, BUTTONS_CHANNEL, BUTTONS);
+
 }
 

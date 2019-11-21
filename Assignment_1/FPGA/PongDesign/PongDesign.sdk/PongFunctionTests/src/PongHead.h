@@ -13,9 +13,14 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "xgpio.h"
+#include "sleep.h"
 
 /************************** IP Block Definitions *****************************/
 #define WS2812ADR XPAR_WS2812_0_S00_AXI_BASEADDR
+#define GPIO_BUTTONS XPAR_GPIO_0_DEVICE_ID
+#define BUTTONS_CHANNEL 1
+#define BUTTONS 0b11
+XGpio Gpio;
 
 /************************** Standard Game Definitions *****************************/
 #define PLAYSPEEDFAST 50000 // SUPA SPEED
@@ -25,13 +30,16 @@
 
 /************************** Player1 Definitions *****************************/
 int distance;
+int scorePlayer1;
 
 /************************** Player2 Definitions *****************************/
+char inputbutton;
+int scorePlayer2;
 
 /************************** Pong Variable Definitions *****************************/
 int Speed;
 int BalkLinks;
-int BalkRechts ;
+int BalkRechts;
 int BallX;
 int BallY; 
 int BallMoveX;
@@ -39,6 +47,7 @@ int BallMoveY;
 int LokatieBalkL; 
 int LokatieBalkR;
 int BalkHit;
+int scoreFlag;
 
 struct pixelColour
 {
@@ -139,4 +148,13 @@ void drawPixel(int X, int Y);
 ****************************************************************************/
 void drawLine(int x1, int y1, int x2, int y2);
 
+
+/****************************************************************************/
+/**
+* @brief	Start GPIO Devices.
+*
+* @note
+*
+****************************************************************************/
+void startGPIO();
 #endif
