@@ -41,7 +41,6 @@
 #include "sleep.h"
 #include "gpio.h"
 #include "gpioPS.h"
-#include "PongHead.h"
 
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
@@ -57,11 +56,16 @@ static void vTimerCallback( TimerHandle_t pxTimer );
 
 /* The queue used by the Tx and Rx tasks, as described at the top of this
 file. */
-static TaskHandle_t xTxTask;
-static TaskHandle_t xRxTask;
-static QueueHandle_t xQueue = NULL;
+static TaskHandle_t xgetPlayer1Input;
+static TaskHandle_t xgetPlayer2Input;
+static TaskHandle_t xgamePongTask;
+static TAskHandle_t xprintDebugInfo;
+
+static QueueHandle_t xQueuePlayer1 = NULL;
+static QueueHandle_t xQueuePlayer2 = NULL;
+static QueueHandle_t xQueueDebugInfo = NULL;
+
 static TimerHandle_t xTimer = NULL;
-char HWstring[15] = "Hello World";
 long RxtaskCntr = 0;
 
 
@@ -95,29 +99,36 @@ int main( void )
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
 					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-					&xTxTask );
+					&xgetPlayer1Input );
 
 	xTaskCreate( 	getPlayer2Input, 					/* The function that implements the task. */
 					( const char * ) "Player2Input", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
 					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-					&xTxTask );
+					&xgetPlayer2Input );
 
-	xTaskCreate( GamePongTask,
+	xTaskCreate( gamePongTask,
 				 ( const char * ) "GamePongLogic",
 				 configMINIMAL_STACK_SIZE,
 				 NULL,
 				 tskIDLE_PRIORITY + 1,
 				 &xRxTask );
 
-	xQueuePlayer1 = xQueueCreate( 	2,						/* There is only one space in the queue. */
-							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
-	xQueuePlayer2 = xQueueCreate( 	2,						/* There is only one space in the queue. */
-							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+	xTaskCreate( printDebugInfo,
+				 ( const char * ) "printDebugInfo",
+				 configMINIMAL_STACK_SIZE,
+				 NULL,
+				 tskIDLE_PRIORITY + 1,
+				 &xprintDebugInfo );
+
+	xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+	xQueuePlayer2 = xQueueCreate(2, sizeof( HWstring ) );
+	xQueueDebugInfo = xQueueCreate(2, sizeof( HWstring ) );
 
 	/* Check the queue was created. */
-	configASSERT( xQueue );
+	configASSERT( xQueuePlayer1 );
+	configASSERT( xQueuePlayer2 );
 
 	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
 
@@ -138,7 +149,11 @@ int main( void )
 	for( ;; );
 }
 
+/*-----------------------------------------------------------*/
+static void printDebugInfo (void *pvParameters)
+{
 
+}
 /*-----------------------------------------------------------*/
 static void getPlayer1Input( void *pvParameters )
 {
@@ -182,7 +197,7 @@ static void getPlayer2Input( void *pvParameters )
 }
 
 /*-----------------------------------------------------------*/
-static void GamePongTask( void *pvParameters )
+static void gamePongTask( void *pvParameters )
 {
 //char Recdstring[15] = "";
 
