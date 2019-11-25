@@ -1,7 +1,7 @@
-15:16:50 **** Clean-only build of configuration Debug for project FirstPong ****
+19:17:27 **** Clean-only build of configuration Debug for project FirstPong ****
 make clean 
-rm -rf  ./src/PongFunc.o ./src/freertos_hello_world.o  ./src/PongFunc.d ./src/freertos_hello_world.d  FirstPong.elf.size  FirstPong.elf
+rm -rf  ./src/freertos_hello_world.o  ./src/freertos_hello_world.d  FirstPong.elf.size  FirstPong.elf
 ' '
 
-15:16:50 Build Finished (took 156ms)
+19:17:27 Build Finished (took 156ms)
 

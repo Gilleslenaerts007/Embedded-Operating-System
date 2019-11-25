@@ -20343,3 +20343,23 @@ con
 
 23:33:13 INFO  : Launch script is exported to file 'C:\EOS\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pongfunctiontests.elf_on_local.tcl'
 23:38:47 INFO  : Disconnected from the channel tcfchan#11.
+18:30:12 INFO  : Registering command handlers for SDK TCF services
+18:30:13 INFO  : Launching XSCT server: xsct.bat -interactive C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\temp_xsdb_launch_script.tcl
+18:30:16 INFO  : XSCT server has started successfully.
+18:30:19 INFO  : Successfully done setting XSCT server connection channel  
+18:30:19 INFO  : Processing command line option -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf.
+18:30:19 INFO  : Successfully done setting SDK workspace  
+19:15:33 INFO  : Registering command handlers for SDK TCF services
+19:15:34 INFO  : Launching XSCT server: xsct.bat -interactive C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\temp_xsdb_launch_script.tcl
+19:15:37 INFO  : XSCT server has started successfully.
+19:15:37 INFO  : Successfully done setting XSCT server connection channel  
+19:15:37 INFO  : Processing command line option -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf.
+19:15:37 INFO  : Successfully done setting SDK workspace  
+19:15:37 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+19:15:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574705654755,  Project:1574702887759
+19:15:43 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf.
+19:15:43 INFO  : Copied contents of C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_1\system.hdf.
+19:15:46 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:15:47 INFO  : Clearing existing target manager status.
+19:15:47 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+19:15:47 WARN  : Linker script will not be updated automatically. Users need to update it manually.
