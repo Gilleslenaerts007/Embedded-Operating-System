@@ -39,13 +39,16 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "sleep.h"
-#include "gpio.h"
-#include "gpioPS.h"
+#include "xgpio.h"
+#include "xgpioPS.h"
 
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
 #define DELAY_1_SECOND		1000UL
 #define TIMER_CHECK_THRESHOLD	9
+#define COLOURARRAYWIDTH 8
+#define COLOURARRAYHEIGHT 8
+
 /*-----------------------------------------------------------*/
 
 /* The Tx and Rx tasks as described at the top of this file. */
@@ -77,6 +80,12 @@ u32 Data;
 XGpio Gpio;
 XGpioPs GpioPS;
 u32 Input_Pin; /* Switch button */
+
+typedef struct pixelColour
+{
+	uint8_t green, red, blue;
+}pixelColour;
+
 void startGPIOPS();
 
 static void vTimerCallback( TimerHandle_t pxTimer )
@@ -124,11 +133,12 @@ int main( void )
 
 	xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
 	xQueuePlayer2 = xQueueCreate(2, sizeof( HWstring ) );
-	xQueueDebugInfo = xQueueCreate(2, sizeof( HWstring ) );
+	xQueueDebugInfo = xQueueCreate(2, (COLOURARRAYHEIGHT*COLOURARRAYWIDTH)*3 ); //3 colour bytes * width and height
 
 	/* Check the queue was created. */
 	configASSERT( xQueuePlayer1 );
 	configASSERT( xQueuePlayer2 );
+	configASSERT( xQueueDebugInfo );
 
 	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
 
@@ -152,6 +162,25 @@ int main( void )
 /*-----------------------------------------------------------*/
 static void printDebugInfo (void *pvParameters)
 {
+	pixelColour debugArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+
+	for(;;)
+	{
+		xQueueReceive( 	xQueueDebugInfo,				/* The queue being read. */
+						&debugArray,	/* Data is read into this address. */
+						portMAX_DELAY );	/* Wait without a timeout for data. */
+
+		for(int x = 0; x < COLOURARRAYHEIGHT; ++x)
+		{
+			for(int y = 0; y < COLOURARRAYWIDTH; ++y)
+			{
+				xil_printf("%d,%d,%d;", debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].blue,
+										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].green,
+										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].red);
+			}
+		}
+		xil_printf("\r\n");
+	}
 
 }
 /*-----------------------------------------------------------*/
@@ -199,7 +228,8 @@ static void getPlayer2Input( void *pvParameters )
 /*-----------------------------------------------------------*/
 static void gamePongTask( void *pvParameters )
 {
-//char Recdstring[15] = "";
+
+	pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
 
 	for( ;; )
 	{

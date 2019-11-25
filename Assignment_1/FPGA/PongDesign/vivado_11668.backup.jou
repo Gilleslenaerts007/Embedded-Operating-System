@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Nov 13 11:40:36 2019
+# Process ID: 11668
+# Current directory: C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14120 C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.xpr
+# Log file: C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/vivado.log
+# Journal file: C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+file copy -force C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.runs/impl_1/design_1_wrapper.sysdef C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf
