@@ -1,4 +1,4 @@
-19:17:59 **** Build of project FirstPong_bsp ****
+13:22:41 **** Build of project PongFunctionTests_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -10,9 +10,6 @@ make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=a
 make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
 make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
-make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"include"
 "Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
 make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
@@ -31,6 +28,8 @@ make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILE
 make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
@@ -42,7 +41,6 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=
 "Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling coresightps_dcc"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
 "Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
 make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling cpu_cortexa9"
@@ -55,11 +53,6 @@ make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
 make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
-make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-"Compiling FreeRTOS"
-arm-none-eabi-ar: creating ../../../lib/libfreertos.a
 "Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
 make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling gpiops"
@@ -94,6 +87,25 @@ make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling uartps"
@@ -114,3 +126,2619 @@ WS2812_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
+13:23:34 **** Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:257:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:250:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63532	   2600	  23616	  89748	  15e94	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+13:23:39 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:24:30 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:25:26 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:25:52 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:27:46 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:28:21 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:31:08 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:257:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:250:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63532	   2600	  23616	  89748	  15e94	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+13:35:35 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63532	   2600	  23616	  89748	  15e94	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+13:35:55 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:36:23 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:37:54 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63532	   2600	  23616	  89748	  15e94	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+13:38:46 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:39:19 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:43:15 **** Incremental Build of project PongFunctionTests_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/WS2812_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Hcsr04_Sensor..."
+Hcsr04_Sensor_selftest.c: In function 'HCSR04_SENSOR_Reg_SelfTest':
+Hcsr04_Sensor_selftest.c:52:62: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( HCSR04_SENSOR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                              ^~
+Hcsr04_Sensor_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/WS2812_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling WS2812..."
+WS2812_selftest.c: In function 'WS2812_Reg_SelfTest':
+WS2812_selftest.c:52:55: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( WS2812_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+WS2812_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+13:44:07 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:257:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:250:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63532	   2600	  23616	  89748	  15e94	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:00:28 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:02:23 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:286:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:279:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64236	   2600	  23616	  90452	  16154	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:03:55 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:07:37 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:189:44: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  else if(BallMoveY == 1 || BallMoveY == -1 && BallX == (LokatieBalkR-1) )
+                            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:286:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:279:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64300	   2600	  23616	  90516	  16194	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:12:20 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:286:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:279:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64300	   2600	  23616	  90516	  16194	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:17:33 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:286:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:279:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64300	   2600	  23616	  90516	  16194	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:21:40 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:290:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:283:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64300	   2600	  23616	  90516	  16194	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:23:43 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:291:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:284:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64396	   2600	  23616	  90612	  161f4	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:24:04 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:28:20 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:291:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:284:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:35:41 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:152:15: warning: statement with no effect [-Wunused-value]
+     BalkHit++;BalkRechts
+               ^~~~~~~~~~
+../src/PongFunc.c:152:25: error: expected ';' before '}' token
+     BalkHit++;BalkRechts
+                         ^
+                         ;
+    }
+    ~                     
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:291:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:284:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/PongFunc.o] Error 1
+14:43:42 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:291:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:284:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:53:59 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:293:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:286:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:54:16 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:54:33 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:54:48 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:55:05 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:55:27 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:55:39 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:05 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:296:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:289:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+14:56:27 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:287:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:280:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+14:56:29 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:36 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:47 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:59 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:57:22 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:57:56 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:58:27 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:59:41 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:00:28 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:00:29 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:00:35 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:288:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:281:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64332	   2600	  23616	  90548	  161b4	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+15:00:57 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:01:39 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:296:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:289:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+15:02:44 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:03:16 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:07:15 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64396	   2600	  23616	  90612	  161f4	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+15:08:14 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:296:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:289:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+15:08:40 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+15:13:18 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:13:19 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'startPositions':
+../src/PongFunc.c:6:5: error: 'LokatieBalkL' undeclared (first use in this function)
+     LokatieBalkL = 0;
+     ^~~~~~~~~~~~
+../src/PongFunc.c:6:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/PongFunc.c:7:5: error: 'LokatieBalkR' undeclared (first use in this function)
+     LokatieBalkR = 7;
+     ^~~~~~~~~~~~
+../src/PongFunc.c:8:5: error: 'BalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+     BalkRechts= 3;
+     ^~~~~~~~~~
+     XBalkRechts
+../src/PongFunc.c:9:5: error: 'BalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+     BalkLinks = 3;
+     ^~~~~~~~~
+     XBalkLinks
+../src/PongFunc.c: In function 'getPlayer1Move':
+../src/PongFunc.c:69:5: error: 'BalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  if(BalkLinks > 0)
+     ^~~~~~~~~
+     XBalkLinks
+../src/PongFunc.c: In function 'getPlayer2Move':
+../src/PongFunc.c:96:3: error: 'BalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+   BalkRechts++;
+   ^~~~~~~~~~
+   XBalkRechts
+../src/PongFunc.c: In function 'drawGame':
+../src/PongFunc.c:109:11: error: 'LokatieBalkL' undeclared (first use in this function)
+  drawLine(LokatieBalkL, BalkLinks, LokatieBalkL, BalkLinks+2);
+           ^~~~~~~~~~~~
+../src/PongFunc.c:109:25: error: 'BalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  drawLine(LokatieBalkL, BalkLinks, LokatieBalkL, BalkLinks+2);
+                         ^~~~~~~~~
+                         XBalkLinks
+../src/PongFunc.c:112:11: error: 'LokatieBalkR' undeclared (first use in this function)
+  drawLine(LokatieBalkR, BalkRechts, LokatieBalkR, BalkRechts+2);
+           ^~~~~~~~~~~~
+../src/PongFunc.c:112:25: error: 'BalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  drawLine(LokatieBalkR, BalkRechts, LokatieBalkR, BalkRechts+2);
+                         ^~~~~~~~~~
+                         XBalkRechts
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:150:39: error: 'LokatieBalkR' undeclared (first use in this function)
+  if ( (BallMoveY == 0) &&  (BallX == (LokatieBalkR-1) || BallX == (LokatieBalkL+1)) )
+                                       ^~~~~~~~~~~~
+../src/PongFunc.c:150:68: error: 'LokatieBalkL' undeclared (first use in this function)
+  if ( (BallMoveY == 0) &&  (BallX == (LokatieBalkR-1) || BallX == (LokatieBalkL+1)) )
+                                                                    ^~~~~~~~~~~~
+../src/PongFunc.c:154:17: error: 'BalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+    if (BallY == BalkRechts)
+                 ^~~~~~~~~~
+                 XBalkRechts
+../src/PongFunc.c:177:17: error: 'BalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+    if (BallY == BalkLinks)
+                 ^~~~~~~~~
+                 XBalkLinks
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/PongFunc.o] Error 1
+15:14:03 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:14:04 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'drawGame':
+../src/PongFunc.c:109:11: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  drawLine(XYBalkLinks, YBalkLinks, XYBalkLinks, YBalkLinks+2);
+           ^~~~~~~~~~~
+           XBalkLinks
+../src/PongFunc.c:109:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/PongFunc.c:112:11: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  drawLine(XYBalkRechts, YBalkRechts, XYBalkRechts, YBalkRechts+2);
+           ^~~~~~~~~~~~
+           XBalkRechts
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:150:39: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  if ( (BallMoveY == 0) &&  (BallX == (XYBalkRechts-1) || BallX == (XYBalkLinks+1)) )
+                                       ^~~~~~~~~~~~
+                                       XBalkRechts
+../src/PongFunc.c:150:68: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  if ( (BallMoveY == 0) &&  (BallX == (XYBalkRechts-1) || BallX == (XYBalkLinks+1)) )
+                                                                    ^~~~~~~~~~~
+                                                                    XBalkLinks
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/PongFunc.o] Error 1
+15:14:48 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:14:49 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'drawGame':
+../src/PongFunc.c:109:11: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  drawLine(XYBalkLinks, YBalkLinks, XYBalkLinks, YBalkLinks+2);
+           ^~~~~~~~~~~
+           XBalkLinks
+../src/PongFunc.c:109:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/PongFunc.c:112:11: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  drawLine(XYBalkRechts, YBalkRechts, XYBalkRechts, YBalkRechts+2);
+           ^~~~~~~~~~~~
+           XBalkRechts
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:196:44: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  else if( (BallMoveY == 1) && ( (BallX == (XYBalkRechts-1)) || (BallX == (XYBalkLinks+1)) ) )
+                                            ^~~~~~~~~~~~
+                                            XBalkRechts
+../src/PongFunc.c:196:75: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  else if( (BallMoveY == 1) && ( (BallX == (XYBalkRechts-1)) || (BallX == (XYBalkLinks+1)) ) )
+                                                                           ^~~~~~~~~~~
+                                                                           XBalkLinks
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/PongFunc.o] Error 1
+15:15:05 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:15:06 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'drawGame':
+../src/PongFunc.c:109:11: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  drawLine(XYBalkLinks, YBalkLinks, XYBalkLinks, YBalkLinks+2);
+           ^~~~~~~~~~~
+           XBalkLinks
+../src/PongFunc.c:109:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/PongFunc.c:112:11: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  drawLine(XYBalkRechts, YBalkRechts, XYBalkRechts, YBalkRechts+2);
+           ^~~~~~~~~~~~
+           XBalkRechts
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:196:44: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+  else if( (BallMoveY == 1) && ( (BallX == (XYBalkRechts-1)) || (BallX == (XYBalkLinks+1)) ) )
+                                            ^~~~~~~~~~~~
+                                            XBalkRechts
+../src/PongFunc.c:196:75: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+  else if( (BallMoveY == 1) && ( (BallX == (XYBalkRechts-1)) || (BallX == (XYBalkLinks+1)) ) )
+                                                                           ^~~~~~~~~~~
+                                                                           XBalkLinks
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/PongFunc.o] Error 1
+15:15:22 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:15:23 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+../src/PongFunc.c: In function 'hitDetect':
+../src/PongFunc.c:228:19: error: 'XYBalkRechts' undeclared (first use in this function); did you mean 'XBalkRechts'?
+     if (BallX == (XYBalkRechts))
+                   ^~~~~~~~~~~~
+                   XBalkRechts
+../src/PongFunc.c:228:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/PongFunc.c:233:24: error: 'XYBalkLinks' undeclared (first use in this function); did you mean 'XBalkLinks'?
+     else if (BallX == (XYBalkLinks))
+                        ^~~~~~~~~~~
+                        XBalkLinks
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/PongFunc.o] Error 1
+15:15:35 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+15:15:36 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+15:15:39 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:15:53 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
