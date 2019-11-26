@@ -32,15 +32,8 @@
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
-/* Xilinx includes. */
-#include "xil_printf.h"
-#include "xparameters.h"
 /*user includes */
-#include "xparameters.h"
-#include "xil_io.h"
-#include "sleep.h"
-#include "xgpio.h"
-#include "xgpioPS.h"
+#include "PongHead.h"
 
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
@@ -62,31 +55,13 @@ file. */
 static TaskHandle_t xgetPlayer1Input;
 static TaskHandle_t xgetPlayer2Input;
 static TaskHandle_t xgamePongTask;
-static TAskHandle_t xprintDebugInfo;
+static TaskHandle_t xprintDebugInfo;
 
 static QueueHandle_t xQueuePlayer1 = NULL;
 static QueueHandle_t xQueuePlayer2 = NULL;
 static QueueHandle_t xQueueDebugInfo = NULL;
 
-static TimerHandle_t xTimer = NULL;
-long RxtaskCntr = 0;
-
-
-#define GPIO_7SEGMENT_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
-#define Switches_Channel 1
-
-u32 Data;
-
-XGpio Gpio;
-XGpioPs GpioPS;
-u32 Input_Pin; /* Switch button */
-
-typedef struct pixelColour
-{
-	uint8_t green, red, blue;
-}pixelColour;
-
-void startGPIOPS();
+static TimerHandle_t xTimerTickRate = NULL;
 
 static void vTimerCallback( TimerHandle_t pxTimer )
 {
@@ -99,40 +74,40 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 
 int main( void )
 {
-	startGPIOHardware();
+	startGPIO();
 
 	xil_printf( "Starting NeoPixel 8x8 Matrix: Pong Game by Gilles, Dennis and Jonas.\r\n" );
 
-	xTaskCreate( 	getPlayer1Input, 					/* The function that implements the task. */
+	xTaskCreate( 	xgetPlayer1Input, 					/* The function that implements the task. */
 					( const char * ) "Player1Input", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
 					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
 					&xgetPlayer1Input );
 
-	xTaskCreate( 	getPlayer2Input, 					/* The function that implements the task. */
+	xTaskCreate( 	xgetPlayer2Input, 					/* The function that implements the task. */
 					( const char * ) "Player2Input", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
 					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
 					&xgetPlayer2Input );
 
-	xTaskCreate( gamePongTask,
+	xTaskCreate( xgamePongTask,
 				 ( const char * ) "GamePongLogic",
 				 configMINIMAL_STACK_SIZE,
 				 NULL,
 				 tskIDLE_PRIORITY + 1,
-				 &xRxTask );
+				 &xgamePongTask );
 
-	xTaskCreate( printDebugInfo,
+	xTaskCreate( xprintDebugInfo,
 				 ( const char * ) "printDebugInfo",
 				 configMINIMAL_STACK_SIZE,
 				 NULL,
 				 tskIDLE_PRIORITY + 1,
 				 &xprintDebugInfo );
 
-	xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
-	xQueuePlayer2 = xQueueCreate(2, sizeof( HWstring ) );
+	xQueuePlayer1 = xQueueCreate(2, sizeof( u32) );
+	xQueuePlayer2 = xQueueCreate(2, sizeof( u32 ) );
 	xQueueDebugInfo = xQueueCreate(2, (COLOURARRAYHEIGHT*COLOURARRAYWIDTH)*3 ); //3 colour bytes * width and height
 
 	/* Check the queue was created. */
@@ -149,9 +124,9 @@ int main( void )
 							vTimerCallback);
 
 	/* Check the timer was created. */
-	configASSERT( xTimer );
+	configASSERT( xTimerTickRate );
 
-	xTimerStart( xTimer, 0 );
+	xTimerStart( xTimerTickRate, 0 );
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
@@ -187,20 +162,13 @@ static void printDebugInfo (void *pvParameters)
 static void getPlayer1Input( void *pvParameters )
 {
 const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+u32 HCRS04Data;
 	for( ;; )
 	{
-
-		if (XGpioPs_ReadPin(&GpioPS, Input_Pin))
-			{
-			player1balk--;
-			}
-		if (XGpioPs_ReadPin(&GpioPS, Input_Pin))
-			{
-			player1balk++;
-			}
+		HCRS04Data = HCSR04_SENSOR_mReadReg(XPAR_HCSR04_SENSOR_0_S00_AXI_BASEADDR,HCSR04_SENSOR_S00_AXI_SLV_REG3_OFFSET);
 
 			xQueueSend( xQueuePlayer1,			/* The queue being written to. */
-					&playerpositiony, /* The address of the data being sent. */
+					&HCRS04Data, /* The address of the data being sent. */
 					0UL );			/* The block time. */
 	}
 }
@@ -208,20 +176,16 @@ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 /*-----------------------------------------------------------*/
 static void getPlayer2Input( void *pvParameters )
 {
+	u32 Buttons;
 
 	for( ;; )
 	{
-		switch (readvalue){
-		case 0 ... 35 :
-		}
+
 		/* Block to wait for data arriving on the queue. */
 		xQueueSend( 	xQueuePlayer2,				/* The queue being read. */
-						&Recdstring,	/* Data is read into this address. */
+						&distance,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
-		/* Print the received data. */
-		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
-		RxtaskCntr++;
 	}
 }
 
@@ -231,52 +195,19 @@ static void gamePongTask( void *pvParameters )
 
 	pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
 
+	u32 movePlayer1, movePlayer2;
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
 		xQueueReceive( 	xQueuePlayer1,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
+						&movePlayer1,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 		xQueueReceive( 	xQueuePlayer2,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
+						&movePlayer2,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
-		/* Print the received data. */
-		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
-		RxtaskCntr++;
 	}
 }
 
-void startGPIOHardware()
-{
-	volatile int Delay;
-
-	int status;
-
-	//Init PS
-	XGpioPs_Config *GPIOPSConfigPtr;
-	GPIOPSConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
-	status = XGpioPs_CfgInitialize(&GpioPS, GPIOPSConfigPtr,GPIOPSConfigPtr->BaseAddr);
-
-	if (status != XST_SUCCESS) {
-		printf("status error \n\r");
-		return XST_FAILURE;
-	}
-    printf("Starting GPIO PS\n\r");
-    Input_Pin = 0;
-	XGpioPs_SetDirectionPin(&GpioPS,Input_Pin,0);
-
-	//Init PL
-	XGpio_Config *GPIOConfigPtr;
-	status = XGpio_Initialize(&Gpio, GPIO_7SEGMENT_DEVICE_ID);
-	if (status != XST_SUCCESS) {
-		xil_printf("Gpio Initialization Failed\r\n");
-		return XST_FAILURE;
-	}
-
-	XGpio_SetDataDirection(&Gpio, Switches_Channel, 0x11);
-
-    return;
-}
 
 
