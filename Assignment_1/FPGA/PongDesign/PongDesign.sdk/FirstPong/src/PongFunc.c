@@ -45,25 +45,25 @@ void updateGame()
 	}
 }
 
-void getPlayer1Move()
+void getPlayer1Move(u32* Data)
 {
 	static int oldDistance = 0;
-	distance=0;
-	distance =  HCSR04_SENSOR_mReadReg(XPAR_HCSR04_SENSOR_0_S00_AXI_BASEADDR,HCSR04_SENSOR_S00_AXI_SLV_REG3_OFFSET);
+	distance =  *Data;
 	//printf("%d cm\n\r", distance);
+	/*
 	if(distance > 40)
 	{
 		distance = 40;
 	}
-	/*
+	*/
+
 	if(distance < 26)
 	{
 		distance = 26;
 	}
 	YBalkLinks = 6 - ((distance / 2) - 32);
-	*/
-	//printf("%d edit\n\r", distance);
 
+	//printf("%d edit\n\r", distance);
 
 	//Naar boven
 	if(YBalkLinks > 0)
@@ -286,6 +286,7 @@ void startGPIO()
 {
 	int Status;
 
+	//Init GPIOPL
 	Status = XGpio_Initialize(&Gpio, GPIO_BUTTONS);
 	if (Status != XST_SUCCESS) {
 		xil_printf("Gpio Initialization Failed\r\n");
@@ -293,6 +294,19 @@ void startGPIO()
 	}
 	//Set data as input
 	XGpio_SetDataDirection(&Gpio, BUTTONS_CHANNEL, BUTTONS);
+
+	//Init PS
+	XGpioPs_Config *GPIOPSConfigPtr;
+	GPIOPSConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+	Status = XGpioPs_CfgInitialize(&GpioPS, GPIOPSConfigPtr,GPIOPSConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		printf("status error \n\r");
+		return XST_FAILURE;
+	}
+    printf("Starting GPIO PS\n\r");
+    Input_Pin = 0;
+	XGpioPs_SetDirectionPin(&GpioPS,Input_Pin,0);
+
 
 }
 

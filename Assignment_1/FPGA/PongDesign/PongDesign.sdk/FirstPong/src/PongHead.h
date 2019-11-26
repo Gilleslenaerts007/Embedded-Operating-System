@@ -13,6 +13,7 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "xgpio.h"
+#include "xgpiops.h"
 #include "sleep.h"
 
 /************************** IP Block Definitions *****************************/
@@ -21,6 +22,9 @@
 #define BUTTONS_CHANNEL 1
 #define BUTTONS 0b11
 XGpio Gpio;
+XGpioPs GpioPS;
+
+u32 Input_Pin; /* Switch button */
 
 /************************** Standard Game Definitions *****************************/
 #define PLAYSPEEDFAST 50000 // SUPA SPEED
@@ -50,10 +54,10 @@ int XBalkRechts;
 int BalkHit;
 int scoreFlag;
 
-struct pixelColour
+typedef struct pixelColour
 {
 	uint8_t green, red, blue;
-};
+}pixelColour;
 struct pixelColour colourArray[8][8];
 char selectColour;
 int COLOUR_INTENSITY;
@@ -89,7 +93,7 @@ void updateGame();
 * @note
 *
 ****************************************************************************/
-void getPlayer1Move();
+void getPlayer1Move(u32* Data);
 
 /****************************************************************************/
 /**
