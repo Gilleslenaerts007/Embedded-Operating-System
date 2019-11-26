@@ -7,12 +7,15 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/PongFunc.c \
 ../src/freertos_hello_world.c 
 
 OBJS += \
+./src/PongFunc.o \
 ./src/freertos_hello_world.o 
 
 C_DEPS += \
+./src/PongFunc.d \
 ./src/freertos_hello_world.d 
 
 
