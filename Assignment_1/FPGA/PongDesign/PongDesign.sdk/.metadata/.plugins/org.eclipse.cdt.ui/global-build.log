@@ -1,15 +1,105 @@
-18:27:04 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+22:31:37 **** Build of configuration Debug for project FreeRTOS_PongGame ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
-18:27:31 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:293:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:304:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
 ' '
 'Building file: ../src/freertos_hello_world.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:63:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:79:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:86:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:93:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgamePongTask,
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:100:18: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(    xprintDebugInfo,
+                  ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:162:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:210:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:211:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:193:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:175:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:160:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:136:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
 'Finished building: ../src/freertos_hello_world.c'
 ' '
 'Building target: FreeRTOS_PongGame.elf'
@@ -20,15 +110,1075 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 106772	   3408	  89744	 199924	  30cf4	FreeRTOS_PongGame.elf
+ 107284	   3392	  89760	 200436	  30ef4	FreeRTOS_PongGame.elf
 'Finished building: FreeRTOS_PongGame.elf.size'
 ' '
-18:27:43 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+22:31:58 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
-18:28:06 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+22:32:13 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:32:26 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:33:54 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:36:59 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:37:31 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:63:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:79:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:86:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:93:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgamePongTask,
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:100:18: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(    xprintDebugInfo,
+                  ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:139:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:187:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:188:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:170:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:152:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:137:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107080	   3392	  89760	 200232	  30e28	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+22:39:12 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:65:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:81:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:88:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:95:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgamePongTask,
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:102:18: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(    xprintDebugInfo,
+                  ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:164:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:212:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:213:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:195:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:177:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:162:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:138:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107284	   3392	  89760	 200436	  30ef4	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+22:39:13 **** Build of project PongFunctionTests_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/WS2812_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Hcsr04_Sensor..."
+Hcsr04_Sensor_selftest.c: In function 'HCSR04_SENSOR_Reg_SelfTest':
+Hcsr04_Sensor_selftest.c:52:62: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( HCSR04_SENSOR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                              ^~
+Hcsr04_Sensor_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/WS2812_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling WS2812..."
+WS2812_selftest.c: In function 'WS2812_Reg_SelfTest':
+WS2812_selftest.c:52:55: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( WS2812_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+WS2812_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+22:39:31 **** Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PongFunctionTests.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PongFunctionTests.elf  |tee "PongFunctionTests.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64460	   2600	  23616	  90676	  16234	PongFunctionTests.elf
+'Finished building: PongFunctionTests.elf.size'
+' '
+22:39:48 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:42:18 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:86:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:93:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:100:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgamePongTask,
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:107:18: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(    xprintDebugInfo,
+                  ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:217:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:218:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:200:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:182:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:167:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:143:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107284	   3392	  89760	 200436	  30ef4	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+22:42:19 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:42:21 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:43:32 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:45:16 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:45:35 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:48:49 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:86:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:93:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:100:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgamePongTask,
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:107:18: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(    xprintDebugInfo,
+                  ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:217:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:218:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:200:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:182:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:167:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:143:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107284	   3392	  89760	 200436	  30ef4	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+22:50:28 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:86:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:93:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgetPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:100:16: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(  xgamePongTask,
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c:107:18: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  xTaskCreate(    xprintDebugInfo,
+                  ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:322:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:217:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:218:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:200:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:182:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:167:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:143:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107284	   3392	  89760	 200436	  30ef4	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+22:53:04 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:56:49 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:57:09 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:02:18 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:62:13: error: 'xprintDebugInfo' redeclared as different kind of symbol
+ static void xprintDebugInfo (void *pvParameters);
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:53:21: note: previous declaration of 'xprintDebugInfo' was here
+ static TaskHandle_t xprintDebugInfo;
+                     ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:63:13: error: 'xgetPlayer1Input' redeclared as different kind of symbol
+ static void xgetPlayer1Input( void *pvParameters );
+             ^~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:50:21: note: previous declaration of 'xgetPlayer1Input' was here
+ static TaskHandle_t xgetPlayer1Input;
+                     ^~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:13: error: 'xgetPlayer2Input' redeclared as different kind of symbol
+ static void xgetPlayer2Input( void *pvParameters );
+             ^~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:51:21: note: previous declaration of 'xgetPlayer2Input' was here
+ static TaskHandle_t xgetPlayer2Input;
+                     ^~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:65:13: error: 'xgamePongTask' redeclared as different kind of symbol
+ static void xgamePongTask( void *pvParameters );
+             ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:52:21: note: previous declaration of 'xgamePongTask' was here
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:91:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xgetPlayer1Input );
+      ^~~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'void (*)(void *)'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:98:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xgetPlayer2Input );
+      ^~~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'void (*)(void *)'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:105:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xgamePongTask );
+      ^~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'void (*)(void *)'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:112:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'void (*)(void *)'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'xgetPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'xgamePongTask':
+../src/freertos_hello_world.c:217:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:218:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+At top level:
+../src/freertos_hello_world.c:53:21: warning: 'xprintDebugInfo' defined but not used [-Wunused-variable]
+ static TaskHandle_t xprintDebugInfo;
+                     ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:52:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:51:21: warning: 'xgetPlayer2Input' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgetPlayer2Input;
+                     ^~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:50:21: warning: 'xgetPlayer1Input' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgetPlayer1Input;
+                     ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+23:04:19 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgetPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgamePongTask':
+../src/freertos_hello_world.c:217:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:218:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107220	   3392	  89760	 200372	  30eb4	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+23:04:20 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:04:22 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:04:38 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:05:38 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:08:37 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:18:12 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:19:12 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:21:10 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgetPlayer1Input':
+../src/freertos_hello_world.c:146:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgamePongTask':
+../src/freertos_hello_world.c:194:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:195:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:62:13: warning: 'prvprintDebugInfo' used but never defined
+ static void prvprintDebugInfo (void *pvParameters);
+             ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/freertos_hello_world.o: in function `main':
+C:\EOS\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\FreeRTOS_PongGame\Debug/../src/freertos_hello_world.c:107: undefined reference to `prvprintDebugInfo'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\EOS\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\FreeRTOS_PongGame\Debug/../src/freertos_hello_world.c:107: undefined reference to `prvprintDebugInfo'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: FreeRTOS_PongGame.elf] Error 1
+23:21:26 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvprintDebugInfo':
+../src/freertos_hello_world.c:145:14: warning: unused variable 'debugArray' [-Wunused-variable]
+  pixelColour debugArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgetPlayer1Input':
+../src/freertos_hello_world.c:156:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgamePongTask':
+../src/freertos_hello_world.c:204:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:205:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107080	   3392	  89760	 200232	  30e28	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+23:21:33 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:23:51 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgetPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgamePongTask':
+../src/freertos_hello_world.c:218:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:219:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:230:6: error: 'debugArray' undeclared (first use in this function); did you mean 'clearArray'?
+     &debugArray, /* The address of the data being sent. */
+      ^~~~~~~~~~
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:230:6: note: each undeclared identifier is reported only once for each function it appears in
+     &debugArray, /* The address of the data being sent. */
+      ^~~~~~~~~~
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+23:25:28 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgetPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgamePongTask':
+../src/freertos_hello_world.c:219:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:220:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107284	   3392	  89760	 200436	  30ef4	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+23:27:41 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:70:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgetPlayer1Input':
+../src/freertos_hello_world.c:169:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvgamePongTask':
+../src/freertos_hello_world.c:220:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer1);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:221:18: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+   getPlayer1Move(&movePlayer2);
+                  ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:36:
+../src/PongHead.h:98:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107308	   3392	  89760	 200460	  30f0c	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+23:28:19 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

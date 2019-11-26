@@ -203,7 +203,7 @@ static void prvgamePongTask( void *pvParameters )
 	//pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
 
 	int movePlayer1, movePlayer2;
-	int dataArray = 0x4803;
+	int data = 0x4803;
 
 	for( ;; )
 	{
@@ -216,7 +216,6 @@ static void prvgamePongTask( void *pvParameters )
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
 
-		printf("playermove1:,%d  2:%d", movePlayer1, movePlayer2);
 		getPlayer1Move(&movePlayer1);
 		getPlayer1Move(&movePlayer2);
 		drawGame();
@@ -229,7 +228,7 @@ static void prvgamePongTask( void *pvParameters )
 		tickFlag = 0;
 
 		xQueueSend( xQueueDebugInfo,			/* The queue being written to. */
-				&dataArray, /* The address of the data being sent. */
+				&debugArray, /* The address of the data being sent. */
 				0UL );
 
 	}

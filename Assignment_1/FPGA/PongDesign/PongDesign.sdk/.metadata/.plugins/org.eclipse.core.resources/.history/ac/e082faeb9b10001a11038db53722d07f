@@ -216,7 +216,6 @@ static void prvgamePongTask( void *pvParameters )
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
 
-		printf("playermove1:,%d  2:%d", movePlayer1, movePlayer2);
 		getPlayer1Move(&movePlayer1);
 		getPlayer1Move(&movePlayer2);
 		drawGame();

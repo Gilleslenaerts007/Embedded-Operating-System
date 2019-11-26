@@ -146,20 +146,7 @@ static void prvprintDebugInfo (void *pvParameters)
 
 	for(;;)
 	{
-		xQueueReceive( 	xQueueDebugInfo,				/* The queue being read. */
-						&debugArray,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
 
-		for(int x = 0; x < COLOURARRAYHEIGHT; ++x)
-		{
-			for(int y = 0; y < COLOURARRAYWIDTH; ++y)
-			{
-				xil_printf("%d,%d,%d;", debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].blue,
-										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].green,
-										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].red);
-			}
-		}
-		xil_printf("\r\n");
 	}
 
 }
@@ -203,7 +190,6 @@ static void prvgamePongTask( void *pvParameters )
 	//pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
 
 	int movePlayer1, movePlayer2;
-	int dataArray = 0x4803;
 
 	for( ;; )
 	{
@@ -215,8 +201,6 @@ static void prvgamePongTask( void *pvParameters )
 						&movePlayer2,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
-
-		printf("playermove1:,%d  2:%d", movePlayer1, movePlayer2);
 		getPlayer1Move(&movePlayer1);
 		getPlayer1Move(&movePlayer2);
 		drawGame();
@@ -227,10 +211,6 @@ static void prvgamePongTask( void *pvParameters )
 			updateGame();
 		}
 		tickFlag = 0;
-
-		xQueueSend( xQueueDebugInfo,			/* The queue being written to. */
-				&dataArray, /* The address of the data being sent. */
-				0UL );
 
 	}
 }

@@ -59,11 +59,6 @@ static QueueHandle_t xQueueDebugInfo = NULL;
 static TimerHandle_t xTimerTickRate = NULL;
 
 static void vTimerCallback( TimerHandle_t pxTimer );
-static void prvprintDebugInfo (void *pvParameters);
-static void prvgetPlayer1Input( void *pvParameters );
-static void prvgetPlayer2Input( void *pvParameters );
-static void prvgamePongTask( void *pvParameters );
-
 
 static void vTimerCallback( TimerHandle_t pxTimer )
 {
@@ -72,43 +67,43 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 
 	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
 	tickFlag = 1;
-	xTimerStart( pxTimer, 0 );
+	xTimerStart( xTimerTickRate, 0 );
 }
 
 int main( void )
 {
-	startGPIO();
-	startPositions();
-	updateGame();
+	//startGPIO();
+	//startPositions();
+	//updateGame();
 
 	xil_printf( "Starting NeoPixel 8x8 Matrix: Pong Game by Gilles, Dennis and Jonas.\r\n" );
 
-	xTaskCreate( 	prvgetPlayer1Input, 					/* The function that implements the task. */
+	xTaskCreate( 	xgetPlayer1Input, 					/* The function that implements the task. */
 					( const char * ) "Player1Input", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY +1,			/* The task runs at the idle priority. */
+					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
 					&xgetPlayer1Input );
 
-	xTaskCreate( 	prvgetPlayer2Input, 					/* The function that implements the task. */
+	xTaskCreate( 	xgetPlayer2Input, 					/* The function that implements the task. */
 					( const char * ) "Player2Input", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY +2,			/* The task runs at the idle priority. */
+					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
 					&xgetPlayer2Input );
 
-	xTaskCreate( 	prvgamePongTask,
+	xTaskCreate( 	xgamePongTask,
 				    ( const char * ) "GamePongLogic",
 					configMINIMAL_STACK_SIZE,
 					NULL,
-					tskIDLE_PRIORITY +3,
+					tskIDLE_PRIORITY + 1,
 					&xgamePongTask );
 
-	xTaskCreate(    prvprintDebugInfo,
+	xTaskCreate(    xprintDebugInfo,
 				    ( const char * ) "printDebugInfo",
 					configMINIMAL_STACK_SIZE,
 					NULL,
-					tskIDLE_PRIORITY +4,
+					tskIDLE_PRIORITY + 1,
 					&xprintDebugInfo );
 
 	xQueuePlayer1 = xQueueCreate(2, sizeof( u32) );
@@ -140,7 +135,7 @@ int main( void )
 }
 
 /*-----------------------------------------------------------*/
-static void prvprintDebugInfo (void *pvParameters)
+static void printDebugInfo (void *pvParameters)
 {
 	pixelColour debugArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
 
@@ -164,7 +159,7 @@ static void prvprintDebugInfo (void *pvParameters)
 
 }
 /*-----------------------------------------------------------*/
-static void prvgetPlayer1Input( void *pvParameters )
+static void getPlayer1Input( void *pvParameters )
 {
 const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 int HCRS04Data;
@@ -179,7 +174,7 @@ int HCRS04Data;
 }
 
 /*-----------------------------------------------------------*/
-static void prvgetPlayer2Input( void *pvParameters )
+static void getPlayer2Input( void *pvParameters )
 {
 	char readinput;
 
@@ -197,13 +192,12 @@ static void prvgetPlayer2Input( void *pvParameters )
 }
 
 /*-----------------------------------------------------------*/
-static void prvgamePongTask( void *pvParameters )
+static void gamePongTask( void *pvParameters )
 {
 
 	//pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
 
 	int movePlayer1, movePlayer2;
-	int dataArray = 0x4803;
 
 	for( ;; )
 	{
@@ -215,8 +209,6 @@ static void prvgamePongTask( void *pvParameters )
 						&movePlayer2,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
-
-		printf("playermove1:,%d  2:%d", movePlayer1, movePlayer2);
 		getPlayer1Move(&movePlayer1);
 		getPlayer1Move(&movePlayer2);
 		drawGame();
@@ -227,10 +219,6 @@ static void prvgamePongTask( void *pvParameters )
 			updateGame();
 		}
 		tickFlag = 0;
-
-		xQueueSend( xQueueDebugInfo,			/* The queue being written to. */
-				&dataArray, /* The address of the data being sent. */
-				0UL );
 
 	}
 }
