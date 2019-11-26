@@ -60,7 +60,8 @@ typedef struct pixelColour
 {
 	uint8_t green, red, blue;
 }pixelColour;
-struct pixelColour colourArray[8][8];
+
+pixelColour colourArray[8][8];
 char selectColour;
 int COLOUR_INTENSITY;
 
