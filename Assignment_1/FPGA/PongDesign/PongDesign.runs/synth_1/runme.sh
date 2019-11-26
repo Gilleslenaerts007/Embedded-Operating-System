@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1'
+HD_PWD='C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

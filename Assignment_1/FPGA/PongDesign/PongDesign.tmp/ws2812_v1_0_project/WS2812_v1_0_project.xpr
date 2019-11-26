@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2019.1.3 (64-bit)              -->
+<!-- Product Version: Vivado v2019.1 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="c:/fpga/assignment_1/fpga/pongdesign/pongdesign.tmp/ws2812_v1_0_project/WS2812_v1_0_project.xpr">
+<Project Version="7" Minor="40" Path="c:/eos/embedded-operating-system/assignment_1/fpga/pongdesign/pongdesign.tmp/ws2812_v1_0_project/WS2812_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="549b19963b27424e8022f1a0c351dc3d"/>
+    <Option Name="Id" Val="cee1720da004494cb08454ecefb46836"/>
     <Option Name="Part" Val="xc7z007sclg225-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -22,7 +22,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../FPGA/Assignment_1/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../EOS/Embedded-Operating-System/Assignment_1/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -62,34 +62,34 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../FPGA/Assignment_1/ip_repo/WS2812_1.0/src/WS2812.vhd">
+      <File Path="$PPRDIR/../../../../../../../EOS/Embedded-Operating-System/Assignment_1/ip_repo/WS2812_1.0/src/WS2812.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0_S00_AXI.vhd">
+      <File Path="$PPRDIR/../../../../../../../EOS/Embedded-Operating-System/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0_S00_AXI.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../../../EOS/Embedded-Operating-System/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../FPGA/Assignment_1/ip_repo/WS2812_1.0/component.xml">
+      <File Path="$PPRDIR/../../../../../../../EOS/Embedded-Operating-System/Assignment_1/ip_repo/WS2812_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="WS2812_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../FPGA/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../EOS/Embedded-Operating-System/Assignment_1/ip_repo/WS2812_1.0/hdl/WS2812_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -1,7 +1,171 @@
-19:55:37 **** Clean-only build of configuration Debug for project FirstPong ****
-make clean 
-rm -rf  ./src/PongFunc.o ./src/freertos_hello_world.o  ./src/PongFunc.d ./src/freertos_hello_world.d  FirstPong.elf.size  FirstPong.elf
+15:15:35 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
 ' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FirstPong_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:65:8: error: unknown type name 'TAskHandle_t'
+ static TAskHandle_t xprintDebugInfo;
+        ^~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:93:7: warning: variable 'lTimerId' set but not used [-Wunused-but-set-variable]
+  long lTimerId;
+       ^~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:102:2: warning: implicit declaration of function 'startGPIOHardware'; did you mean 'startGPIOPS'? [-Wimplicit-function-declaration]
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+  startGPIOPS
+../src/freertos_hello_world.c:106:16: error: 'getPlayer1Input' undeclared (first use in this function); did you mean 'xgetPlayer1Input'?
+  xTaskCreate(  getPlayer1Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer1Input
+../src/freertos_hello_world.c:106:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:113:16: error: 'getPlayer2Input' undeclared (first use in this function); did you mean 'xgetPlayer2Input'?
+  xTaskCreate(  getPlayer2Input,      /* The function that implements the task. */
+                ^~~~~~~~~~~~~~~
+                xgetPlayer2Input
+../src/freertos_hello_world.c:120:15: error: 'gamePongTask' undeclared (first use in this function); did you mean 'xgamePongTask'?
+  xTaskCreate( gamePongTask,
+               ^~~~~~~~~~~~
+               xgamePongTask
+../src/freertos_hello_world.c:125:7: error: 'xRxTask' undeclared (first use in this function); did you mean 'prvRxTask'?
+      &xRxTask );
+       ^~~~~~~
+       prvRxTask
+../src/freertos_hello_world.c:127:15: error: 'printDebugInfo' undeclared (first use in this function); did you mean 'xprintDebugInfo'?
+  xTaskCreate( printDebugInfo,
+               ^~~~~~~~~~~~~~
+               xprintDebugInfo
+../src/freertos_hello_world.c:132:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      &xprintDebugInfo );
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+../../FirstPong_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'int *'
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:134:42: error: 'HWstring' undeclared (first use in this function); did you mean 'tostring'?
+  xQueuePlayer1 = xQueueCreate(2, sizeof( HWstring ) );
+                                          ^~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/freertos_hello_world.c:145:2: error: 'xTimerTickRate' undeclared (first use in this function); did you mean 'xTimerCreate'?
+  xTimerTickRate = xTimerCreate( (const char *) "Timer",
+  ^~~~~~~~~~~~~~
+  xTimerCreate
+../src/freertos_hello_world.c: In function 'getPlayer1Input':
+../src/freertos_hello_world.c:195:4: error: 'player1balk' undeclared (first use in this function)
+    player1balk--;
+    ^~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:203:7: error: 'playerpositiony' undeclared (first use in this function)
+      &playerpositiony, /* The address of the data being sent. */
+       ^~~~~~~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:189:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'getPlayer2Input':
+../src/freertos_hello_world.c:214:11: error: 'readvalue' undeclared (first use in this function)
+   switch (readvalue){
+           ^~~~~~~~~
+../src/freertos_hello_world.c:215:8: error: label at end of compound statement
+   case 0 ... 35 :
+        ^
+In file included from ../src/freertos_hello_world.c:33:
+../src/freertos_hello_world.c:219:8: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       &Recdstring, /* Data is read into this address. */
+        ^~~~~~~~~~
+../../FirstPong_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:238:7: error: 'Recdstring' undeclared (first use in this function); did you mean 'tostring'?
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+       tostring
+../src/freertos_hello_world.c:232:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:250:6: warning: conflicting types for 'startGPIOHardware'
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:102:2: note: previous implicit declaration of 'startGPIOHardware' was here
+  startGPIOHardware();
+  ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'startGPIOHardware':
+../src/freertos_hello_world.c:262:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:262:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:262:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:44:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:262:3:
+   printf("status error \n\r");
+   ^~~~~~
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:263:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:265:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:265:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FirstPong_bsp/ps7_cortexa9_0/include/xgpio.h:132,
+                 from ../src/freertos_hello_world.c:42:
+../../FirstPong_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:274:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:250:6: note: declared here
+ void startGPIOHardware()
+      ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:270:16: warning: unused variable 'GPIOConfigPtr' [-Wunused-variable]
+  XGpio_Config *GPIOConfigPtr;
+                ^~~~~~~~~~~~~
+../src/freertos_hello_world.c:252:15: warning: unused variable 'Delay' [-Wunused-variable]
+  volatile int Delay;
+               ^~~~~
+../src/freertos_hello_world.c: At top level:
+../src/freertos_hello_world.c:55:13: warning: 'prvTxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvTxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:56:13: warning: 'prvRxTask' declared 'static' but never defined [-Wunused-function]
+ static void prvRxTask( void *pvParameters );
+             ^~~~~~~~~
+../src/freertos_hello_world.c:229:13: warning: 'gamePongTask' defined but not used [-Wunused-function]
+ static void gamePongTask( void *pvParameters )
+             ^~~~~~~~~~~~
+../src/freertos_hello_world.c:209:13: warning: 'getPlayer2Input' defined but not used [-Wunused-function]
+ static void getPlayer2Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:187:13: warning: 'getPlayer1Input' defined but not used [-Wunused-function]
+ static void getPlayer1Input( void *pvParameters )
+             ^~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:163:13: warning: 'printDebugInfo' defined but not used [-Wunused-function]
+ static void printDebugInfo (void *pvParameters)
+             ^~~~~~~~~~~~~~
+../src/freertos_hello_world.c:64:21: warning: 'xgamePongTask' defined but not used [-Wunused-variable]
+ static TaskHandle_t xgamePongTask;
+                     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
 
-19:55:37 Build Finished (took 143ms)
+15:15:35 Build Finished (took 415ms)
 
