@@ -1,7 +1,8 @@
-19:17:27 **** Clean-only build of configuration Debug for project FirstPong ****
-make clean 
-rm -rf  ./src/freertos_hello_world.o  ./src/freertos_hello_world.d  FirstPong.elf.size  FirstPong.elf
+17:58:09 **** Incremental Build of configuration Debug for project FirstPong ****
+make pre-build main-build 
+a9-linaro-pre-build-step
 ' '
+make: Nothing to be done for 'main-build'.
 
-19:17:27 Build Finished (took 156ms)
+17:58:09 Build Finished (took 189ms)
 

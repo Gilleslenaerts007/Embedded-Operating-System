@@ -12,14 +12,14 @@ int main()
     startGPIO();
     printf("Starting Pong.\n\r");
     startPositions();
-    COLOUR_INTENSITY = 10;
+    COLOUR_INTENSITY = 50;
 
 	for(;;)
 	{
 		updateGame();
 		getPlayer1Move();
 		getPlayer2Move();
-		usleep(PLAYSPEEDNORMAL);
+		usleep(PLAYSPEEDOK);
 	}
 
     cleanup_platform();
