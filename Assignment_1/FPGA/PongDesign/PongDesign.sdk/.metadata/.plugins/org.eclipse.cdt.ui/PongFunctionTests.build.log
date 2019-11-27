@@ -1,8 +1,8 @@
-15:15:53 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+12:30:11 **** Incremental Build of configuration Debug for project PongFunctionTests ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-15:15:54 Build Finished (took 218ms)
+12:30:12 Build Finished (took 343ms)
 
