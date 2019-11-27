@@ -11,6 +11,7 @@ void startPositions()
 	BallY=4;//rand(7); 			//Y Staat van boven 0 naar beneden 7
 	BallMoveX = 1;
 	BallMoveY = 0;
+	COLOUR_INTENSITY = 50;
 }
 
 void updateGame()
@@ -47,58 +48,62 @@ void updateGame()
 
 void getPlayer1Move(u32* Data)
 {
-	static int oldDistance = 0;
+	static int calculatedDistance = 0; //0-15 16-20 21-25 26-30 31-35
 	distance =  *Data;
 	//printf("%d cm\n\r", distance);
-	/*
-	if(distance > 40)
+
+	switch(distance)
 	{
-		distance = 40;
+	case 0 ... 15:
+		calculatedDistance = 5;
+		break;
+	case 16:
+		calculatedDistance = 4;
+		break;
+	case 17:
+		calculatedDistance = 3;
+		break;
+	case 18:
+		calculatedDistance = 2;
+		break;
+	case 19:
+		calculatedDistance = 1;
+		break;
+	case 20:
+		calculatedDistance = 0;
+		break;
+	default:
+		calculatedDistance = -1;
+		break;
 	}
-	*/
-
-	if(distance < 26)
+	if(YBalkLinks < calculatedDistance)
 	{
-		distance = 26;
+		YBalkLinks ++;
 	}
-	YBalkLinks = 6 - ((distance / 2) - 32);
-
-	//printf("%d edit\n\r", distance);
-
-	//Naar boven
-	if(YBalkLinks > 0)
+	else if(YBalkLinks > calculatedDistance)
 	{
-		if (distance > oldDistance)
-		{
-			YBalkLinks--;
-		}
+		YBalkLinks --;
 	}
-
-	//naar onder
-	if(YBalkLinks < 5)
-	{
-		if (distance < oldDistance)
-		{
-			YBalkLinks++;
-		}
-	}
-
-	oldDistance = distance;
+	YBalkLinks = calculatedDistance;
 
 }
 
 void getPlayer2Move(char* Button)
 {
 	inputbutton = *Button;
-	//printf("inputbutton=%d \n\r", inputbutton);
-	if (inputbutton & 0b01) //(!(inputbutton & 0b01)) // DENNIS BUTTONS
-	{
-		YBalkRechts++;
-	}
-	else if (inputbutton & 0b10) //(!(inputbutton & 0b10)) // DENNIS BUTTONS
-	{
-		YBalkRechts--;
-	}
+
+		//printf("inputbutton=%d \n\r", inputbutton);
+		if (!(inputbutton & 0b01) && YBalkRechts < 6) // DENNIS BUTTONS
+		{
+
+			YBalkRechts++;
+		}
+		else if (!(inputbutton & 0b10) && YBalkRechts > -1) // DENNIS BUTTONS
+		{
+			YBalkRechts--;
+		}
+
+
 
 }
 
@@ -239,6 +244,15 @@ void hitDetect()
 
 void drawPixel(int X, int Y)
 {
+	if(X > 7)
+		X = 7;
+	if(X < 0)
+		X = 0;
+	if(Y > 7)
+		Y = 7;
+	if(Y < 0)
+		Y = 0;
+
 	switch (selectColour)
 	{
 		case 'r' : colourArray[Y][X].red = COLOUR_INTENSITY;
