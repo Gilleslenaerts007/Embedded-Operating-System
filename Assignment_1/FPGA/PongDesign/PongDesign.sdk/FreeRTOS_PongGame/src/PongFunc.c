@@ -147,7 +147,92 @@ void hitDetect()
 {
 	//printf("BallMoveX=%d \n\rBallMoveY=%d\n\r", BallMoveX, BallMoveY);
 
-    if (BallY == 7 || BallY == 0)
+	if (BallY == 7 || BallY == 0)
+	    {
+	        BallMoveY = BallMoveY * -1;
+	    }
+
+		if ( (BallMoveY == 0) &&  (BallX == (XBalkRechts-1) || BallX == (XBalkLinks+1)) )
+		{
+		  if( BallMoveX == 1 )
+			{
+				if (BallY == YBalkRechts)
+				{
+				BallMoveX = BallMoveX * -1;
+				BallMoveY = -1;
+					BalkHit++;
+				}
+				else if (BallY == YBalkRechts+1)
+				{
+				BallMoveX = BallMoveX * -1;
+				BallMoveY = 0;
+					BalkHit++;
+				}
+
+				else if (BallY == YBalkRechts+2)
+				{
+				BallMoveX = BallMoveX * -1;
+				BallMoveY = 1;
+					 BalkHit++;
+				}
+			}
+
+			else if ( BallMoveX == -1)
+			{
+				if (BallY == YBalkLinks)
+				{
+				BallMoveX = BallMoveX * -1;
+				BallMoveY = -1;
+					 BalkHit++;
+				}
+				else if (BallY == YBalkLinks+1)
+				{
+				BallMoveX = BallMoveX * -1;
+				BallMoveY = 0;
+					 BalkHit++;
+				}
+				else if (BallY == YBalkLinks+2)
+				{
+				BallMoveX = BallMoveX * -1;
+				BallMoveY = 1;
+					 BalkHit++;}
+			}
+		}
+		else if( (BallMoveY == 1 || BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
+		{
+			//Rechts hits
+			if (BallY == YBalkRechts || BallY == YBalkRechts+1 || BallY == YBalkRechts+2)
+			{
+			BallMoveX = BallMoveX * -1;
+	            BalkHit++;
+			}
+			else if (BallY == YBalkRechts+3 || BallY == YBalkRechts-1)
+			{
+			BallMoveX = BallMoveX * -1;
+			BallMoveY = 0;
+	             BalkHit++;
+			}
+
+			//Left hits
+			if (BallY == YBalkLinks || BallY == YBalkLinks+1 || BallY == YBalkLinks+2)
+			{
+			BallMoveX = BallMoveX * -1;
+	            BalkHit++;
+			}
+			else if (BallY == YBalkLinks+3 || BallY == YBalkLinks-1)
+			{
+			BallMoveX = BallMoveX * -1;
+			BallMoveY = 0;
+	             BalkHit++;
+			}
+		}
+
+    //Check for score
+    if (BallX == (XBalkRechts))
+    {
+    	scorePlayer1++;
+    	scoreFlag++;
+    }if (BallY == 7 || BallY == 0)
     {
         BallMoveY = BallMoveY * -1;
     }
@@ -198,7 +283,7 @@ void hitDetect()
 				 BalkHit++;}
 		}
 	}
-	else if( (BallMoveY == 1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
+	else if( (BallMoveY == 1 || BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
 	{
 		//Rechts hits
 		if (BallY == YBalkRechts || BallY == YBalkRechts+1 || BallY == YBalkRechts+2)
@@ -212,9 +297,7 @@ void hitDetect()
 		BallMoveY = 0;
              BalkHit++;
 		}
-	}
-	else if( (BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
-	{
+
 		//Left hits
 		if (BallY == YBalkLinks || BallY == YBalkLinks+1 || BallY == YBalkLinks+2)
 		{
@@ -228,13 +311,6 @@ void hitDetect()
              BalkHit++;
 		}
 	}
-
-    //Check for score
-    if (BallX == (XBalkRechts))
-    {
-    	scorePlayer1++;
-    	scoreFlag++;
-    }
     else if (BallX == (XBalkLinks))
     {
     	scorePlayer2++;
