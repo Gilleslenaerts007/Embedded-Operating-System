@@ -70,19 +70,19 @@ set rc [catch {
   set_property board_part em.avnet.com:minized:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.cache/wt [current_project]
-  set_property parent.project_path C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.xpr [current_project]
-  set_property ip_repo_paths C:/EOS/Embedded-Operating-System/Assignment_1/ip_repo [current_project]
+  set_property webtalk.parent_dir C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.cache/wt [current_project]
+  set_property parent.project_path C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.xpr [current_project]
+  set_property ip_repo_paths C:/repos/Embedded-Operating-System/Assignment_1/ip_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.cache/ip [current_project]
+  set_property ip_output_repo C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/EOS/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/constrs_1/new/WS2812NeoPixel.xdc
+  read_xdc C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.srcs/constrs_1/new/WS2812NeoPixel.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z007sclg225-1
   set_param project.isImplRun false
