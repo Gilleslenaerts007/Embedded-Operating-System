@@ -1,4 +1,4 @@
-17:50:22 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+18:15:00 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -40,9 +40,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 107172	   3392	  89760	 200324	  30e84	FreeRTOS_PongGame.elf
+ 107112	   3392	  89760	 200264	  30e48	FreeRTOS_PongGame.elf
 'Finished building: FreeRTOS_PongGame.elf.size'
 ' '
 
-17:50:23 Build Finished (took 816ms)
+18:15:01 Build Finished (took 790ms)
 
