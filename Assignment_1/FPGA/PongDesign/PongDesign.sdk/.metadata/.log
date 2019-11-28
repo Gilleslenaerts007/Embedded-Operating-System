@@ -15410,3 +15410,2450 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-2
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 21:08:01.324
 !MESSAGE XSCT command with result: [disconnect tcfchan#24], Result: [null, ]. Thread: Thread-1807
+!SESSION 2019-11-28 22:37:26.841 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=nl_BE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk
+
+!ENTRY org.eclipse.ui 2 0 2019-11-28 22:37:34.671
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-11-28 22:37:34.671
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-11-28 22:37:35.231
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-11-28 22:37:35.231
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:43.158
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:43.166
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:44.953
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:44.957
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:44.961
+!MESSAGE XSCT Command: [setws C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:44.976
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:44.980
+!MESSAGE XSCT command with result: [setws C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:37:49.163
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:07.903
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:07.909
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "7z007s",
+"family": "zynq",
+"timestamp": "Wed Nov 20 15:13:33 2019",
+"vivado_version": "2019.1",
+"part": "xc7z007sclg225-1",
+}]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-11-28 22:38:09.350
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.355
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.372
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"Hcsr04_Sensor_0": {"hier_name": "Hcsr04_Sensor_0",
+"type": "Hcsr04_Sensor",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"WS2812_0": {"hier_name": "WS2812_0",
+"type": "WS2812",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_ps7_0_50M": {"hier_name": "rst_ps7_0_50M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_0": {"hier_name": "ps7_uart_0",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_1": {"hier_name": "ps7_sd_1",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_i2c_0": {"hier_name": "ps7_i2c_0",
+"type": "ps7_i2c",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.381
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.389
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "666.666666",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "50",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "16 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "533.333333",
+}]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.393
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.407
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Result: [null, {"Hcsr04_Sensor_0": {},
+"WS2812_0": {},
+"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "2",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "2",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "2",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "2",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GIER": {"description": "Global Interrupt Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global Interrupt Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_i2c_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_sd_1": {},
+"ps7_slcr_0": {},
+"ps7_uart_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.412
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.429
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"WS2812_0_S00_AXI": {"name": "WS2812_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"Hcsr04_Sensor_0_S00_AXI": {"name": "Hcsr04_Sensor_0",
+"base": "0x43C10000",
+"high": "0x43C1FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_i2c_0": {"name": "ps7_i2c_0",
+"base": "0xE0004000",
+"high": "0xE0004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_1": {"name": "ps7_sd_1",
+"base": "0xE0101000",
+"high": "0xE0101FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_0": {"name": "ps7_uart_0",
+"base": "0xE0000000",
+"high": "0xE0000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.433
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_ENABLED], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.440
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.444
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.449
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.453
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.458
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.462
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.466
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.470
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_FREQ], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.475
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_FREQ], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.479
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.483
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.487
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.493
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+}]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.498
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.503
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Result: [null, Hcsr04_Sensor_0 WS2812_0 axi_gpio_0 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_i2c_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_sd_1 ps7_slcr_0 ps7_uart_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.508
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf bit], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.513
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf bit], Result: [null, design_1_wrapper.bit]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:09.517
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:11.701
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:11.706
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.549
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.555
+!MESSAGE XSCT Command: [version -server], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.560
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.565
+!MESSAGE XSCT Command: [version], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.571
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.578
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.590
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.594
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.612
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.617
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.625
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.629
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.647
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.651
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.659
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.663
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.680
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.685
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.692
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.696
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.712
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.716
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.724
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.728
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.745
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.748
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.757
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Avnet MiniZed V1 1234-oj1A]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.760
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.778
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.782
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.798
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.802
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.807
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.812
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.817
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:12.821
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:13.244
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:13.248
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:13.335
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:13.339
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.345
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.431
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.440
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.443
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.459
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.464
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.895
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:16.903
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.137
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.184
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.628
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.632
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.665
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.670
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.675
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.680
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.710
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.714
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.963
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.967
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.976
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:18.980
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.000
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.004
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.284
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.288
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.293
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.363
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.834
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.842
+!MESSAGE XSCT Command: [con], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:38:19.855
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:35.963
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-163
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:35.984
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-163
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-11-28 22:43:37.002
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.016
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.042
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.050
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.072
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.080
+!MESSAGE XSCT Command: [version -server], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.088
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.096
+!MESSAGE XSCT Command: [version], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.102
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.107
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.117
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.122
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.141
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.145
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.153
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.157
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.173
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.177
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.185
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.188
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.204
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.208
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.216
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.219
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.236
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.240
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.247
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.251
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.269
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.272
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.281
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.284
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.301
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.304
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.321
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.325
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.329
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.333
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.338
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.341
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.364
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.367
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.446
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:37.451
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.456
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.538
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.550
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.554
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.570
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.573
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.590
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:40.593
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:41.836
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:41.876
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:41.906
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:41.909
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.619
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_0]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.623
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.629
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.633
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.655
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.661
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.866
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.870
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.881
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.885
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.905
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:43.909
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.139
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.143
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.147
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.195
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.289
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.294
+!MESSAGE XSCT Command: [con], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:43:44.303
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:07.381
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-222
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:07.406
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-222
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-11-28 22:47:08.390
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.400
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.419
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.425
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.438
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.443
+!MESSAGE XSCT Command: [version -server], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.448
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.452
+!MESSAGE XSCT Command: [version], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.457
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.461
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.471
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.476
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.494
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.498
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.507
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.510
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.527
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.531
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.539
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.543
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.560
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.563
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.571
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.575
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.591
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.596
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.604
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.608
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.625
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.629
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.637
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.640
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.657
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.660
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.678
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.682
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.685
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.689
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.693
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.697
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.720
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.723
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.803
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:08.808
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.813
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.842
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.856
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.860
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.880
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.884
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.905
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:11.909
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:13.128
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:13.200
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:13.232
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:13.236
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:14.966
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_1]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:14.970
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:14.974
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:14.978
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.000
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.004
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.210
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.214
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.225
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.229
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.254
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.258
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.484
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.488
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.493
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.558
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.641
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.646
+!MESSAGE XSCT Command: [con], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:47:15.653
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:31.463
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-278
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:31.472
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-278
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-11-28 22:48:32.464
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.469
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.477
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.481
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.496
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.500
+!MESSAGE XSCT Command: [version -server], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.506
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.510
+!MESSAGE XSCT Command: [version], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.515
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.520
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.529
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.533
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.552
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.556
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.564
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.568
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.586
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.589
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.598
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.601
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.618
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.622
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.629
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.633
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.649
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.653
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.661
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.664
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.681
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.684
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.692
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.696
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.712
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.715
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.732
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.736
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.740
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.744
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.748
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.752
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.774
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.778
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.873
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:32.882
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:35.894
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:35.941
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:35.957
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:35.963
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:35.984
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:35.989
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:36.014
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:36.018
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:37.225
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:37.245
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:37.267
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:37.271
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.767
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_2]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.771
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.775
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.778
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.799
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.803
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.990
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:38.994
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.001
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.005
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.026
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.030
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.356
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.365
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.376
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.435
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.512
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.517
+!MESSAGE XSCT Command: [con], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:48:39.524
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:03.526
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-333
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:03.533
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-333
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-11-28 22:49:04.527
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.544
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.571
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.583
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.609
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.615
+!MESSAGE XSCT Command: [version -server], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.621
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.626
+!MESSAGE XSCT Command: [version], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.632
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.638
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.647
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.651
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.669
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.673
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.682
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.686
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.705
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.709
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.717
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.720
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.738
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.742
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.752
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.756
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.773
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.777
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.786
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.789
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.806
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.810
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.818
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.822
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.838
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.841
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.858
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.862
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.865
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.869
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.875
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.878
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.900
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.904
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.990
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:04.994
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.000
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.055
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.070
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.074
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.098
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.104
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.127
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:08.130
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:09.345
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:09.392
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:09.416
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:09.419
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.224
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_3]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.228
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.232
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.236
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.255
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.259
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.480
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.483
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.493
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.497
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.517
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.521
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.742
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.746
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.750
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.795
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.874
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.877
+!MESSAGE XSCT Command: [con], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:11.884
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:37.076
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-392
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:37.096
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-392
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-11-28 22:49:38.090
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.101
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.121
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#6]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.127
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.148
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.153
+!MESSAGE XSCT Command: [version -server], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.162
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.166
+!MESSAGE XSCT Command: [version], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.172
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.177
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.188
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.192
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.209
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.213
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.222
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.225
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.242
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.245
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.253
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.257
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.274
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.277
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.285
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.289
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.306
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.310
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.318
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.321
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.338
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.341
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.349
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.353
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.371
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.374
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.391
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.395
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.399
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.402
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.406
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.410
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.433
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.437
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.521
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:38.525
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.530
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.568
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.579
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.583
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.604
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.607
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.625
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:41.629
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:42.878
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:42.901
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:42.934
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:42.938
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:44.776
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_4]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:44.779
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:44.783
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:44.787
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:44.807
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:44.811
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.010
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.013
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.021
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.025
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.045
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.049
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.277
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.281
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.287
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.340
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.416
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.421
+!MESSAGE XSCT Command: [con], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-11-28 22:49:45.428
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-1

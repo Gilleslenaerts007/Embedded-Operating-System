@@ -278,7 +278,7 @@ void hitDetect()
 		startPositions();
 	}
 
-	if(scorePlayer1 >= 5 || scorePlayer2 >= 5)
+	if(scorePlayer1 > 5 || scorePlayer2 > 5)
 	{
 		xil_printf(	"-----SCOREBOARD-----\r\n"
 					"player 1: %d\r\n"

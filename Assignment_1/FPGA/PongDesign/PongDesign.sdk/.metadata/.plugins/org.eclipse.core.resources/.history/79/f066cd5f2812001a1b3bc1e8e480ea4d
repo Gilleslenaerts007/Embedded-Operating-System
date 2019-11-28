@@ -277,15 +277,12 @@ void hitDetect()
 		xil_printf("P2 scored, score: %d\r\n", scorePlayer2);
 		startPositions();
 	}
-
-	if(scorePlayer1 >= 5 || scorePlayer2 >= 5)
+	if(scorePlayer1 > 5 || scorePlayer2 > 5)
 	{
 		xil_printf(	"-----SCOREBOARD-----\r\n"
-					"player 1: %d\r\n"
-					"player 2: %d\r\n"
+					"player 1: %d"
+					"player 2: %d"
 					,scorePlayer1, scorePlayer2);
-		scorePlayer1 = 0;
-		scorePlayer2 = 0;
 		sleep(2);
 	}
 }

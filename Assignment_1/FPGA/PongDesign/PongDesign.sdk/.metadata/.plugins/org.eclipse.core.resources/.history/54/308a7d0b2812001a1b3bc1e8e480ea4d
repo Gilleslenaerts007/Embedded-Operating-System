@@ -268,25 +268,14 @@ void hitDetect()
 	if(BallX == 7)	//check if p1 has scored
 	{
 		scorePlayer1 ++;
-		xil_printf("P1 scored, score :%d\r\n", scorePlayer1);
+		xil_printf("P1 scored\r\n");
 		startPositions();
 	}
 	if(BallX == 0)	//check if p2 has scored
 	{
 		scorePlayer2 ++;
-		xil_printf("P2 scored, score: %d\r\n", scorePlayer2);
+		xil_printf("P2 scored\r\n");
 		startPositions();
-	}
-
-	if(scorePlayer1 >= 5 || scorePlayer2 >= 5)
-	{
-		xil_printf(	"-----SCOREBOARD-----\r\n"
-					"player 1: %d\r\n"
-					"player 2: %d\r\n"
-					,scorePlayer1, scorePlayer2);
-		scorePlayer1 = 0;
-		scorePlayer2 = 0;
-		sleep(2);
 	}
 }
 

@@ -62,8 +62,8 @@ static void getPlayer1Input( void *pvParameters );
 static void getPlayer2Input( void *pvParameters );
 static void gamePongTask( void *pvParameters );
 
-#define TICKFLAGGAMEVAL 5    // * 50ms
-#define TICKFLAGCONTROLLER2 2 // * 50ms
+#define TICKFLAGGAMEVAL 5    //every 500ms
+#define TICKFLAGCONTROLLER2 2 //every 100ms
 
 static void vTimerCallback( TimerHandle_t pxTimer )
 {
