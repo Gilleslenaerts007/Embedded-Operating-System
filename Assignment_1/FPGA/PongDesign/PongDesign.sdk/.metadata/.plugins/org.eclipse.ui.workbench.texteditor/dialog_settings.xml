@@ -2,19 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="BallMoveY" key="selection"/>
+		<item value="DELAY_10_SECONDS" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="DELAY_10_SECONDS"/>
+			<item value="DELAY_1_SECOND"/>
+			<item value="TIMER_ID"/>
+			<item value="tickflag"/>
 			<item value="BallMoveY"/>
 			<item value="scoreFlag"/>
 			<item value="BalkHit"/>
 			<item value="printdebug"/>
-			<item value="xQueueReceive"/>
-			<item value="BallMovey"/>
-			<item value="BallMovex"/>
 		</list>
 		<list key="replacehistory">
 			<item value="BallMoveY"/>

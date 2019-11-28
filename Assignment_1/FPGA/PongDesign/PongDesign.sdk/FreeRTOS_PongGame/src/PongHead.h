@@ -55,7 +55,8 @@ int XBalkLinks;
 int XBalkRechts;
 int BalkHit;
 int scoreFlag;
-char tickFlag;
+bool tickFlagGame;
+bool tickFlagController2;
 
 typedef struct pixelColour
 {
