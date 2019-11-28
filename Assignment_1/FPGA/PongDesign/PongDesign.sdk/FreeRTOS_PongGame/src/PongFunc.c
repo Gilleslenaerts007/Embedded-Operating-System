@@ -48,7 +48,7 @@ void updateGame()
 
 void getPlayer1Move(u32* Data)
 {
-	static int calculatedDistance = 0; //0-15 16-20 21-25 26-30 31-35
+	static int calculatedDistance = 0;
 	distance =  *Data;
 	//printf("%d cm\n\r", distance);
 
@@ -95,13 +95,13 @@ void getPlayer2Move(char* Button)
 		//printf("inputbutton=%d \n\r", inputbutton);
 		if (!(inputbutton & 0b01) && YBalkRechts < 6) // DENNIS BUTTONS
 		{
-
 			YBalkRechts++;
 		}
 		else if (!(inputbutton & 0b10) && YBalkRechts > -1) // DENNIS BUTTONS
 		{
 			YBalkRechts--;
 		}
+		YBalkRechts = 2; //debug, REMOVE
 
 
 
@@ -145,177 +145,139 @@ void clearArray()		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere
 //Add more colisions, like ball on edge contact from below to up
 void hitDetect()
 {
-	//printf("BallMoveX=%d \n\rBallMoveY=%d\n\r", BallMoveX, BallMoveY);
+	//actually detecting algorithm
 
-	if (BallY == 7 || BallY == 0)
-	    {
-	        BallMoveY = BallMoveY * -1;
-	    }
-
-		if ( (BallMoveY == 0) &&  (BallX == (XBalkRechts-1) || BallX == (XBalkLinks+1)) )
-		{
-		  if( BallMoveX == 1 )
-			{
-				if (BallY == YBalkRechts)
-				{
-				BallMoveX = BallMoveX * -1;
-				BallMoveY = -1;
-					BalkHit++;
-				}
-				else if (BallY == YBalkRechts+1)
-				{
-				BallMoveX = BallMoveX * -1;
-				BallMoveY = 0;
-					BalkHit++;
-				}
-
-				else if (BallY == YBalkRechts+2)
-				{
-				BallMoveX = BallMoveX * -1;
-				BallMoveY = 1;
-					 BalkHit++;
-				}
-			}
-
-			else if ( BallMoveX == -1)
-			{
-				if (BallY == YBalkLinks)
-				{
-				BallMoveX = BallMoveX * -1;
-				BallMoveY = -1;
-					 BalkHit++;
-				}
-				else if (BallY == YBalkLinks+1)
-				{
-				BallMoveX = BallMoveX * -1;
-				BallMoveY = 0;
-					 BalkHit++;
-				}
-				else if (BallY == YBalkLinks+2)
-				{
-				BallMoveX = BallMoveX * -1;
-				BallMoveY = 1;
-					 BalkHit++;}
-			}
-		}
-		else if( (BallMoveY == 1 || BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
-		{
-			//Rechts hits
-			if (BallY == YBalkRechts || BallY == YBalkRechts+1 || BallY == YBalkRechts+2)
-			{
-			BallMoveX = BallMoveX * -1;
-	            BalkHit++;
-			}
-			else if (BallY == YBalkRechts+3 || BallY == YBalkRechts-1)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-	             BalkHit++;
-			}
-
-			//Left hits
-			if (BallY == YBalkLinks || BallY == YBalkLinks+1 || BallY == YBalkLinks+2)
-			{
-			BallMoveX = BallMoveX * -1;
-	            BalkHit++;
-			}
-			else if (BallY == YBalkLinks+3 || BallY == YBalkLinks-1)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-	             BalkHit++;
-			}
-		}
-
-    //Check for score
-    if (BallX == (XBalkRechts))
-    {
-    	scorePlayer1++;
-    	scoreFlag++;
-    }if (BallY == 7 || BallY == 0)
-    {
-        BallMoveY = BallMoveY * -1;
-    }
-
-	if ( (BallMoveY == 0) &&  (BallX == (XBalkRechts-1) || BallX == (XBalkLinks+1)) )
+	if(BallX == 1 || BallX == 6) //detecting collision with pads YBalkRechts YBalkLinks BallY
 	{
-	  if( BallMoveX == 1 )
+		bool above 	= FALSE;
+		bool center = FALSE;
+		bool below 	= FALSE;
+		//---detecting collision with pads
+		for(int8_t count = -1; count <= 1; ++count)
 		{
-			if (BallY == YBalkRechts)
+			if ((((YBalkRechts == BallY + count)	|| (YBalkRechts + 1 == BallY + count)	|| (YBalkRechts + 2 == BallY + count)) && BallX == 6)|| //center
+				(((YBalkLinks  == BallY + count)	|| (YBalkLinks  + 1 == BallY + count)	|| (YBalkLinks  + 2 == BallY + count)) && BallX == 1))
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = -1;
-				BalkHit++;
-			}
-			else if (BallY == YBalkRechts+1)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-				BalkHit++;
-			}
-
-			else if (BallY == YBalkRechts+2)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 1;
-				 BalkHit++;
+				if(count == -1)
+					above = TRUE;
+				if(count == 0)
+					center = TRUE;
+				if(count == 1)
+					below = TRUE;
 			}
 		}
+		//--------------------------------
 
-		else if ( BallMoveX == -1)
+		//--check which direction to go, dependent of y direction of ball and location hit on pad)
+		if(above == FALSE && center == FALSE && below == FALSE)
 		{
-			if (BallY == YBalkLinks)
+			//do nothing
+		}
+		if(above == FALSE && center == FALSE && below == TRUE) 		//hit top of pad (going diagonal) (1)
+		{
+			switch(BallMoveY)
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = -1;
-				 BalkHit++;
+			case 1:
+				//BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case 0:
+				break;
+			case -1:
+				break;
+			default:
+				break;
 			}
-			else if (BallY == YBalkLinks+1)
+		}
+		else if (above == FALSE && center == TRUE && below == TRUE)	//hit top of pad(2)
+		{
+			switch(BallMoveY)
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-				 BalkHit++;
+			case 1:
+				//BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case 0:
+				BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case -1:
+				break;
+			default:
+				break;
 			}
-			else if (BallY == YBalkLinks+2)
+		}
+		else if (above == TRUE && center == TRUE && below == TRUE)	//hit center(3)
+		{
+			switch(BallMoveY)
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 1;
-				 BalkHit++;}
+			case 1:
+				BallMoveY = 0;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case 0:
+				BallMoveX = BallMoveX * -1;
+				break;
+			case -1:
+				BallMoveY = 0;
+				BallMoveX = BallMoveX * -1;
+				break;
+			default:
+				xil_printf("Hit center error\r\n");
+				break;
+			}
+		}
+		else if (above == TRUE && center == TRUE && below == FALSE)	//hit bottom of pad(4)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				break;
+			case 0:
+				BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case -1:
+				//BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			default:
+				break;
+			}
+		}
+		else if (above == TRUE && center == FALSE && below == FALSE)//hit bottom of pad (going diagonal)(5)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				break;
+			case 0:
+				break;
+			case -1:
+				//BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			default:
+				break;
+			}
 		}
 	}
-	else if( (BallMoveY == 1 || BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
-	{
-		//Rechts hits
-		if (BallY == YBalkRechts || BallY == YBalkRechts+1 || BallY == YBalkRechts+2)
-		{
-		BallMoveX = BallMoveX * -1;
-            BalkHit++;
-		}
-		else if (BallY == YBalkRechts+3 || BallY == YBalkRechts-1)
-		{
-		BallMoveX = BallMoveX * -1;
-		BallMoveY = 0;
-             BalkHit++;
-		}
+	//--------------------------
+	if(BallY == 0 || BallY == 7)    //check if hit top or bottom
+		BallMoveY = BallMoveY * -1;
 
-		//Left hits
-		if (BallY == YBalkLinks || BallY == YBalkLinks+1 || BallY == YBalkLinks+2)
-		{
-		BallMoveX = BallMoveX * -1;
-            BalkHit++;
-		}
-		else if (BallY == YBalkLinks+3 || BallY == YBalkLinks-1)
-		{
-		BallMoveX = BallMoveX * -1;
-		BallMoveY = 0;
-             BalkHit++;
-		}
+	if(BallX == 7)	//check if p1 has scored
+	{
+		scorePlayer1 ++;
+		xil_printf("P1 scored\r\n");
+		startPositions();
 	}
-    else if (BallX == (XBalkLinks))
-    {
-    	scorePlayer2++;
-    	scoreFlag++;
-    }
+	if(BallX == 0)	//check if p2 has scored
+	{
+		scorePlayer2 ++;
+		xil_printf("P2 scored\r\n");
+		startPositions();
+	}
 }
 
 void drawPixel(int X, int Y)

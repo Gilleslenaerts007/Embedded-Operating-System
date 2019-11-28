@@ -156,13 +156,13 @@ static void printDebugInfo (void *pvParameters)
 		{
 			for(int y = 0; y < COLOURARRAYWIDTH; ++y)
 			{
-				xil_printf("%d,%d,%d;", debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].blue,
-										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].green,
-										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].red);
+				//xil_printf("%d,%d,%d;", debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].blue,
+					//					debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].green,
+					//  				debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].red);
 			}
-			xil_printf("\r\n");
+			//xil_printf("\r\n");
 		}
-		xil_printf("\r\n");
+		//xil_printf("\r\n");
 	}
 
 }

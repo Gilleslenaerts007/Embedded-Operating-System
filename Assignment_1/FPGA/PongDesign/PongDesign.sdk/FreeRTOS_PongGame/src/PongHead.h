@@ -6,6 +6,7 @@
 #include "stdint.h"
 #include "math.h"
 #include "time.h"
+#include "stdbool.h"
 
 /************************** Minized Includes *****************************/
 #include "WS2812.h"
