@@ -48,7 +48,7 @@ void updateGame()
 
 void getPlayer1Move(u32* Data)
 {
-	static int calculatedDistance = 0;
+	static int calculatedDistance = 0; //0-15 16-20 21-25 26-30 31-35
 	distance =  *Data;
 	//printf("%d cm\n\r", distance);
 
@@ -145,13 +145,13 @@ void clearArray()		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere
 //Add more colisions, like ball on edge contact from below to up
 void hitDetect()
 {
+	static bool above 	= FALSE;
+	static bool center = FALSE;
+	static bool below 	= FALSE;
 	//actually detecting algorithm
 
 	if(BallX == 1 || BallX == 6) //detecting collision with pads YBalkRechts YBalkLinks BallY
 	{
-		bool above 	= FALSE;
-		bool center = FALSE;
-		bool below 	= FALSE;
 		//---detecting collision with pads
 		for(int8_t count = -1; count <= 1; ++count)
 		{
@@ -169,10 +169,7 @@ void hitDetect()
 		//--------------------------------
 
 		//--check which direction to go, dependent of y direction of ball and location hit on pad)
-		if(above == FALSE && center == FALSE && below == FALSE)
-		{
-			//do nothing
-		}
+
 		if(above == FALSE && center == FALSE && below == TRUE) 		//hit top of pad (going diagonal) (1)
 		{
 			switch(BallMoveY)
@@ -263,19 +260,11 @@ void hitDetect()
 		}
 	}
 	//--------------------------
-	if(BallY == 0 || BallY == 7)    //check if hit top or bottom
+	if(BallY == 0 || BallY == 7)
 		BallMoveY = BallMoveY * -1;
-
-	if(BallX == 7)	//check if p1 has scored
+	if(BallX == 0 || BallX == 7)
 	{
-		scorePlayer1 ++;
-		xil_printf("P1 scored\r\n");
-		startPositions();
-	}
-	if(BallX == 0)	//check if p2 has scored
-	{
-		scorePlayer2 ++;
-		xil_printf("P2 scored\r\n");
+		xil_printf("RESTART\r\n");
 		startPositions();
 	}
 }
