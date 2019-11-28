@@ -1,8 +1,66 @@
-16:22:24 **** Incremental Build of configuration Debug for project PongFunctionTests ****
+17:49:14 **** Incremental Build of configuration Debug for project PongFunctionTests ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../PongFunctionTests_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:11,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../PongFunctionTests_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:292:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:285:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PongFunctionTests_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: PongFunctionTests.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PongFunctionTests_bsp/ps7_cortexa9_0/lib -o "PongFunctionTests.elf"  ./src/PongFunc.o ./src/helloworld.o ./src/platform.o   
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _vector_table; defaulting to 0000000000100000
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/PongFunc.o: in function `updateGame':
+C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/PongFunc.c:39: undefined reference to `sleep'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/PongFunc.c:43: undefined reference to `sleep'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/PongFunc.o: in function `getPlayer2Move':
+C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/PongFunc.c:93: undefined reference to `XGpio_DiscreteRead'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/PongFunc.o: in function `startGPIO':
+C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/PongFunc.c:289: undefined reference to `XGpio_Initialize'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/PongFunc.c:291: undefined reference to `xil_printf'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/PongFunc.c:295: undefined reference to `XGpio_SetDataDirection'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/helloworld.o: in function `main':
+C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\PongFunctionTests\Debug/../src/helloworld.c:22: undefined reference to `usleep'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-sbrkr.o): in function `_sbrk_r':
+sbrkr.c:(.text+0x12): undefined reference to `_sbrk'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-writer.o): in function `_write_r':
+writer.c:(.text+0x18): undefined reference to `_write'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-closer.o): in function `_close_r':
+closer.c:(.text+0x12): undefined reference to `_close'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-fstatr.o): in function `_fstat_r':
+fstatr.c:(.text+0x16): undefined reference to `_fstat'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-isattyr.o): in function `_isatty_r':
+isattyr.c:(.text+0x12): undefined reference to `_isatty'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-lseekr.o): in function `_lseek_r':
+lseekr.c:(.text+0x18): undefined reference to `_lseek'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/thumb/v7-a+fp/hard\libc.a(lib_a-readr.o): in function `_read_r':
+readr.c:(.text+0x18): undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: PongFunctionTests.elf] Error 1
 
-16:22:24 Build Finished (took 319ms)
+17:49:15 Build Finished (took 1s.7ms)
 

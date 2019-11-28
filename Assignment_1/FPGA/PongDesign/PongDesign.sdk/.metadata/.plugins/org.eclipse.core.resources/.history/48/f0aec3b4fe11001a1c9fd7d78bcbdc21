@@ -101,7 +101,7 @@ void getPlayer2Move(char* Button)
 		{
 			YBalkRechts--;
 		}
-		YBalkRechts = 2; //debug, REMOVE
+		YBalkRechts = 4; //debug, REMOVE
 
 
 
@@ -175,7 +175,7 @@ void hitDetect()
 			switch(BallMoveY)
 			{
 			case 1:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case 0:
@@ -191,11 +191,11 @@ void hitDetect()
 			switch(BallMoveY)
 			{
 			case 1:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case 0:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case -1:
@@ -209,14 +209,14 @@ void hitDetect()
 			switch(BallMoveY)
 			{
 			case 1:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case 0:
 				BallMoveX = BallMoveX * -1;
 				break;
 			case -1:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			default:
@@ -231,11 +231,11 @@ void hitDetect()
 			case 1:
 				break;
 			case 0:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case -1:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			default:
@@ -251,7 +251,7 @@ void hitDetect()
 			case 0:
 				break;
 			case -1:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			default:

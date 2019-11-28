@@ -101,7 +101,7 @@ void getPlayer2Move(char* Button)
 		{
 			YBalkRechts--;
 		}
-		YBalkRechts = 2; //debug, REMOVE
+		YBalkRechts = 3; //debug, REMOVE
 
 
 

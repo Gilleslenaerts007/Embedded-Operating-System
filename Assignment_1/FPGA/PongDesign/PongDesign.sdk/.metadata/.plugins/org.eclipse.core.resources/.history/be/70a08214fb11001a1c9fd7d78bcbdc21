@@ -101,7 +101,6 @@ void getPlayer2Move(char* Button)
 		{
 			YBalkRechts--;
 		}
-		YBalkRechts = 2; //debug, REMOVE
 
 
 
@@ -159,11 +158,11 @@ void hitDetect()
 				(((YBalkLinks  == BallY + count)	|| (YBalkLinks  + 1 == BallY + count)	|| (YBalkLinks  + 2 == BallY + count)) && BallX == 1))
 			{
 				if(count == -1)
-					above = TRUE;
+					below = TRUE;
 				if(count == 0)
 					center = TRUE;
 				if(count == 1)
-					below = TRUE;
+					above = TRUE;
 			}
 		}
 		//--------------------------------
@@ -175,7 +174,7 @@ void hitDetect()
 			switch(BallMoveY)
 			{
 			case 1:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case 0:
@@ -191,11 +190,11 @@ void hitDetect()
 			switch(BallMoveY)
 			{
 			case 1:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case 0:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case -1:
@@ -209,14 +208,14 @@ void hitDetect()
 			switch(BallMoveY)
 			{
 			case 1:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case 0:
 				BallMoveX = BallMoveX * -1;
 				break;
 			case -1:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			default:
@@ -231,11 +230,11 @@ void hitDetect()
 			case 1:
 				break;
 			case 0:
-				BallMoveY = 1;
+				BallMoveY = -1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			case -1:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			default:
@@ -251,7 +250,7 @@ void hitDetect()
 			case 0:
 				break;
 			case -1:
-				BallMoveY = -1;
+				BallMoveY = 1;
 				BallMoveX = BallMoveX * -1;
 				break;
 			default:
