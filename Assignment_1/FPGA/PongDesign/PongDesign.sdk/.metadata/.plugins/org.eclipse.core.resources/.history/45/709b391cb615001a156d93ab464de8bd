@@ -49,7 +49,7 @@ void updateGame()
 void getPlayer1Move(u32* Data)
 {
 	static int calculatedDistance = 0;
-	int distance =  *Data;
+	distance =  *Data;
 	//printf("%d cm\n\r", distance);
 
 	switch(distance)
@@ -90,7 +90,7 @@ void getPlayer1Move(u32* Data)
 
 void getPlayer2Move(char* Button)
 {
-	char inputbutton = *Button;
+	inputbutton = *Button;
 
 		//printf("inputbutton=%d \n\r", inputbutton);
 		if (!(inputbutton & 0b01) && YBalkRechts < 6) // DENNIS BUTTONS

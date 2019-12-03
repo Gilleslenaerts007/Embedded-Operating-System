@@ -2134,3 +2134,136 @@ arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
  107788	   3392	  89776	 200956	  310fc	FreeRTOS_PongGame.elf
 'Finished building: FreeRTOS_PongGame.elf.size'
 ' '
+11:19:26 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:12,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:347:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:12,
+                 from ../src/PongFunc.c:1:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:366:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:347:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:209:2: error: unknown type name 'gameData'
+  gameData data;
+  ^~~~~~~~
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+11:19:32 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:209:2: error: unknown type name 'gameData'
+  gameData data;
+  ^~~~~~~~
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+11:19:53 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:225:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:229:12: error: 'data' undeclared (first use in this function); did you mean 'atan'?
+   drawGame(data);
+            ^~~~
+            atan
+../src/freertos_hello_world.c:229:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+11:20:02 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:225:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107724	   3392	  89760	 200876	  310ac	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '

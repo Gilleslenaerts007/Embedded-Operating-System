@@ -40,6 +40,7 @@ int scorePlayer1;
 
 /************************** Player2 Definitions *****************************/
 int scorePlayer2;
+char inputbutton;
 
 /************************** Pong Variable Definitions *****************************/
 int Speed;
