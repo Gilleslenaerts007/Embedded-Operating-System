@@ -60,9 +60,8 @@ typedef struct gameData
 	int XBalkRechts;
 	int BalkHit;
 	int scoreFlag;
-
-	char selectColour;
-	int COLOUR_INTENSITY;
+	bool tickFlagGame;
+	bool tickFlagController2;
 
 	pixelColour colourArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH];
 }gameData;
@@ -70,7 +69,8 @@ typedef struct gameData
 
 
 pixelColour colourArray[8][8];
-
+char selectColour;
+int COLOUR_INTENSITY;
 bool tickFlagGame;
 bool tickFlagController2;
 

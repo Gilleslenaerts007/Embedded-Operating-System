@@ -202,14 +202,7 @@ static void getPlayer2Input( void *pvParameters )
 static void gamePongTask( void *pvParameters )
 {
 
-	gameData *game = (gameData*)malloc(sizeof(gameData)); //allocate on heap///-----NEEDS DELETE------
-	if(game == NULL)
-	{
-		xil_printf("Could not create gamedata heap mem, exiting!!!\r\n");
-		//implement exit fct;
-		while(1){}; //for now hang here
-	}
-
+	gameData *game = game;
 	int movePlayer1, movePlayer2;
 
 	startPositions(game);

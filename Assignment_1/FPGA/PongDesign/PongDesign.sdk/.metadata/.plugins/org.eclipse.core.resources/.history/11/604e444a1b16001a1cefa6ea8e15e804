@@ -11,7 +11,7 @@ void startPositions(gameData* game)
 	game->BallY=4;//rand(7); 			//Y Staat van boven 0 naar beneden 7
 	game->BallMoveX = 1;
 	game->BallMoveY = 0;
-	game->COLOUR_INTENSITY = 50;
+	COLOUR_INTENSITY = 50;
 }
 
 void updateGame(gameData* game)
@@ -109,13 +109,13 @@ void getPlayer2Move(char* Button, gameData* game)
 void drawGame(gameData* game)
 {
 	//color=GROEN
-    game->selectColour = 'g';
+    selectColour = 'g';
 	drawLine(game->XBalkLinks, game->YBalkLinks, game->XBalkLinks, game->YBalkLinks+2, game);
 	//color=BLUE
-    game->selectColour = 'b';
+    selectColour = 'b';
 	drawLine(game->XBalkRechts, game->YBalkRechts, game->XBalkRechts, game->YBalkRechts+2, game);
 	//Color=RED
-    game->selectColour = 'r';
+    selectColour = 'r';
 	drawPixel(game->BallX,game->BallY, game);
 	
 	for(int y = 0; y <= 7; ++y)
@@ -301,17 +301,17 @@ void drawPixel(int X, int Y, gameData* game)
 	if(Y < 0)
 		Y = 0;
 
-	switch (game->selectColour)
+	switch (selectColour)
 	{
-		case 'r' : game->colourArray[Y][X].red = game->COLOUR_INTENSITY;
+		case 'r' : game->colourArray[Y][X].red = COLOUR_INTENSITY;
 				   break;
-		case 'g' : game->colourArray[Y][X].green = game->COLOUR_INTENSITY;
+		case 'g' : game->colourArray[Y][X].green = COLOUR_INTENSITY;
 				   break;
-		case 'b' : game->colourArray[Y][X].blue = game->COLOUR_INTENSITY;
+		case 'b' : game->colourArray[Y][X].blue = COLOUR_INTENSITY;
 				   break;
-		default  : game->colourArray[Y][X].red = game->COLOUR_INTENSITY;
-			       game->colourArray[Y][X].green = game->COLOUR_INTENSITY;
-				   game->colourArray[Y][X].blue = game->COLOUR_INTENSITY;
+		default  : game->colourArray[Y][X].red = COLOUR_INTENSITY;
+			       game->colourArray[Y][X].green = COLOUR_INTENSITY;
+				   game->colourArray[Y][X].blue = COLOUR_INTENSITY;
 				   break;
 	}
 }

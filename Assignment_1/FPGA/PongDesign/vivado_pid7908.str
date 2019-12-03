@@ -170,3 +170,4 @@ dismissDialog("Launch SDK"); // aa (cl)
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 53 MB. Current time: 12/3/19, 10:16:04 PM CET
 // HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 52 MB. Current time: 12/3/19, 10:46:04 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 52 MB. Current time: 12/3/19, 11:16:05 PM CET
