@@ -13678,3 +13678,3340 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-17
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:28:18.029
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:49.726
+!MESSAGE XSCT Command: [disconnect tcfchan#22], Thread: Thread-1795
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:49.737
+!MESSAGE XSCT command with result: [disconnect tcfchan#22], Result: [null, ]. Thread: Thread-1795
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-12-03 23:39:50.752
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.772
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.792
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#23]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.802
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.820
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.826
+!MESSAGE XSCT Command: [version -server], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.832
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.838
+!MESSAGE XSCT Command: [version], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.844
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.850
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.864
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.869
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.886
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.889
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.898
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.902
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.920
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.924
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.933
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.937
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.955
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.959
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.967
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.971
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.988
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.991
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:50.999
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.003
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.021
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.024
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.032
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.036
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.053
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.057
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.074
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.077
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.081
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.086
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.091
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.095
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.118
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.122
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.203
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:51.214
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.229
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.281
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.296
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.300
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.317
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.322
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.340
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:54.344
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:55.555
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:55.581
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:55.604
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:55.608
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.154
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_21]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.158
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.162
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.166
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.186
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.190
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.392
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.396
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.403
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.407
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.429
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.432
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.735
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.744
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.755
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.841
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.928
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.933
+!MESSAGE XSCT Command: [con], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:39:57.942
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:30.100
+!MESSAGE XSCT Command: [disconnect tcfchan#23], Thread: Thread-1852
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:30.111
+!MESSAGE XSCT command with result: [disconnect tcfchan#23], Result: [null, ]. Thread: Thread-1852
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-12-03 23:40:31.110
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.114
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.121
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#24]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.125
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.138
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.142
+!MESSAGE XSCT Command: [version -server], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.146
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.150
+!MESSAGE XSCT Command: [version], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.154
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.158
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.166
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.170
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.189
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.194
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.203
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.207
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.226
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.231
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.240
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.245
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.263
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.268
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.277
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.281
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.301
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.305
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.313
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.317
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.335
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.340
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.350
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.355
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.379
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.386
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.408
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.413
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.419
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.424
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.430
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.435
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.465
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.470
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.556
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:31.560
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.565
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.599
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.613
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.618
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.639
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.644
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.668
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:34.672
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:35.880
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:35.907
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:35.930
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:35.934
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.473
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_22]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.477
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.482
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.487
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.509
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.513
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.732
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.736
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.746
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.750
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.771
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:37.776
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.085
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.093
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.101
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.203
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.296
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.301
+!MESSAGE XSCT Command: [con], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:40:38.309
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:17.693
+!MESSAGE XSCT Command: [disconnect tcfchan#24], Thread: Thread-1909
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:17.704
+!MESSAGE XSCT command with result: [disconnect tcfchan#24], Result: [null, ]. Thread: Thread-1909
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-12-03 23:41:18.703
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.721
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.744
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#25]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.753
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.771
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.775
+!MESSAGE XSCT Command: [version -server], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.780
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.786
+!MESSAGE XSCT Command: [version], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.790
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.795
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.803
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.807
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.824
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.828
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.837
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.840
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.858
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.862
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.870
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.874
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.891
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.895
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.903
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.907
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.925
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.929
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.937
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.941
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.958
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.962
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.970
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.974
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.991
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:18.994
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.012
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Avnet MiniZed V1 1234-oj1A" && level == 0}], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.016
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.020
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.024
+!MESSAGE XSCT Command: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.029
+!MESSAGE XSCT command with result: [source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.033
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.057
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.061
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.228
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:19.232
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.236
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.273
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.283
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Avnet MiniZed V1 1234-oj1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.287
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.305
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.309
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.328
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:22.335
+!MESSAGE XSCT Command: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:23.543
+!MESSAGE XSCT command with result: [fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:23.576
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:23.604
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:23.608
+!MESSAGE XSCT Command: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.516
+!MESSAGE XSCT command with result: [loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_23]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.520
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.524
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.528
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.549
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.552
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.761
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.765
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.775
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.779
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.801
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:25.805
+!MESSAGE XSCT Command: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.075
+!MESSAGE XSCT command with result: [dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.080
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.085
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.138
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.222
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.227
+!MESSAGE XSCT Command: [con], Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:41:26.236
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-28
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:10.769
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:10.776
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:10.780
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:10.786
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:10.789
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:10.794
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:35.198
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:35.205
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:35.209
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:35.214
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:35.218
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:43:35.222
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:07.105
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:07.112
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:07.116
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:07.122
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:07.126
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:07.131
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:39.479
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:39.486
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:39.490
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:39.496
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:39.499
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:44:39.504
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:22.969
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:22.977
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:22.981
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:22.988
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.050
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.079
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"ps7_cortexa9_0": {"archiver": {"category": "",
+"value": "arm-none-eabi-ar",
+"default": "arm-none-eabi-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "arm-none-eabi-gcc",
+"default": "arm-none-eabi-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra",
+"default": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"freertos10_xilinx": {"PSU_TTC0_Select": {"category": "tick_setup",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC0 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC0_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC0 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC1_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC1 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC1_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC1 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC2_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC2 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC2_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC2 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC3_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC3 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC3_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC3 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSINTC_SPEC": {"category": "",
+"value": "*",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSTMR_DEV": {"category": "",
+"value": "*",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSTMR_SPEC": {"category": "",
+"value": "true",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"check_for_stack_overflow": {"category": "kernel_features",
+"value": "2",
+"default": "2",
+"type": "int",
+"desc": "Set to 0 for no overflow checking.  Set to 1 to include basic run time task stack checking.  Set to 2 to include more comprehensive run time task stack checking.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"enable_stm_event_trace": {"category": "enable_stm_event_trace",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable event tracing through System Trace Macrocell avaialable on Zynq MPSoC. This is supported only for Cortex A53 and R5 processors",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_timer_tick_trace": {"category": "enable_stm_event_trace",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable tracing of timer tick events",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"generate_runtime_stats": {"category": "kernel_features",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Set to 1 generate runtime stats for tasks.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"hook_functions": {"category": "hook_functions",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Include or exclude application defined hook (callback) functions.  Callback functions must be defined by the application that is using FreeRTOS",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"idle_yield": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true if the Idle task should yield if another idle priority task is able to run, or false if the idle task should always use its entire time slice unless it is preempted.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"kernel_behavior": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Parameters relating to the kernel behavior",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"kernel_features": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Include or exclude kernel features",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"max_api_call_interrupt_priority": {"category": "kernel_behavior",
+"value": "18",
+"default": "18",
+"type": "int",
+"desc": "The maximum interrupt priority from which interrupt safe FreeRTOS API calls can be made.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"max_priorities": {"category": "kernel_behavior",
+"value": "8",
+"default": "8",
+"type": "int",
+"desc": "The number of task priorities that will be available.  Priorities can be assigned from zero to (max_priorities - 1)",
+"permit": "",
+"options": {},
+"range": "",
+},
+"max_task_name_len": {"category": "kernel_behavior",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The maximum number of characters that can be in the name of a task.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"message_buffer": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true to include message buffer functionality, or false to exclude message buffer functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"minimal_stack_size": {"category": "kernel_behavior",
+"value": "200",
+"default": "200",
+"type": "int",
+"desc": "The size of the stack allocated to the Idle task. Also used by standard demo and test tasks found in the main FreeRTOS download.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"num_thread_local_storage_pointers": {"category": "kernel_features",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Sets the number of pointers each task has to store thread local values.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"queue_registry_size": {"category": "kernel_features",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The maximum number of queues that can be registered at any one time. Only registered queues can be viewed in the Eclipse/GDB kernel aware debugger plug-in.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"software_timers": {"category": "software_timers",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Options relating to the software timers functionality",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_0 ps7_uart_1",
+},
+"stdout": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_0 ps7_uart_1",
+},
+"stm_channel": {"category": "enable_stm_event_trace",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "STM channel to use for trace. Valid channels are 0-65535",
+"permit": "",
+"options": {},
+"range": "",
+},
+"stream_buffer": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true to include stream buffer functionality, or false to exclude stream buffer functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"support_static_allocation": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true to allocate memory statically, or false to allocate memory dynamically.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"tick_rate": {"category": "kernel_behavior",
+"value": "100",
+"default": "100",
+"type": "int",
+"desc": "Number of RTOS ticks per sec",
+"permit": "",
+"options": {},
+"range": "",
+},
+"tick_setup": {"category": "tick_setup",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Configuration for enabling tick timer",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"timer_command_queue_length": {"category": "software_timers",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The number of commands the timer command queue can hold at any one time.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"timer_task_priority": {"category": "software_timers",
+"value": "(configMAX_PRIORITIES - 1)",
+"default": "(configMAX_PRIORITIES - 1)",
+"type": "string",
+"desc": "The priority at which the software timer service/daemon task will execute.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"timer_task_stack_depth": {"category": "software_timers",
+"value": "(configMINIMAL_STACK_SIZE)",
+"default": "(configMINIMAL_STACK_SIZE)",
+"type": "string",
+"desc": "The size of the stack allocated to the timer service/daemon task.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"total_heap_size": {"category": "kernel_behavior",
+"value": "65536",
+"default": "65536",
+"type": "int",
+"desc": "Sets the amount of RAM reserved for use by FreeRTOS - used when tasks, queues, semaphores and event groups are created.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_counting_semaphores": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include counting semaphore functionality, or false to exclude recursive mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_daemon_task_startup_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set true for kernel to call vApplicationDaemonTaskStartupHook on first iteration of RTOS daemon task. The application must provide an implementation of vApplicationDaemonTaskStartupHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_freertos_asserts": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Defines configASSERT() to assist development and debugging.  The application can override the default implementation of vApplicationAssert( char *pcFile, uint32_t ulLine )",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_getmutex_holder": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to use mutex xSemaphoreGetMutexHolder API, or false to exclude it.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_idle_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true for the kernel to call vApplicationIdleHook() on each iteration of the idle task.  The application must provide an implementation of vApplicationIdleHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_malloc_failed_hook": {"category": "hook_functions",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Only used if a FreeRTOS memory manager (heap_n.c) is included in the project.  Set to true for the kernel to call vApplicationMallocFailedHookHook() if there is insufficient FreeRTOS heap available for a task, queue or semaphore to be created.  The application can override the default implementation of vApplicationMallocFailedHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_mutexes": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include mutex functionality, or false to exclude mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_newlib_reent": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "When true each task will have its own Newlib reent structure.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_port_optimized_task_selection": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "When true task selection will be faster at the cost of limiting the maximum number of unique priorities to 32.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_preemption": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to use the preemptive scheduler, or false to use the cooperative scheduler.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_queue_sets": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include queue set functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_recursive_mutexes": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include recursive mutex functionality, or false to exclude recursive mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_stats_formatting_functions": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to 1 to include the vTaskList() and vTaskGetRunTimeStats() functions, which format run-time data into human readable text.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_task_fpu_support": {"category": "kernel_features",
+"value": "1",
+"default": "1",
+"type": "int",
+"desc": "Set to 1 to create tasks without FPU context, set to 2 to have tasks with FPU context by default.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_task_notifications": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include direct to task notification functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_tick_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true for the kernel to call vApplicationTickHook() during each tick interrupt.  The application must provide an implementation of vApplicationTickHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_timers": {"category": "software_timers",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include software timer functionality, or false to exclude software timer functionality",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_timeslicing": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "When true equal priority ready tasks will share CPU time with a context switch on each tick interrupt.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_trace_facility": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include the legacy trace functionality, and a few other features.  traceMACROS are the preferred method of tracing now.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.275
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.285
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"ps7_cortexa9_0": {"freertos10_xilinx_v1_3": {"name": "freertos10_xilinx",
+"version": "1.3",
+"desc": "This Xilinx FreeRTOS port is based on FreeRTOS kernel version 10.1.1",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/ThirdParty/bsp/freertos10_xilinx_v1_3",
+},
+"standalone_v7_0": {"name": "standalone",
+"version": "7.0",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/bsp/standalone_v7_0",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.292
+!MESSAGE XSCT Command: [hsi::utils::get_all_libs -json], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.304
+!MESSAGE XSCT command with result: [hsi::utils::get_all_libs -json], Result: [null, {"libmetal_v2_0": {"name": "libmetal",
+"version": "2.0",
+"desc": "Libmetal Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/ThirdParty/sw_services/libmetal_v2_0",
+"os": "standalone freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"lwip211_v1_0": {"name": "lwip211",
+"version": "1.0",
+"desc": "lwip211 library: lwIP (light weight IP) is an open source TCP/IP stack configured for Xilinx hard and soft Ethernet MACs",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/ThirdParty/sw_services/lwip211_v1_0",
+"os": "standalone xilkernel freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"openamp_v1_5": {"name": "openamp",
+"version": "1.5",
+"desc": "OpenAmp Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lmetal,-lopen_amp,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/ThirdParty/sw_services/openamp_v1_5",
+"os": "standalone freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexr5",
+},
+"xilffs_v4_1": {"name": "xilffs",
+"version": "4.1",
+"desc": "Generic Fat File System Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilffs_v4_1",
+"os": "standalone freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"xilflash_v4_6": {"name": "xilflash",
+"version": "4.6",
+"desc": "Xilinx Flash library for Intel/AMD CFI compliant parallel flash",
+"compilerflags": "",
+"linkerflags": "-lxilflash",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilflash_v4_6",
+"os": "standalone xilkernel freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"xilfpga_v5_0": {"name": "xilfpga",
+"version": "5.0",
+"desc": "XilFPGA library provides an interface to the Linux or bare-metal users for configuring the PL over PCAP from PS",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilfpga,-lxil,-lxilsecure,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilfpga_v5_0",
+"os": "standalone freertos10_xilinx",
+"proc": "psu_cortexa53 psu_cortexr5 psu_pmu",
+},
+"xilisf_v5_13": {"name": "xilisf",
+"version": "5.13",
+"desc": "Xilinx In-system and Serial Flash Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilisf_v5_13",
+"os": "standalone xilkernel freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"xillibpm_v1_0": {"name": "xillibpm",
+"version": "1.0",
+"desc": "Xilinx Versal Platform Management Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxillibpm,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xillibpm_v1_0",
+"os": "standalone freertos10_xilinx",
+"proc": "psu_cortexa72 psu_cortexr5",
+},
+"xilloader_v1_0": {"name": "xilloader",
+"version": "1.0",
+"desc": "Xilinx Versal Platform Loader Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilloader,-lxillibpm,-lxilplmi,-lxilffs,-lxilpdi,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilloader_v1_0",
+"os": "standalone",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"xilmailbox_v1_0": {"name": "xilmailbox",
+"version": "1.0",
+"desc": "Xilinx IPI Mailbox Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilmailbox,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilmailbox_v1_0",
+"os": "standalone",
+"proc": "psu_cortexa72 psu_cortexa53 psu_cortexr5 psu_pmu",
+},
+"xilpdi_v1_0": {"name": "xilpdi",
+"version": "1.0",
+"desc": "Xilinx Programable Device Image (PDI) Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilpdi,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilpdi_v1_0",
+"os": "standalone",
+"proc": "psu_cortexa72 psu_cortexr5",
+},
+"xilplmi_v1_0": {"name": "xilplmi",
+"version": "1.0",
+"desc": "Xilinx versal Platform Loader and Manager Interface Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilplmi,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilplmi_v1_0",
+"os": "standalone",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"xilpm_v2_5": {"name": "xilpm",
+"version": "2.5",
+"desc": "Power Management API Library for ZynqMP",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilpm_v2_5",
+"os": "standalone freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+"xilrsa_v1_5": {"name": "xilrsa",
+"version": "1.5",
+"desc": "Xilinx RSA Library to access RSA and SHA software algorithms on Zynq",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilrsa_v1_5",
+"os": "standalone freertos10_xilinx",
+"proc": "ps7_cortexa9",
+},
+"xilsecure_v4_0": {"name": "xilsecure",
+"version": "4.0",
+"desc": "Xilinx Secure Library provides interface to AES, RSA and SHA hardware engines on ZynqMP Soc and Versal",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilsecure,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilsecure_v4_0",
+"os": "standalone freertos10_xilinx",
+"proc": "psu_cortexa53 psu_cortexr5 psu_pmu psu_cortexa72 psv_cortexa72",
+},
+"xilskey_v6_7": {"name": "xilskey",
+"version": "6.7",
+"desc": "Xilinx Secure Key Library supports programming efuse and bbram",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilskey,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/sw_services/xilskey_v6_7",
+"os": "standalone freertos10_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psv_cortexr5 psu_pmu microblaze psu_cortexa72 psv_cortexa72",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.309
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.314
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.319
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.325
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.370
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.380
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"Hcsr04_Sensor_0": {"name": "Hcsr04_Sensor",
+"ver": "1.0",
+},
+"WS2812_0": {"name": "WS2812",
+"ver": "1.0",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.4",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.5",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.5",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.5",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_i2c_0": {"name": "iicps",
+"ver": "3.9",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.6",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "4.0",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_sd_1": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_0": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_usb_0": {"name": "usbps",
+"ver": "2.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.385
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:23.476
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"Hcsr04_Sensor_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"Hcsr04_Sensor_v1_0": {"name": "Hcsr04_Sensor",
+"version": "1.0",
+"repo": "C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/drivers/Hcsr04_Sensor_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"WS2812_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"WS2812_v1_0": {"name": "WS2812",
+"version": "1.0",
+"repo": "C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/drivers/WS2812_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_4": {"name": "gpio",
+"version": "4.4",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"processing_system7_0": {"version": "5.5",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_ps7_0_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_ps7_0_50M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_clockc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_uart_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartps_v3_7": {"name": "uartps",
+"version": "3.7",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/uartps_v3_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_uart_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartps_v3_7": {"name": "uartps",
+"version": "3.7",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/uartps_v3_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_pl310_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_pmu_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_qspi_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"qspips_v3_6": {"name": "qspips",
+"version": "3.6",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/qspips_v3_6",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_qspi_linear_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_axi_interconnect_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_cortexa9_0": {"version": "5.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_cortexa9_v2_7": {"name": "cpu_cortexa9",
+"version": "2.7",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_cortexa9_v2_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ddr_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"ddrps_v1_0": {"name": "ddrps",
+"version": "1.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/ddrps_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_usb_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"usbps_v2_4": {"name": "usbps",
+"version": "2.4",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/usbps_v2_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_sd_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"sdps_v3_7": {"name": "sdps",
+"version": "3.7",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/sdps_v3_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_sd_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"sdps_v3_7": {"name": "sdps",
+"version": "3.7",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/sdps_v3_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_i2c_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"iicps_v3_9": {"name": "iicps",
+"version": "3.9",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/iicps_v3_9",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_gpio_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpiops_v3_5": {"name": "gpiops",
+"version": "3.5",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/gpiops_v3_5",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ddrc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_dev_cfg_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"devcfg_v3_5": {"name": "devcfg",
+"version": "3.5",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/devcfg_v3_5",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_xadc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"xadcps_v2_3": {"name": "xadcps",
+"version": "2.3",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/xadcps_v2_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_ocmc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_coresight_comp_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"coresightps_dcc_v1_5": {"name": "coresightps_dcc",
+"version": "1.5",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/coresightps_dcc_v1_5",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_gpv_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_scuc_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_globaltimer_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_intc_dist_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_l2cachec_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_dma_s": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"dmaps_v2_4": {"name": "dmaps",
+"version": "2.4",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/dmaps_v2_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_iop_bus_config_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_ram_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_ram_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_scugic_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"scugic_v4_0": {"name": "scugic",
+"version": "4.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/scugic_v4_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_scutimer_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"scutimer_v2_1": {"name": "scutimer",
+"version": "2.1",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/scutimer_v2_1",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_scuwdt_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"scuwdt_v2_1": {"name": "scuwdt",
+"version": "2.1",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/scuwdt_v2_1",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_slcr_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_dma_ns": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"dmaps_v2_4": {"name": "dmaps",
+"version": "2.4",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/dmaps_v2_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ps7_afi_0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_afi_1": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_afi_2": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_afi_3": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ps7_m_axi_gp0": {"version": "1.00.a",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:28.154
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:28.159
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.058
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.066
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.071
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.078
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.146
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.174
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"ps7_cortexa9_0": {"archiver": {"category": "",
+"value": "arm-none-eabi-ar",
+"default": "arm-none-eabi-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "arm-none-eabi-gcc",
+"default": "arm-none-eabi-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra",
+"default": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"freertos10_xilinx": {"PSU_TTC0_Select": {"category": "tick_setup",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC0 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC0_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC0 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC1_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC1 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC1_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC1 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC2_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC2 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC2_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC2 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC3_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC3 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC3_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC3 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSINTC_SPEC": {"category": "",
+"value": "*",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSTMR_DEV": {"category": "",
+"value": "*",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSTMR_SPEC": {"category": "",
+"value": "true",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"check_for_stack_overflow": {"category": "kernel_features",
+"value": "2",
+"default": "2",
+"type": "int",
+"desc": "Set to 0 for no overflow checking.  Set to 1 to include basic run time task stack checking.  Set to 2 to include more comprehensive run time task stack checking.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"enable_stm_event_trace": {"category": "enable_stm_event_trace",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable event tracing through System Trace Macrocell avaialable on Zynq MPSoC. This is supported only for Cortex A53 and R5 processors",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_timer_tick_trace": {"category": "enable_stm_event_trace",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable tracing of timer tick events",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"generate_runtime_stats": {"category": "kernel_features",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Set to 1 generate runtime stats for tasks.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"hook_functions": {"category": "hook_functions",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Include or exclude application defined hook (callback) functions.  Callback functions must be defined by the application that is using FreeRTOS",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"idle_yield": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true if the Idle task should yield if another idle priority task is able to run, or false if the idle task should always use its entire time slice unless it is preempted.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"kernel_behavior": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Parameters relating to the kernel behavior",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"kernel_features": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Include or exclude kernel features",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"max_api_call_interrupt_priority": {"category": "kernel_behavior",
+"value": "18",
+"default": "18",
+"type": "int",
+"desc": "The maximum interrupt priority from which interrupt safe FreeRTOS API calls can be made.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"max_priorities": {"category": "kernel_behavior",
+"value": "8",
+"default": "8",
+"type": "int",
+"desc": "The number of task priorities that will be available.  Priorities can be assigned from zero to (max_priorities - 1)",
+"permit": "",
+"options": {},
+"range": "",
+},
+"max_task_name_len": {"category": "kernel_behavior",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The maximum number of characters that can be in the name of a task.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"message_buffer": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true to include message buffer functionality, or false to exclude message buffer functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"minimal_stack_size": {"category": "kernel_behavior",
+"value": "200",
+"default": "200",
+"type": "int",
+"desc": "The size of the stack allocated to the Idle task. Also used by standard demo and test tasks found in the main FreeRTOS download.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"num_thread_local_storage_pointers": {"category": "kernel_features",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Sets the number of pointers each task has to store thread local values.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"queue_registry_size": {"category": "kernel_features",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The maximum number of queues that can be registered at any one time. Only registered queues can be viewed in the Eclipse/GDB kernel aware debugger plug-in.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"software_timers": {"category": "software_timers",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Options relating to the software timers functionality",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_0 ps7_uart_1",
+},
+"stdout": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_0 ps7_uart_1",
+},
+"stm_channel": {"category": "enable_stm_event_trace",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "STM channel to use for trace. Valid channels are 0-65535",
+"permit": "",
+"options": {},
+"range": "",
+},
+"stream_buffer": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true to include stream buffer functionality, or false to exclude stream buffer functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"support_static_allocation": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true to allocate memory statically, or false to allocate memory dynamically.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"tick_rate": {"category": "kernel_behavior",
+"value": "100",
+"default": "100",
+"type": "int",
+"desc": "Number of RTOS ticks per sec",
+"permit": "",
+"options": {},
+"range": "",
+},
+"tick_setup": {"category": "tick_setup",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Configuration for enabling tick timer",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"timer_command_queue_length": {"category": "software_timers",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The number of commands the timer command queue can hold at any one time.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"timer_task_priority": {"category": "software_timers",
+"value": "(configMAX_PRIORITIES - 1)",
+"default": "(configMAX_PRIORITIES - 1)",
+"type": "string",
+"desc": "The priority at which the software timer service/daemon task will execute.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"timer_task_stack_depth": {"category": "software_timers",
+"value": "(configMINIMAL_STACK_SIZE)",
+"default": "(configMINIMAL_STACK_SIZE)",
+"type": "string",
+"desc": "The size of the stack allocated to the timer service/daemon task.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"total_heap_size": {"category": "kernel_behavior",
+"value": "65536",
+"default": "65536",
+"type": "int",
+"desc": "Sets the amount of RAM reserved for use by FreeRTOS - used when tasks, queues, semaphores and event groups are created.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_counting_semaphores": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include counting semaphore functionality, or false to exclude recursive mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_daemon_task_startup_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set true for kernel to call vApplicationDaemonTaskStartupHook on first iteration of RTOS daemon task. The application must provide an implementation of vApplicationDaemonTaskStartupHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_freertos_asserts": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Defines configASSERT() to assist development and debugging.  The application can override the default implementation of vApplicationAssert( char *pcFile, uint32_t ulLine )",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_getmutex_holder": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to use mutex xSemaphoreGetMutexHolder API, or false to exclude it.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_idle_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true for the kernel to call vApplicationIdleHook() on each iteration of the idle task.  The application must provide an implementation of vApplicationIdleHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_malloc_failed_hook": {"category": "hook_functions",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Only used if a FreeRTOS memory manager (heap_n.c) is included in the project.  Set to true for the kernel to call vApplicationMallocFailedHookHook() if there is insufficient FreeRTOS heap available for a task, queue or semaphore to be created.  The application can override the default implementation of vApplicationMallocFailedHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_mutexes": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include mutex functionality, or false to exclude mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_newlib_reent": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "When true each task will have its own Newlib reent structure.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_port_optimized_task_selection": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "When true task selection will be faster at the cost of limiting the maximum number of unique priorities to 32.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_preemption": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to use the preemptive scheduler, or false to use the cooperative scheduler.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_queue_sets": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include queue set functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_recursive_mutexes": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include recursive mutex functionality, or false to exclude recursive mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_stats_formatting_functions": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to 1 to include the vTaskList() and vTaskGetRunTimeStats() functions, which format run-time data into human readable text.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_task_fpu_support": {"category": "kernel_features",
+"value": "1",
+"default": "1",
+"type": "int",
+"desc": "Set to 1 to create tasks without FPU context, set to 2 to have tasks with FPU context by default.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_task_notifications": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include direct to task notification functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_tick_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true for the kernel to call vApplicationTickHook() during each tick interrupt.  The application must provide an implementation of vApplicationTickHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_timers": {"category": "software_timers",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include software timer functionality, or false to exclude software timer functionality",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_timeslicing": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "When true equal priority ready tasks will share CPU time with a context switch on each tick interrupt.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_trace_facility": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include the legacy trace functionality, and a few other features.  traceMACROS are the preferred method of tracing now.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.376
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.383
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.388
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.394
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.442
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:31.452
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"Hcsr04_Sensor_0": {"name": "Hcsr04_Sensor",
+"ver": "1.0",
+},
+"WS2812_0": {"name": "WS2812",
+"ver": "1.0",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.4",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.5",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.5",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.5",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_i2c_0": {"name": "iicps",
+"ver": "3.9",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.6",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "4.0",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_sd_1": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_0": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_usb_0": {"name": "usbps",
+"ver": "2.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:40.757
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:40.762
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.202
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.230
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.238
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.252
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.261
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.273
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.281
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.287
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.291
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.301
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"Hcsr04_Sensor_0": {"name": "Hcsr04_Sensor",
+"ver": "1.0",
+},
+"WS2812_0": {"name": "WS2812",
+"ver": "1.0",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.4",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.5",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.5",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.5",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_i2c_0": {"name": "iicps",
+"ver": "3.9",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.6",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "4.0",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_sd_1": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_0": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_usb_0": {"name": "usbps",
+"ver": "2.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.315
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:42.320
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.817
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.824
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.828
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.833
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.844
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.853
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"Hcsr04_Sensor_0": {"name": "Hcsr04_Sensor",
+"ver": "1.0",
+},
+"WS2812_0": {"name": "WS2812",
+"ver": "1.0",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.4",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.5",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.5",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.4",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.5",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_i2c_0": {"name": "iicps",
+"ver": "3.9",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.6",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "4.0",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_sd_1": {"name": "sdps",
+"ver": "3.7",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_0": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.7",
+},
+"ps7_usb_0": {"name": "usbps",
+"ver": "2.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.928
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.934
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.938
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.943
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.950
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.956
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.961
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:45:45.966
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:57:11.943
+!MESSAGE XSCT Command: [disconnect tcfchan#25], Thread: Thread-2069
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-12-03 23:57:11.953
+!MESSAGE XSCT command with result: [disconnect tcfchan#25], Result: [null, ]. Thread: Thread-2069
+
+!ENTRY org.eclipse.ui 4 4 2019-12-03 23:57:12.182
+!MESSAGE Could not create action delegate for id: org.eclipse.debug.ui.switchMemoryBlock
+!SUBENTRY 1 org.eclipse.ui 4 4 2019-12-03 23:57:12.183
+!MESSAGE Internal plug-in action delegate error on creation.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.ToolBar.layoutItems(ToolBar.java:692)
+	at org.eclipse.swt.widgets.ToolItem.updateImages(ToolItem.java:1041)
+	at org.eclipse.swt.widgets.ToolItem.setEnabled(ToolItem.java:661)
+	at org.eclipse.jface.action.ActionContributionItem.update(ActionContributionItem.java:802)
+	at org.eclipse.jface.action.ActionContributionItem.actionPropertyChange(ActionContributionItem.java:165)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$1(ActionContributionItem.java:128)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:49)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:72)
+	at org.eclipse.jface.action.Action.setEnabled(Action.java:540)
+	at org.eclipse.debug.internal.ui.views.memory.SwitchMemoryBlockAction$UpdateActionEnablementJob.runInUIThread(SwitchMemoryBlockAction.java:100)
+	at org.eclipse.debug.internal.ui.views.memory.SwitchMemoryBlockAction.init(SwitchMemoryBlockAction.java:384)
+	at org.eclipse.ui.internal.PluginAction.initDelegate(PluginAction.java:174)
+	at org.eclipse.ui.internal.ViewPluginAction.initDelegate(ViewPluginAction.java:54)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:125)
+	at org.eclipse.ui.internal.PluginAction.getMenuCreator(PluginAction.java:372)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetDispose(ActionContributionItem.java:455)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$5(ActionContributionItem.java:431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:836)
+	at org.eclipse.swt.widgets.ToolBar.releaseChildren(ToolBar.java:835)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:839)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:460)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:255)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:918)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.disposeWidget(ElementReferenceRenderer.java:112)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:918)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:880)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:880)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:873)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:880)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:873)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:880)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:880)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:846)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:841)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:825)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1976)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1598)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$16(WorkbenchWindow.java:1540)
+	at org.eclipse.ui.internal.WorkbenchWindow$11.run(WorkbenchWindow.java:1626)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1623)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1188)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1170)
+	at org.eclipse.ui.internal.Workbench.access$22(Workbench.java:1112)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1453)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1450)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1423)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1594)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$16(WorkbenchWindow.java:1540)
+	at org.eclipse.ui.internal.WorkbenchWindow$11.run(WorkbenchWindow.java:1626)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1623)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1637)
+	at org.eclipse.ui.internal.WorkbenchWindow$6.close(WorkbenchWindow.java:524)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer$7.shellClosed(WBWRenderer.java:629)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:99)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:315)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1728)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4793)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5102)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2547)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4889)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5102)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2547)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4889)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5102)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2552)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3814)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)

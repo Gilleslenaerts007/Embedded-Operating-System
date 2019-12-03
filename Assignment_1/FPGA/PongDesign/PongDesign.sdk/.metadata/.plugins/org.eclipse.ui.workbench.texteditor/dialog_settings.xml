@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="game-&gt;colourArray" key="selection"/>
+		<item value="static void" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="colourArray"/>
-			<item value="intensity"/>
-			<item value="select"/>
-			<item value="tickFlagController2"/>
-			<item value="tickFlagGame"/>
-			<item value="scoreFlag"/>
-			<item value="BalkHit"/>
-			<item value="XBalkRechts"/>
+			<item value="static void"/>
+			<item value="xtask"/>
+			<item value="task"/>
+			<item value="TIMER_CHECK_THRESHOLD"/>
+			<item value="DELAY_50_MILISECOND"/>
+			<item value="TIMER_ID"/>
+			<item value="COLOUR_INTENSITY"/>
+			<item value="selectColour"/>
 		</list>
 		<list key="replacehistory">
+			<item value="game-&gt;COLOUR_INTENSITY"/>
+			<item value="game-&gt;selectColour"/>
 			<item value="game-&gt;colourArray"/>
 			<item value="game-&gt;tickFlagController2"/>
 			<item value="game-&gt;tickFlagGame"/>
 			<item value="game-&gt;scoreFlag"/>
 			<item value="game-&gt;BalkHit"/>
 			<item value="game-&gt;XBalkRechts"/>
-			<item value="game-&gt;XBalkLinks"/>
-			<item value="game-&gt;BallMoveY"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="392" key="DIALOG_HEIGHT"/>
-		<item value="801" key="DIALOG_X_ORIGIN"/>
-		<item value="221" key="DIALOG_Y_ORIGIN"/>
+		<item value="1071" key="DIALOG_X_ORIGIN"/>
+		<item value="196" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

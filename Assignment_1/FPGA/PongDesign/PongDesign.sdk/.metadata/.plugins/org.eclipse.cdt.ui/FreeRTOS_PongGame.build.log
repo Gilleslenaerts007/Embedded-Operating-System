@@ -1,38 +1,8 @@
-23:34:21 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+23:41:17 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/freertos_hello_world.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
-../src/freertos_hello_world.c: In function 'gamePongTask':
-../src/freertos_hello_world.c:204:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
-    getPlayer1Move(&movePlayer1, game);
-                   ^~~~~~~~~~~~
-In file included from ../src/freertos_hello_world.c:37:
-../src/PongHead.h:108:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
- void getPlayer1Move(u32* Data, gameData* game);
-                     ~~~~~^~~~
-../src/freertos_hello_world.c:205:19: warning: passing argument 1 of 'getPlayer2Move' from incompatible pointer type [-Wincompatible-pointer-types]
-    getPlayer2Move(&movePlayer2, game);
-                   ^~~~~~~~~~~~
-In file included from ../src/freertos_hello_world.c:37:
-../src/PongHead.h:117:27: note: expected 'char *' but argument is of type 'int *'
- void getPlayer2Move(char* Button, gameData* game);
-                     ~~~~~~^~~~~~
-'Finished building: ../src/freertos_hello_world.c'
-' '
-'Building target: FreeRTOS_PongGame.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
-'Finished building target: FreeRTOS_PongGame.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 107492	   3392	  89696	 200580	  30f84	FreeRTOS_PongGame.elf
-'Finished building: FreeRTOS_PongGame.elf.size'
-' '
+make: Nothing to be done for 'main-build'.
 
-23:34:22 Build Finished (took 759ms)
+23:41:17 Build Finished (took 198ms)
 

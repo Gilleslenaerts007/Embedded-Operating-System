@@ -33049,3 +33049,145 @@ con
 ----------------End of Script----------------
 
 23:28:18 INFO  : Launch script is exported to file 'C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertos_ponggame.elf_on_local.tcl'
+23:39:49 INFO  : Disconnected from the channel tcfchan#22.
+23:39:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:51 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+23:39:51 INFO  : 'jtag frequency' command is executed.
+23:39:51 INFO  : Sourcing of 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:39:51 INFO  : Context for 'APU' is selected.
+23:39:51 INFO  : System reset is completed.
+23:39:54 INFO  : 'after 3000' command is executed.
+23:39:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+23:39:55 INFO  : FPGA configured successfully with bitstream "C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:39:55 INFO  : Context for 'APU' is selected.
+23:39:57 INFO  : Hardware design information is loaded from 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:39:57 INFO  : 'configparams force-mem-access 1' command is executed.
+23:39:57 INFO  : Context for 'APU' is selected.
+23:39:57 INFO  : 'ps7_init' command is executed.
+23:39:57 INFO  : 'ps7_post_config' command is executed.
+23:39:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:57 INFO  : The application 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:39:57 INFO  : 'configparams force-mem-access 0' command is executed.
+23:39:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:39:57 INFO  : Memory regions updated for context APU
+23:39:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:57 INFO  : 'con' command is executed.
+23:39:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+23:39:57 INFO  : Launch script is exported to file 'C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertos_ponggame.elf_on_local.tcl'
+23:40:30 INFO  : Disconnected from the channel tcfchan#23.
+23:40:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:31 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+23:40:31 INFO  : 'jtag frequency' command is executed.
+23:40:31 INFO  : Sourcing of 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:40:31 INFO  : Context for 'APU' is selected.
+23:40:31 INFO  : System reset is completed.
+23:40:34 INFO  : 'after 3000' command is executed.
+23:40:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+23:40:35 INFO  : FPGA configured successfully with bitstream "C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:40:35 INFO  : Context for 'APU' is selected.
+23:40:37 INFO  : Hardware design information is loaded from 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:40:37 INFO  : 'configparams force-mem-access 1' command is executed.
+23:40:37 INFO  : Context for 'APU' is selected.
+23:40:37 INFO  : 'ps7_init' command is executed.
+23:40:37 INFO  : 'ps7_post_config' command is executed.
+23:40:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:38 INFO  : The application 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:40:38 INFO  : 'configparams force-mem-access 0' command is executed.
+23:40:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:40:38 INFO  : Memory regions updated for context APU
+23:40:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:38 INFO  : 'con' command is executed.
+23:40:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+23:40:38 INFO  : Launch script is exported to file 'C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertos_ponggame.elf_on_local.tcl'
+23:41:17 INFO  : Disconnected from the channel tcfchan#24.
+23:41:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:41:19 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+23:41:19 INFO  : 'jtag frequency' command is executed.
+23:41:19 INFO  : Sourcing of 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:41:19 INFO  : Context for 'APU' is selected.
+23:41:19 INFO  : System reset is completed.
+23:41:22 INFO  : 'after 3000' command is executed.
+23:41:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+23:41:23 INFO  : FPGA configured successfully with bitstream "C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:41:23 INFO  : Context for 'APU' is selected.
+23:41:25 INFO  : Hardware design information is loaded from 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:41:25 INFO  : 'configparams force-mem-access 1' command is executed.
+23:41:25 INFO  : Context for 'APU' is selected.
+23:41:25 INFO  : 'ps7_init' command is executed.
+23:41:25 INFO  : 'ps7_post_config' command is executed.
+23:41:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:41:26 INFO  : The application 'C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:41:26 INFO  : 'configparams force-mem-access 0' command is executed.
+23:41:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/FreeRTOS_PongGame/Debug/FreeRTOS_PongGame.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:41:26 INFO  : Memory regions updated for context APU
+23:41:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:41:26 INFO  : 'con' command is executed.
+23:41:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+23:41:26 INFO  : Launch script is exported to file 'C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertos_ponggame.elf_on_local.tcl'
+23:57:11 INFO  : Disconnected from the channel tcfchan#25.

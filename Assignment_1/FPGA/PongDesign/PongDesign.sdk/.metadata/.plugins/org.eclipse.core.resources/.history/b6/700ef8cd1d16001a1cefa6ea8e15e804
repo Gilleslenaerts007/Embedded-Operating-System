@@ -60,7 +60,7 @@ static void getPlayer1Input( void *pvParameters );
 static void getPlayer2Input( void *pvParameters );
 static void gamePongTask( void *pvParameters );
 static void vTimerCallback(TimerHandle_t pxTimer);
-static void cleanup(void);
+
 
 int main( void )
 {
@@ -213,8 +213,9 @@ static void gamePongTask( void *pvParameters )
 			updateGame(game);
 			tickFlagGame = 0;
 		}
+
+
 	}
-	free(game);
 }
 
 /*-----------------------------------------------------------*/
@@ -237,15 +238,4 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 	}
 }
 
-/*-----------------------------------------------------------*/
-static void cleanup(void)
-{
-
-	vTaskDelete(xgetPlayer1Input);
-	vTaskDelete(xgetPlayer2Input);
-	vTaskDelete(xgamePongTask);
-	vTaskDelete(xprintDebugInfo);
-
-	xTimerDelete(xTimerTickRate, 0);
-}
 
