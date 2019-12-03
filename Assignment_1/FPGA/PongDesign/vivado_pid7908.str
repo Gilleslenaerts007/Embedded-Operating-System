@@ -1,0 +1,172 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 7908
+License: Customer
+
+Current time: 	Tue Dec 03 21:15:56 CET 2019
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 86 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	KoffieJoe
+User home directory: C:/Users/KoffieJoe
+User working directory: C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign
+User country: 	BE
+User language: 	nl
+User locale: 	nl_BE
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/KoffieJoe/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/KoffieJoe/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/KoffieJoe/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/vivado.log
+Vivado journal file location: 	C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/vivado.jou
+Engine tmp dir: 	C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/.Xil/Vivado-7908-DESKTOP-FPLKD6R
+
+Xilinx Environment Variables
+----------------------------
+TWINCATSDK: C:\TwinCAT\3.1\SDK\
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 612 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\repos\Embedded-Operating-System\Assignment_1\FPGA\PongDesign\PongDesign.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 74 MB (+74656kb) [00:00:12]
+// [Engine Memory]: 640 MB (+519547kb) [00:00:12]
+// [GUI Memory]: 106 MB (+30174kb) [00:00:12]
+// [GUI Memory]: 115 MB (+3893kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  3199 ms.
+// Tcl Message: open_project C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/repos/Embedded-Operating-System/Assignment_1/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 61 MB. Current time: 12/3/19, 9:16:02 PM CET
+// [Engine Memory]: 674 MB (+1824kb) [00:00:14]
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 690.020 ; gain = 71.012 
+// Project name: PongDesign; location: C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign; part: xc7z007sclg225-1
+// [Engine Memory]: 820 MB (+117793kb) [00:00:15]
+dismissDialog("Open Project"); // by (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ae (cl)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (cl): Launch SDK: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (cl)
+// Tcl Message: launch_sdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// Elapsed time: 1280 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ae (cl)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (cl): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (cl)
+// Tcl Message: launch_sdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1156 ms. Increasing delay to 3468 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 62 MB. Current time: 12/3/19, 9:46:04 PM CET
+// Elapsed time: 2250 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ae (cl)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (cl): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (cl)
+// Tcl Message: launch_sdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk -hwspec C:/repos/Embedded-Operating-System/Assignment_1/FPGA/PongDesign/PongDesign.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 53 MB. Current time: 12/3/19, 10:16:04 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 52 MB. Current time: 12/3/19, 10:46:04 PM CET

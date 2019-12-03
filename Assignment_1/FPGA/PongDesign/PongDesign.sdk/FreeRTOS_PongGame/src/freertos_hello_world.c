@@ -39,8 +39,7 @@
 #define TIMER_ID	1
 #define DELAY_50_MILISECOND		50UL
 #define TIMER_CHECK_THRESHOLD	9
-#define COLOURARRAYWIDTH 8
-#define COLOURARRAYHEIGHT 8
+
 
 /*-----------------------------------------------------------*/
 
@@ -86,25 +85,23 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 
 int main( void )
 {
-	pixelColour colourArray[8][8];
+
 	startGPIO();
-	startPositions();
-	updateGame();
 
 	xil_printf( "Starting NeoPixel 8x8 Matrix: Pong Game by Gilles, Dennis and Jonas.\r\n" );
 
 	xTaskCreate( 	getPlayer1Input, 					/* The function that implements the task. */
-					( const char * ) "Player1Input", 		/* Text name for the task, provided to assist debugging only. */
-					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
-					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-					&xgetPlayer1Input );
+					( const char * ) "Player1Input", 	/* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 			/* The stack allocated to the task. */
+					NULL, 								/* The task parameter is not used, so set to NULL. */
+					tskIDLE_PRIORITY,					/* The task runs at the idle priority. */
+					&xgetPlayer1Input );				/* Pointer to task instance*/
 
-	xTaskCreate( 	getPlayer2Input, 					/* The function that implements the task. */
-					( const char * ) "Player2Input", 		/* Text name for the task, provided to assist debugging only. */
-					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
-					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
+	xTaskCreate( 	getPlayer2Input,
+					( const char * ) "Player2Input",
+					configMINIMAL_STACK_SIZE,
+					NULL,
+					tskIDLE_PRIORITY,
 					&xgetPlayer2Input );
 
 	xTaskCreate( 	gamePongTask,
@@ -205,33 +202,31 @@ static void getPlayer2Input( void *pvParameters )
 static void gamePongTask( void *pvParameters )
 {
 
-	//pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+	gameData *game;   //well this works because it just writes to NULL and there is nothing....
 	int movePlayer1, movePlayer2;
-	xQueueSend( xQueueDebugInfo, &colourArray, 0UL );
+
+	startPositions(game);
+	updateGame(game);
+
 	for( ;; )
 	{
 
 		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueuePlayer1,				/* The queue being read. */
-						&movePlayer1,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
-
-		xQueueReceive( 	xQueuePlayer2,				/* The queue being read. */
-						&movePlayer2,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
+		xQueueReceive( 	xQueuePlayer1, &movePlayer1, portMAX_DELAY );
+		xQueueReceive( 	xQueuePlayer2, &movePlayer2, portMAX_DELAY );
 
 		if(tickFlagController2)
 		{
-			getPlayer1Move(&movePlayer1);
-			getPlayer2Move(&movePlayer2);
+			getPlayer1Move(&movePlayer1, game);
+			getPlayer2Move(&movePlayer2, game);
 			tickFlagController2 = 0;
 		}
-		drawGame();
-		xQueueSend( xQueueDebugInfo, &colourArray, portMAX_DELAY);
-		clearArray();
+		drawGame(game);
+		xQueueSend( xQueueDebugInfo, game->colourArray, portMAX_DELAY);
+		clearArray(game);
 		if(tickFlagGame)
 		{
-			updateGame();
+			updateGame(game);
 			tickFlagGame = 0;
 		}
 
