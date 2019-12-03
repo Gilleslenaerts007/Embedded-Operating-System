@@ -226,7 +226,7 @@ static void gamePongTask( void *pvParameters )
 			getPlayer2Move(&movePlayer2);
 			tickFlagController2 = 0;
 		}
-		drawGame();
+		drawGame(data);
 		xQueueSend( xQueueDebugInfo, &colourArray, portMAX_DELAY);
 		clearArray();
 		if(tickFlagGame)

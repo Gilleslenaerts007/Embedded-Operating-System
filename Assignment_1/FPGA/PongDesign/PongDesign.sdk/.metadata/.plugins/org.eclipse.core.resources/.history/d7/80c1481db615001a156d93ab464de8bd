@@ -36,10 +36,12 @@ u32 Input_Pin; /* Switch button */
 #define false 0
 
 /************************** Player1 Definitions *****************************/
+int distance;
 int scorePlayer1;
 
 /************************** Player2 Definitions *****************************/
 int scorePlayer2;
+char inputbutton;
 
 /************************** Pong Variable Definitions *****************************/
 int Speed;

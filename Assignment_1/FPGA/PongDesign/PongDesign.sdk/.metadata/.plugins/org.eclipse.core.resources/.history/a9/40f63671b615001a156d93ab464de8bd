@@ -206,6 +206,7 @@ static void gamePongTask( void *pvParameters )
 {
 
 	//pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+	gameData data;
 	int movePlayer1, movePlayer2;
 	xQueueSend( xQueueDebugInfo, &colourArray, 0UL );
 	for( ;; )
@@ -226,7 +227,7 @@ static void gamePongTask( void *pvParameters )
 			getPlayer2Move(&movePlayer2);
 			tickFlagController2 = 0;
 		}
-		drawGame();
+		drawGame(data);
 		xQueueSend( xQueueDebugInfo, &colourArray, portMAX_DELAY);
 		clearArray();
 		if(tickFlagGame)

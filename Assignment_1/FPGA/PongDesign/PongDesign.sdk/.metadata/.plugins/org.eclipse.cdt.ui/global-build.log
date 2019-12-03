@@ -1860,3 +1860,410 @@ arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
  107580	   3392	  89776	 200748	  3102c	FreeRTOS_PongGame.elf
 'Finished building: FreeRTOS_PongGame.elf.size'
 ' '
+10:50:11 **** Clean-only build of project FreeRTOS_PongGame_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s clean 
+rm: kan lstat `*.o' niet uitvoeren: Invalid argument
+make[1]: *** [Makefile:26: clean] Error 1
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s clean 
+make: *** [Makefile:33: ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src/make.clean] Error 2
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s clean 
+rm: kan lstat `*.o' niet uitvoeren: Invalid argument
+make[1]: *** [Makefile:26: clean] Error 1
+make: *** [Makefile:33: ps7_cortexa9_0/libsrc/WS2812_v1_0/src/make.clean] Error 2
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s clean 
+make: Target 'clean' not remade because of errors.
+10:50:13 **** Clean-only build of configuration Debug for project FreeRTOS_PongGame ****
+make clean 
+rm -rf  ./src/PongFunc.o ./src/freertos_hello_world.o  ./src/PongFunc.d ./src/freertos_hello_world.d  FreeRTOS_PongGame.elf.size  FreeRTOS_PongGame.elf
+' '
+10:52:12 **** Build of project FreeRTOS_PongGame_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"include"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/WS2812_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Compiling FreeRTOS"
+arm-none-eabi-ar: creating ../../../lib/libfreertos.a
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Hcsr04_Sensor_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Hcsr04_Sensor..."
+Hcsr04_Sensor_selftest.c: In function 'HCSR04_SENSOR_Reg_SelfTest':
+Hcsr04_Sensor_selftest.c:52:62: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( HCSR04_SENSOR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                              ^~
+Hcsr04_Sensor_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/WS2812_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/WS2812_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling WS2812..."
+WS2812_selftest.c: In function 'WS2812_Reg_SelfTest':
+WS2812_selftest.c:52:55: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( WS2812_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+WS2812_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+10:52:53 **** Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:12,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:347:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:12,
+                 from ../src/PongFunc.c:1:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:366:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:347:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:101:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107580	   3392	  89776	 200748	  3102c	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+11:02:58 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:101:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107660	   3392	  89776	 200828	  3107c	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+11:03:45 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:101:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107788	   3392	  89776	 200956	  310fc	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
+11:19:26 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PongFunc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PongFunc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PongFunc.d" -MT"src/PongFunc.o" -o "src/PongFunc.o" "../src/PongFunc.c"
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:12,
+                 from ../src/PongFunc.c:1:
+../src/PongFunc.c: In function 'startGPIO':
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:347:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/WS2812.h:8,
+                 from ../src/PongHead.h:12,
+                 from ../src/PongFunc.c:1:
+../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/PongFunc.c:366:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/PongFunc.c:347:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+'Finished building: ../src/PongFunc.c'
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:209:2: error: unknown type name 'gameData'
+  gameData data;
+  ^~~~~~~~
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+11:19:32 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:209:2: error: unknown type name 'gameData'
+  gameData data;
+  ^~~~~~~~
+../src/freertos_hello_world.c:226:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+11:19:53 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:225:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+../src/freertos_hello_world.c:229:12: error: 'data' undeclared (first use in this function); did you mean 'atan'?
+   drawGame(data);
+            ^~~~
+            atan
+../src/freertos_hello_world.c:229:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/freertos_hello_world.o] Error 1
+11:20:02 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
+  pixelColour colourArray[8][8];
+              ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'gamePongTask':
+../src/freertos_hello_world.c:225:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
+    getPlayer1Move(&movePlayer1);
+                   ^~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:37:
+../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
+ void getPlayer1Move(u32* Data);
+                     ~~~~~^~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_PongGame.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_PongGame.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107724	   3392	  89760	 200876	  310ac	FreeRTOS_PongGame.elf
+'Finished building: FreeRTOS_PongGame.elf.size'
+' '
