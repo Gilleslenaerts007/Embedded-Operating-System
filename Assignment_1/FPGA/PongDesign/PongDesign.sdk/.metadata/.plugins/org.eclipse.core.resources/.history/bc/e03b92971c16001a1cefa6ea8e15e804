@@ -36,13 +36,15 @@
 /*user includes */
 #include "PongHead.h"
 
-/* Timer defines */
 #define TIMER_ID	1
 #define DELAY_50_MILISECOND		50UL
-#define TICKFLAGGAMEVAL 5    // * 50ms
-#define TICKFLAGCONTROLLER2 2 // * 50ms
+#define TIMER_CHECK_THRESHOLD	9
 
-/* handles */
+
+/*-----------------------------------------------------------*/
+
+/* The queue used by the Tx and Rx tasks, as described at the top of this
+file. */
 static TaskHandle_t xgetPlayer1Input;
 static TaskHandle_t xgetPlayer2Input;
 static TaskHandle_t xgamePongTask;
@@ -54,13 +56,32 @@ static QueueHandle_t xQueueDebugInfo = NULL;
 
 static TimerHandle_t xTimerTickRate = NULL;
 
-/* Function definitions */
 static void printDebugInfo (void *pvParameters);
 static void getPlayer1Input( void *pvParameters );
 static void getPlayer2Input( void *pvParameters );
 static void gamePongTask( void *pvParameters );
-static void vTimerCallback(TimerHandle_t pxTimer);
 
+#define TICKFLAGGAMEVAL 5    // * 50ms
+#define TICKFLAGCONTROLLER2 2 // * 50ms
+
+static void vTimerCallback( TimerHandle_t pxTimer )
+{
+	static unsigned long ticks;    //248 days before overflow should be enough :p
+	static int prevtickFlagGame;
+	static int prevtickController2;
+
+	ticks ++;
+	if(ticks - prevtickFlagGame >= TICKFLAGGAMEVAL)
+	{
+		prevtickFlagGame = ticks;
+		tickFlagGame = 1;
+	}
+	if(ticks - prevtickController2 >= TICKFLAGCONTROLLER2)
+	{
+		prevtickController2 = ticks;
+		tickFlagController2 = 1;
+	}
+}
 
 int main( void )
 {
@@ -218,24 +239,5 @@ static void gamePongTask( void *pvParameters )
 	}
 }
 
-/*-----------------------------------------------------------*/
-static void vTimerCallback( TimerHandle_t pxTimer )
-{
-	static unsigned long ticks;    //248 days before overflow should be enough :p
-	static int prevtickFlagGame;
-	static int prevtickController2;
-
-	ticks ++;
-	if(ticks - prevtickFlagGame >= TICKFLAGGAMEVAL)
-	{
-		prevtickFlagGame = ticks;
-		tickFlagGame = 1;
-	}
-	if(ticks - prevtickController2 >= TICKFLAGCONTROLLER2)
-	{
-		prevtickController2 = ticks;
-		tickFlagController2 = 1;
-	}
-}
 
 

@@ -50,6 +50,7 @@ void getPlayer1Move(u32* Data, gameData* game)
 {
 	static int calculatedDistance = 0;
 	int distance =  *Data;
+	//printf("%d cm\n\r", distance);
 
 	switch(distance)
 	{
@@ -91,6 +92,7 @@ void getPlayer2Move(char* Button, gameData* game)
 {
 	char inputbutton = *Button;
 
+		//printf("inputbutton=%d \n\r", inputbutton);
 		if (!(inputbutton & 0b01) && game->YBalkRechts < 6) // DENNIS BUTTONS
 		{
 			game->YBalkRechts++;
@@ -99,6 +101,9 @@ void getPlayer2Move(char* Button, gameData* game)
 		{
 			game->YBalkRechts--;
 		}
+
+
+
 }
 
 void drawGame(gameData* game)
