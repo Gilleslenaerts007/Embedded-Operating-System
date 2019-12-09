@@ -1,35 +1,8 @@
-11:20:02 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+23:41:17 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/freertos_hello_world.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
-../src/freertos_hello_world.c: In function 'main':
-../src/freertos_hello_world.c:89:14: warning: unused variable 'colourArray' [-Wunused-variable]
-  pixelColour colourArray[8][8];
-              ^~~~~~~~~~~
-../src/freertos_hello_world.c: In function 'gamePongTask':
-../src/freertos_hello_world.c:225:19: warning: passing argument 1 of 'getPlayer1Move' from incompatible pointer type [-Wincompatible-pointer-types]
-    getPlayer1Move(&movePlayer1);
-                   ^~~~~~~~~~~~
-In file included from ../src/freertos_hello_world.c:37:
-../src/PongHead.h:99:26: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'int *'
- void getPlayer1Move(u32* Data);
-                     ~~~~~^~~~
-'Finished building: ../src/freertos_hello_world.c'
-' '
-'Building target: FreeRTOS_PongGame.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_PongGame_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_PongGame.elf"  ./src/PongFunc.o ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
-'Finished building target: FreeRTOS_PongGame.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size FreeRTOS_PongGame.elf  |tee "FreeRTOS_PongGame.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 107724	   3392	  89760	 200876	  310ac	FreeRTOS_PongGame.elf
-'Finished building: FreeRTOS_PongGame.elf.size'
-' '
+make: Nothing to be done for 'main-build'.
 
-11:20:04 Build Finished (took 1s.192ms)
+23:41:17 Build Finished (took 198ms)
 
