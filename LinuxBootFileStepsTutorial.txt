@@ -1,0 +1,46 @@
+Jtag in 'J'
+Flash fallback image to flash Minized
+Copy "uEnv.txt, uImage, minized-zynq7.dtb" to usb
+check "uEnv.txt" bootargs => earlyprintk console=ttyPS0,115200 root=/dev/mmcblk1p2 rw rootwait
+
+Jtag in 'F'
+reboot MiniZed
+Login root/root
+mkdir /mnt/thumb
+mkdir /mnt/emmc
+mount /dev/sda1 /mnt/thumb/
+mount /dev/mmcblk1p1 /mnt/emmc/
+cp /mnt/thumb/uEnv.txt /mnt/emmc/
+cp /mnt/thumb/uImage /mnt/emmc/
+cp /mnt/thumb/minized-zynq7.dtb /mnt/emmc/
+umount /mnt/thumb
+umount /mnt/emmc
+shutdown -r now
+
+LINUX
+
+copy files "core-image-minimal-dev-minized-zynq7.tar.gz" & "modules-minized-zynq7.tgz" so can be acces in Linux
+in linux format usb "mkfs.ext4 (location of usb path in linux)"
+sudo mount usb (Pi automatic mounting)
+sudo tar xzpf core-image-minimal-dev-minized-zynq7.tar.gz -C /mnt/thumb/
+sudo tar xzpf modules-minized-zynq7.tgz -C /mnt/thumb/
+sudo umount /mnt/thumb
+
+SDK
+Create Yoco boot file with ADD partition => "app.elf", "wrapper.bit", "u-boot.elf"
+Jtag in J
+flash minized with Yoco boot
+
+Jtag 'F'
+cancel autoboot
+run loadbootenv
+run importbootenv
+setenv bootargs earlyprintk console=ttyPS0,115200 root=/dev/sd1 rw rootwait
+run bootkernel
+
+commands:
+cat /proc/cpuinfo
+uname -a
+nano helloworld.c
+gcc hello.c hello
+./hello
