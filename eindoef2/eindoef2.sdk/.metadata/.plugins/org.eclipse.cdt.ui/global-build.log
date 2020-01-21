@@ -1,0 +1,2194 @@
+14:34:32 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:35:17 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvPSButtonTask':
+../src/freertos_hello_world.c:269:31: warning: passing argument 1 of 'XGpioPs_ReadPin' from incompatible pointer type [-Wincompatible-pointer-types]
+   psbutton = (XGpioPs_ReadPin(&Gpio, Input_Pin));
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:241:36: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ u32 XGpioPs_ReadPin(const XGpioPs *InstancePtr, u32 Pin);
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:309:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:338:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:343:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:354:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:354:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:357:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:357:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:362:29: warning: passing argument 1 of 'XGpioPs_SetDirectionPin' from incompatible pointer type [-Wincompatible-pointer-types]
+     XGpioPs_SetDirectionPin(&Gpio, Output_Pin, 1);
+                             ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:243:45: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_SetDirectionPin(const XGpioPs *InstancePtr, u32 Pin, u32 Direction);
+                              ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:363:29: warning: passing argument 1 of 'XGpioPs_SetOutputEnablePin' from incompatible pointer type [-Wincompatible-pointer-types]
+  XGpioPs_SetOutputEnablePin(&Gpio, Output_Pin, 1);
+                             ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:245:48: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_SetOutputEnablePin(const XGpioPs *InstancePtr, u32 Pin, u32 OpEnable);
+                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:366:26: warning: passing argument 1 of 'XGpioPs_SetDirectionPin' from incompatible pointer type [-Wincompatible-pointer-types]
+  XGpioPs_SetDirectionPin(&Gpio,Input_Pin,0);
+                          ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:243:45: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_SetDirectionPin(const XGpioPs *InstancePtr, u32 Pin, u32 Direction);
+                              ~~~~~~~~~~~~~~~^~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159404	   3416	  96240	 259060	  3f3f4	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:36:05 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:37:06 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvPSButtonTask':
+../src/freertos_hello_world.c:269:31: warning: passing argument 1 of 'XGpioPs_ReadPin' from incompatible pointer type [-Wincompatible-pointer-types]
+   psbutton = (XGpioPs_ReadPin(&Gpio, Input_Pin));
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:241:36: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ u32 XGpioPs_ReadPin(const XGpioPs *InstancePtr, u32 Pin);
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:309:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:338:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:343:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:354:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:354:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:357:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:357:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159404	   3416	  96240	 259060	  3f3f4	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:37:36 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvPSButtonTask':
+../src/freertos_hello_world.c:269:31: warning: passing argument 1 of 'XGpioPs_ReadPin' from incompatible pointer type [-Wincompatible-pointer-types]
+   psbutton = (XGpioPs_ReadPin(&Gpio, Input_Pin));
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:241:36: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ u32 XGpioPs_ReadPin(const XGpioPs *InstancePtr, u32 Pin);
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:309:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:338:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:343:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:354:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:354:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:357:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:357:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159404	   3416	  96240	 259060	  3f3f4	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:38:46 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvPSButtonTask':
+../src/freertos_hello_world.c:269:31: warning: passing argument 1 of 'XGpioPs_ReadPin' from incompatible pointer type [-Wincompatible-pointer-types]
+   psbutton = (XGpioPs_ReadPin(&Gpio, Input_Pin));
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:241:36: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ u32 XGpioPs_ReadPin(const XGpioPs *InstancePtr, u32 Pin);
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:309:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:338:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:343:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:354:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:354:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:357:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:357:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159404	   3416	  96240	 259060	  3f3f4	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:39:24 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:309:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:338:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:343:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:354:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:354:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:355:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:330:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:357:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:357:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159404	   3416	  96240	 259060	  3f3f4	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:41:58 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:313:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:339:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:331:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:331:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:355:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:355:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:356:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:331:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:358:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:358:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159412	   3416	  96240	 259068	  3f3fc	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:42:33 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:310:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:313:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:339:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:331:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:331:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:355:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:355:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:356:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:331:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:358:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:358:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159412	   3416	  96240	 259068	  3f3fc	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:43:49 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:243:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:311:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:312:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:313:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:314:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:340:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:332:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:345:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:332:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:356:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:356:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:357:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:332:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:359:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:359:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159412	   3416	  96240	 259068	  3f3fc	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:44:56 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:46:50 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:244:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:244:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:244:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:315:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:316:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:317:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:318:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:349:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:360:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:360:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:361:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:363:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:363:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159476	   3416	  96240	 259132	  3f43c	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:48:13 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:248:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:315:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:316:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:317:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:318:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:349:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:360:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:360:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:361:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:363:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:363:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159476	   3416	  96240	 259132	  3f43c	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:50:42 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:243:11: warning: implicit declaration of function 'XUartLite_RecvByte'; did you mean 'XUartPs_RecvByte'? [-Wimplicit-function-declaration]
+   input = XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);
+           ^~~~~~~~~~~~~~~~~~
+           XUartPs_RecvByte
+../src/freertos_hello_world.c:243:30: error: 'XPAR_UARTLITE_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_XUARTPS_0_BASEADDR'?
+   input = XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+                              XPAR_XUARTPS_0_BASEADDR
+../src/freertos_hello_world.c:243:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_hello_world.c:248:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:315:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:316:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:317:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:318:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:349:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:360:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:360:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:361:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:363:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:363:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [src/subdir.mk:32: src/freertos_hello_world.o] Error 1
+14:52:28 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:248:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:315:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:316:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:317:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:318:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:349:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:360:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:360:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:361:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:363:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:363:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159476	   3416	  96240	 259132	  3f43c	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+14:57:40 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:248:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:315:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:316:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:317:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:318:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:349:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:360:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:360:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:361:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:363:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:363:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159476	   3416	  96240	 259132	  3f43c	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+15:02:26 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:03:01 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:05:47 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+D:\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:241:11: warning: implicit declaration of function 'getchar' [-Wimplicit-function-declaration]
+   input = getchar();
+           ^~~~~~~
+../src/freertos_hello_world.c:241:11: note: 'getchar' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+../src/freertos_hello_world.c:248:13: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+       ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                     ~~~~~~^~~~~~
+../src/freertos_hello_world.c:248:58: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+   if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+                                                    ~~~~~~^~~~~~
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+../src/freertos_hello_world.c: In function 'prvRxTask':
+../src/freertos_hello_world.c:315:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:316:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:317:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/freertos_hello_world.c:318:31: warning: passing argument 1 of 'XGpioPs_WritePin' from incompatible pointer type [-Wincompatible-pointer-types]
+      case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+                               ^~~~~
+In file included from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:242:38: note: expected 'const XGpioPs *' {aka 'const struct <anonymous> *'} but argument is of type 'XGpio *' {aka 'struct <anonymous> *'}
+ void XGpioPs_WritePin(const XGpioPs *InstancePtr, u32 Pin, u32 Data);
+                       ~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:344:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:349:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:360:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:360:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:361:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:336:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:363:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:363:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159980	   3416	  96240	 259636	  3f634	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+15:06:09 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:06:37 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:12:40 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

@@ -65,20 +65,20 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 3
   create_project -in_memory -part xc7z007sclg225-1
   set_property board_part em.avnet.com:minized:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/EOS/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.cache/wt [current_project]
-  set_property parent.project_path C:/EOS/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.xpr [current_project]
-  set_property ip_output_repo C:/EOS/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.cache/wt [current_project]
+  set_property parent.project_path D:/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.xpr [current_project]
+  set_property ip_output_repo D:/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/EOS/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet D:/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/EOS/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/Embedded-Operating-System/RTOsAnalyzer/RTOsAnalyzer.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z007sclg225-1
