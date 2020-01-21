@@ -77,7 +77,7 @@ void startGPIO();
 
 XGpioPs GpioPS;
 u32 Input_Pin; /* Switch button */
-u32 Output_Pin; /* LED button */
+u32 Output_PinG, Output_PinR; /* LED button */
 
 XGpio Gpio;
 #define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
@@ -233,27 +233,22 @@ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 
 traceString cteq_event_string_TX = xTraceRegisterString("'A & B' input Task");
 char input = 'b';
-char oldinput = 0x00;
 
 	for( ;; )
 	{
 
 		input = getchar();
-
 		//check for new input if yes change old.
-		if (input != oldinput)
-		{
-			oldinput = input;
-		}
-		if (input == 'A' | input == 'a' | input == 'B' | input == 'b')
+		if ( (input == 'A') | (input == 'a') | (input == 'B') | (input == 'b') )
 		{
 			xQueueSend( xQueue,			/* The queue being written to. */
 						&input, /* The address of the data being sent. */
 						0UL );			/* The block time. */
 			vTracePrint(cteq_event_string_TX, "In TX Task...\r\n");
-			xil_printf( "got input : %c\r\n", input );
+			xil_printf( "sending input : %c\r\n", input );
 		}
-		else input = oldinput;
+		else input = 0x00;
+
 
 	}
 }
@@ -287,47 +282,74 @@ static void prvRxTask( void *pvParameters )
 {
 char recvCommandInput = 0x00;
 int recvButtonInput = 0;
-char i = 0;
+int i = 0;
+char oldinput = 0x00;
 traceString cteq_event_string_RX = xTraceRegisterString("RX Task");
+
+//Quelay so queue's don't wait on data forever so we Still run code. No blocking for data to arrive..
+TickType_t quelay = pdMS_TO_TICKS( 800UL );
 
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
 		xQueueReceive( 	xQueue,				/* The queue being read. */
 						&recvCommandInput,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
+						quelay );	/* Wait without a timeout for data. */
 		xQueueReceive( 	xQueue2,				/* The queue being read. */
 						&recvButtonInput,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
+						quelay );	/* Wait without a timeout for data. */
+
+		if (recvCommandInput != oldinput)
+		{
+			oldinput = recvCommandInput;
+
+			if (recvCommandInput == 'a' )
+			{
+				vTracePrintF(cteq_event_string_RX, "System is on\r\n");
+				xil_printf("System is on\r\n");
+			}
+			else
+			{
+				xil_printf("system if off \r\n");
+				vTracePrintF(cteq_event_string_RX, "System is off\r\n");
+			}
+		}
+		else recvCommandInput = oldinput;
 
 		if (recvCommandInput == 'a' )
 		{
-			vTracePrintF(cteq_event_string_RX, "System is on\r\n");
 			vTracePrintF(cteq_event_string_RX, "Recieved command: %c In RX Task...\r\n", recvCommandInput);
 			vTracePrintF(cteq_event_string_RX, "Recieved button : %d In RX Task...\r\n", recvButtonInput);
-			xil_printf("System is on\r\n");
 			xil_printf("Recieved command: %c In RX Task...\r\n", recvCommandInput);
 			xil_printf("Recieved button : %d In RX Task...\r\n", recvButtonInput);
 			if (!recvButtonInput)
 			{
+				//xil_printf("I case is: %d", i);
 				switch (i)
 				{
-					case 0: XGpioPs_WritePin(&Gpio, Output_Pin,0b00);
-					case 1: XGpioPs_WritePin(&Gpio, Output_Pin,0b01);
-					case 2: XGpioPs_WritePin(&Gpio, Output_Pin,0b10);
-					case 3: XGpioPs_WritePin(&Gpio, Output_Pin,0b11);
+					case 0: XGpioPs_WritePin(&GpioPS, Output_PinR,0b00);
+							XGpioPs_WritePin(&GpioPS, Output_PinG,0b00);
+							break;
+					case 1: XGpioPs_WritePin(&GpioPS, Output_PinR,0b00);
+							XGpioPs_WritePin(&GpioPS, Output_PinG,0b01);
+							break;
+					case 2: XGpioPs_WritePin(&GpioPS, Output_PinR,0b01);
+							XGpioPs_WritePin(&GpioPS, Output_PinG,0b00);
+							break;
+					case 3: XGpioPs_WritePin(&GpioPS, Output_PinR,0b01);
+							XGpioPs_WritePin(&GpioPS, Output_PinG,0b01);
+							break;
 					default: i = 0;
+							break;
 				}
 
-				if (i>=3) i =0;
+				if (i>=3)
+				{
+					i =0;
+				}
+				else i++;
 			}
 		}
-		else
-		{
-			xil_printf("system if off \r\n");
-			vTracePrintF(cteq_event_string_RX, "System is off\r\n");
-		}
-
 
 	}
 }
@@ -362,15 +384,21 @@ void startGPIO()
 	}
     printf("Starting GPIO PS\n\r");
     Input_Pin = 0;
-    Output_Pin = 52;
+    Output_PinR = 52;
+    Output_PinG = 53;
 
     //Set Led Pin
-    XGpioPs_SetDirectionPin(&GpioPS, Output_Pin, 1);
-	XGpioPs_SetOutputEnablePin(&GpioPS, Output_Pin, 1);
+    XGpioPs_SetDirectionPin(&GpioPS, Output_PinR, 1);
+	XGpioPs_SetOutputEnablePin(&GpioPS, Output_PinR, 1);
+    XGpioPs_SetDirectionPin(&GpioPS, Output_PinG, 1);
+	XGpioPs_SetOutputEnablePin(&GpioPS, Output_PinG, 1);
+
+	//init leds out.
+	XGpioPs_WritePin(&GpioPS, Output_PinR,0b00);
+	XGpioPs_WritePin(&GpioPS, Output_PinG,0b00);
 
 	// Set Input pin
 	XGpioPs_SetDirectionPin(&GpioPS,Input_Pin,0);
-
 
 }
 

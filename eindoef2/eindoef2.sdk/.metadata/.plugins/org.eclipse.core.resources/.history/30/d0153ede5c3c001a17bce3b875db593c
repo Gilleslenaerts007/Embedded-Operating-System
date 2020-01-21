@@ -1,0 +1,382 @@
+/*
+    Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+    Copyright (C) 2012 - 2018 Xilinx, Inc. All Rights Reserved.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of
+    this software and associated documentation files (the "Software"), to deal in
+    the Software without restriction, including without limitation the rights to
+    use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+    the Software, and to permit persons to whom the Software is furnished to do so,
+    subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software. If you wish to use our Amazon
+    FreeRTOS name, please do so in a fair use way that does not cause confusion.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+    FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+    COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+    IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+    http://www.FreeRTOS.org
+    http://aws.amazon.com/freertos
+
+
+    1 tab == 4 spaces!
+*/
+
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+/* Xilinx includes. */
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xuartps_hw.h"
+#include "xgpiops.h"
+#include "xgpio.h"
+
+#define TIMER_ID30	30
+#define TIMER_ID5	5
+#define TIMER_ID2	2
+
+#define DELAY_30_SECONDS	30000UL
+#define DELAY_5_SECONDS	5000UL
+#define DELAY_2_SECONDS		2000UL
+#define DELAY_1_SECOND		1000UL
+#define TIMER_CHECK_THRESHOLD	9
+/*-----------------------------------------------------------*/
+
+/* The Tx and Rx tasks as described at the top of this file. */
+static void prvSerialTask( void *pvParameters );
+static void prvPSButtonTask( void *pvParameters );
+static void prvRxTask( void *pvParameters );
+static void vTimerCallback( TimerHandle_t pxTimer );
+/*-----------------------------------------------------------*/
+
+/* The queue used by the Tx and Rx tasks, as described at the top of this
+file. */
+static TaskHandle_t xSerialTask;
+static TaskHandle_t xPSButtonTask;
+static TaskHandle_t xRxTask;
+
+static QueueHandle_t xQueue = NULL;
+static QueueHandle_t xQueue2 = NULL;
+
+static TimerHandle_t xTimer30 = NULL;
+static TimerHandle_t xTimer5 = NULL;
+static TimerHandle_t xTimer2 = NULL;
+
+
+
+/*User defines */
+void startGPIO();
+
+XGpioPs GpioPS;
+u32 Input_Pin; /* Switch button */
+u32 Output_Pin; /* LED button */
+
+XGpio Gpio;
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+#define LED_DELAY     10000000
+
+#define LEDG_CHANNEL 1
+#define LEDR_CHANNEL 2
+#define LEDG 0b00
+#define LEDR 0b00
+
+static void vTimerCallback( TimerHandle_t pxTimer )
+{
+	long lTimerId;
+	static char toggleflag = 0x01;
+	configASSERT( pxTimer );
+	traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
+
+	if (lTimerId == TIMER_ID2)
+	{
+		traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+		xil_printf("2sec. Timer .. Led Toggle\r\n");
+		if (toggleflag)
+		{
+			XGpio_DiscreteWrite(&Gpio, LEDG_CHANNEL, 0x01);
+			toggleflag = 0x00;
+		}
+		else
+		{
+			XGpio_DiscreteClear(&Gpio, LEDG_CHANNEL, 0x01);
+			toggleflag = 0x01;
+		}
+
+		configASSERT( xTimer2 );
+		xTimerStart( xTimer2, 0 );
+	}
+
+	if (lTimerId == TIMER_ID5) {
+		traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+		xil_printf("5sec. Timer .. Gilles Lenaerts.\r\n");
+	}
+
+	if (lTimerId == TIMER_ID30) {
+		traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+		xil_printf("30sec. Timer .. Ending Program.\r\n");
+		vTaskDelete( prvSerialTask );
+		vTaskDelete( prvPSButtonTask );
+		vTaskDelete( prvRxTask );
+	}
+
+}
+
+
+
+int main( void )
+{
+	vTraceEnable(TRC_START);
+	const TickType_t x2seconds = pdMS_TO_TICKS( DELAY_2_SECONDS );
+	const TickType_t x5seconds = pdMS_TO_TICKS( DELAY_5_SECONDS );
+	const TickType_t x30seconds = pdMS_TO_TICKS( DELAY_30_SECONDS );
+	traceString cteq_event_string = xTraceRegisterString("Main");
+
+	startGPIO();
+	printf( "FreeRTOS\r\n" );
+
+
+	vTracePrint(cteq_event_string, "Hello from FREERTOS example main trace \r\n");
+	/* Create the two tasks.  The Tx task is given a lower priority than the
+	Rx task, so the Rx task will leave the Blocked state and pre-empt the Tx
+	task as soon as the Tx task places an item in the queue. */
+	xTaskCreate( 	prvSerialTask, 					/* The function that implements the task. */
+					( const char * ) "A or B", 		/* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
+					NULL, 						/* The task parameter is not used, so set to NULL. */
+					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
+					&xSerialTask );
+
+	xTaskCreate( prvPSButtonTask,
+				 ( const char * ) "PsButton",
+				 configMINIMAL_STACK_SIZE,
+				 NULL,
+				 tskIDLE_PRIORITY + 1,
+				 &xPSButtonTask );
+	xTaskCreate( prvRxTask,
+				 ( const char * ) "Quehandler",
+				 configMINIMAL_STACK_SIZE,
+				 NULL,
+				 tskIDLE_PRIORITY + 1,
+				 &xRxTask );
+
+	/* Create the queue used by the tasks.  The Rx task has a higher priority
+	than the Tx task, so will preempt the Tx task and remove values from the
+	queue as soon as the Tx task writes to the queue - therefore the queue can
+	never have more than one item in it. */
+	xQueue = xQueueCreate( 	1,						/* There is only one space in the queue. */
+							sizeof( char ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+	xQueue2 = xQueueCreate( 	1,						/* There is only one space in the queue. */
+							sizeof( u32 ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+
+	/* Check the queue was created. */
+	configASSERT( xQueue );
+	configASSERT( xQueue2 );
+
+	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
+	 after 10 seconds and the timer call back would get called. In the timer call back
+	 checks are done to ensure that the tasks have been running properly till then.
+	 The tasks are deleted in the timer call back and a message is printed to convey that
+	 the example has run successfully.
+	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
+	xTimer30 = xTimerCreate( (const char *) "Timer30",
+							x30seconds,
+							pdFALSE,
+							(void *) TIMER_ID30,
+							vTimerCallback);
+	xTimer5 = xTimerCreate( (const char *) "Timer5",
+							x5seconds,
+							pdFALSE,
+							(void *) TIMER_ID5,
+							vTimerCallback);
+	xTimer2 = xTimerCreate( (const char *) "Timer2",
+							x2seconds,
+							pdFALSE,
+							(void *) TIMER_ID2,
+							vTimerCallback);
+	/* Check the timer was created. */
+	configASSERT( xTimer30 );
+	configASSERT( xTimer5 );
+	configASSERT( xTimer2 );
+
+	/* start the timer with a block time of 0 ticks. This means as soon
+	   as the schedule starts the timer will start running and will expire after
+	   10 seconds */
+	xTimerStart( xTimer30, 0 );
+	xTimerStart( xTimer5, 0 );
+	xTimerStart( xTimer2, 0 );
+
+	/* Start the tasks and timer running. */
+	vTaskStartScheduler();
+
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	for( ;; );
+}
+
+
+/*-----------------------------------------------------------*/
+static void prvSerialTask( void *pvParameters )
+{
+const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+
+traceString cteq_event_string_TX = xTraceRegisterString("'A & B' input Task");
+char input = 'b';
+
+	for( ;; )
+	{
+
+		input = getchar();
+		//check for new input if yes change old.
+		if ( (input == 'A') | (input == 'a') | (input == 'B') | (input == 'b') )
+		{
+			xQueueSend( xQueue,			/* The queue being written to. */
+						&input, /* The address of the data being sent. */
+						0UL );			/* The block time. */
+			vTracePrint(cteq_event_string_TX, "In TX Task...\r\n");
+			xil_printf( "sending input : %c\r\n", input );
+		}
+		else input = 0x00;
+
+
+	}
+}
+
+/*-----------------------------------------------------------*/
+static void prvPSButtonTask( void *pvParameters )
+{
+const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+
+traceString cteq_event_string_TX = xTraceRegisterString("Button Task");
+int psbutton = 0x00;
+
+	for( ;; )
+	{
+		/* Delay for 1 second. */
+		vTaskDelay( x1second );
+
+		psbutton = (XGpioPs_ReadPin(&GpioPS, Input_Pin));
+		/* Send the next value on the queue.  The queue should always be
+		empty at this point so a block time of 0 is used. */
+		xQueueSend( xQueue2,			/* The queue being written to. */
+					&psbutton, /* The address of the data being sent. */
+					0UL );			/* The block time. */
+		vTracePrint(cteq_event_string_TX, "In TX Task...\r\n");
+		xil_printf( "PSButton is : %d \r\n", psbutton );
+	}
+}
+
+/*-----------------------------------------------------------*/
+static void prvRxTask( void *pvParameters )
+{
+char recvCommandInput = 0x00;
+int recvButtonInput = 0;
+int i = 0;
+char oldinput = 0x00;
+traceString cteq_event_string_RX = xTraceRegisterString("RX Task");
+
+//Quelay so que doesn't wait on data forever. Still run code.
+TickType_t quelay = pdMS_TO_TICKS( 100UL );
+
+	for( ;; )
+	{
+		/* Block to wait for data arriving on the queue. */
+		xQueueReceive( 	xQueue,				/* The queue being read. */
+						&recvCommandInput,	/* Data is read into this address. */
+						quelay );	/* Wait without a timeout for data. */
+		xQueueReceive( 	xQueue2,				/* The queue being read. */
+						&recvButtonInput,	/* Data is read into this address. */
+						quelay );	/* Wait without a timeout for data. */
+
+		if (recvCommandInput != oldinput)
+		{
+			oldinput = recvCommandInput;
+		}
+		else recvCommandInput = oldinput;
+
+		if (recvCommandInput == 'a' )
+		{
+			vTracePrintF(cteq_event_string_RX, "System is on\r\n");
+			vTracePrintF(cteq_event_string_RX, "Recieved command: %c In RX Task...\r\n", recvCommandInput);
+			vTracePrintF(cteq_event_string_RX, "Recieved button : %d In RX Task...\r\n", recvButtonInput);
+			xil_printf("System is on\r\n");
+			xil_printf("Recieved command: %c In RX Task...\r\n", recvCommandInput);
+			xil_printf("Recieved button : %d In RX Task...\r\n", recvButtonInput);
+			if (!recvButtonInput)
+			{
+				xil_printf("I case is: %d", i);
+				switch (i)
+				{
+					case 0: XGpioPs_WritePin(&GpioPS, Output_Pin,0b00);
+					case 1: XGpioPs_WritePin(&GpioPS, Output_Pin,0b01);
+					case 2: XGpioPs_WritePin(&GpioPS, Output_Pin,0b10);
+					case 3: XGpioPs_WritePin(&GpioPS, Output_Pin,0b11);
+					default: i = 0;
+				}
+
+				if (i>=3) i =0;
+			}
+		}
+		else
+		{
+			xil_printf("system if off \r\n");
+			vTracePrintF(cteq_event_string_RX, "System is off\r\n");
+		}
+
+
+	}
+}
+
+/*-----------------------------------------------------------*/
+void startGPIO()
+{
+	int Status;
+
+	//Init GPIOPL
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	//Set data as output
+	XGpio_SetDataDirection(&Gpio, LEDG_CHANNEL, 0x00);
+	XGpio_SetDataDirection(&Gpio, LEDR_CHANNEL, 0x00);
+
+	//Init PS
+	XGpioPs_Config *GPIOPSConfigPtr;
+	GPIOPSConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+	Status = XGpioPs_CfgInitialize(&GpioPS, GPIOPSConfigPtr,GPIOPSConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		printf("status error \n\r");
+		return XST_FAILURE;
+	}
+    printf("Starting GPIO PS\n\r");
+    Input_Pin = 0;
+    Output_Pin = 52;
+
+    //Set Led Pin
+    XGpioPs_SetDirectionPin(&GpioPS, Output_Pin, 1);
+	XGpioPs_SetOutputEnablePin(&GpioPS, Output_Pin, 1);
+
+	// Set Input pin
+	XGpioPs_SetDirectionPin(&GpioPS,Input_Pin,0);
+
+
+}
+

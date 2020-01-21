@@ -1,8 +1,119 @@
-15:12:40 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+16:42:59 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:240:11: warning: implicit declaration of function 'getchar' [-Wimplicit-function-declaration]
+   input = getchar();
+           ^~~~~~~
+../src/freertos_hello_world.c:240:11: note: 'getchar' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:366:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:371:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:382:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:382:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:383:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:385:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:385:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 160300	   3416	  96240	 259956	  3f774	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
 
-15:12:40 Build Finished (took 259ms)
+16:43:00 Build Finished (took 868ms)
 
