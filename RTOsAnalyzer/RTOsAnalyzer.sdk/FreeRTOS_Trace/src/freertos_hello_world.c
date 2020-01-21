@@ -159,7 +159,7 @@ traceString cteq_event_string_RX = xTraceRegisterString("RX Task");
 		/* Print the received data. */
 		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
 		RxtaskCntr++;
-		vTracePrint(cteq_event_string_RX, "In RX Task...\r\n");
+		vTracePrintF(cteq_event_string_RX, "Recieved: %s In RX Task...\r\n", Recdstring);
 	}
 }
 
@@ -168,7 +168,7 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 {
 	long lTimerId;
 	configASSERT( pxTimer );
-
+	traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
 	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
 
 	if (lTimerId != TIMER_ID) {
@@ -182,8 +182,10 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
 	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
 		xil_printf("FreeRTOS Hello World Example PASSED");
+		vTracePrint(cteq_event_string_RX, "FreeRTOS Hello World Example PASSED < Trace\r\n");
 	} else {
 		xil_printf("FreeRTOS Hello World Example FAILED");
+		vTracePrint(cteq_event_string_RX, "FreeRTOS Hello World Example FAILED < Trace\r\n");
 	}
 
 	vTaskDelete( xRxTask );

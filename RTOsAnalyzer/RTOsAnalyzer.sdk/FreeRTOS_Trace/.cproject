@@ -20,7 +20,7 @@
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.arm.a53.x32" id="xilinx.armv7.target.gnu.base.debug.1076324114" isAbstract="false" name="Debug Platform" superClass="xilinx.armv7.target.gnu.base.debug"/>
 							<builder buildPath="${workspace_loc:/FreeRTOS_Trace}/Debug" enableAutoBuild="true" id="xilinx.gnu.armv7.toolchain.builder.debug.157380867" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="xilinx.gnu.armv7.toolchain.builder.debug"/>
 							<tool id="xilinx.gnu.armv7.c.toolchain.assembler.debug.1227635342" name="ARM v7 gcc assembler" superClass="xilinx.gnu.armv7.c.toolchain.assembler.debug">
-								<option id="xilinx.gnu.both.asm.option.include.paths.762755950" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
+								<option id="xilinx.gnu.both.asm.option.include.paths.762755950" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/freertos10_xilinx_v1_3/src}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.assembler.input.494675132" superClass="xilinx.gnu.assembler.input"/>
@@ -32,7 +32,7 @@
 									<listOptionValue builtIn="false" value="../../FreeRTOS_Trace_bsp/ps7_cortexa9_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.misc.other.1816556224" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.1628759369" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1628759369" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/freertos10_xilinx_v1_3/src}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.armv7.c.compiler.input.1501211245" name="C source files" superClass="xilinx.gnu.armv7.c.compiler.input"/>

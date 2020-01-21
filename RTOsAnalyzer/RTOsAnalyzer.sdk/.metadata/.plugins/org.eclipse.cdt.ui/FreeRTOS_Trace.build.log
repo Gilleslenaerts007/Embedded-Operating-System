@@ -1,8 +1,8 @@
-13:40:25 **** Incremental Build of configuration Debug for project FreeRTOS_Trace ****
+17:21:47 **** Build of configuration Debug for project FreeRTOS_Trace ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-13:40:26 Build Finished (took 842ms)
+17:21:48 Build Finished (took 542ms)
 

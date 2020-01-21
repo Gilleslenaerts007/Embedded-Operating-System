@@ -1,0 +1,353 @@
+#include "PongHead.h"
+
+void startPositions()
+{
+	//srand((unsigned) time(0));
+    XBalkLinks = 0;
+    XBalkRechts = 7;
+    YBalkRechts= 3;
+    YBalkLinks = 3;
+    BallX=4;//rand(4)+2;		//X staat van links boven 0 naar Rechts 7
+	BallY=4;//rand(7); 			//Y Staat van boven 0 naar beneden 7
+	BallMoveX = 1;
+	BallMoveY = 0;
+	COLOUR_INTENSITY = 50;
+}
+
+void updateGame()
+{
+	hitDetect();
+	BallX = BallX + BallMoveX;
+    BallY = BallY + BallMoveY;
+    drawGame();
+    clearArray();
+
+    //Check for score
+	if (scoreFlag)
+	{
+		scoreFlag=0;
+		printf("------------ SCORE -----------\n\rPlayer1: %d\n\rPlayer2: %d\n\r", scorePlayer1, scorePlayer2);
+		printf("Resetting positions");
+		clearArray();
+		startPositions();
+		drawGame();
+
+		if ( (scorePlayer1>=10) || (scorePlayer2>=10) )
+		{
+			//Wait for ps input next start?
+			scorePlayer1= 0;
+			scorePlayer2= 0;
+			sleep(5);
+			//while( (GPIOSPS_ReadPin) = 0 )
+		}
+
+		sleep(1);
+		clearArray();
+	}
+}
+
+void getPlayer1Move(u32* Data)
+{
+	static int calculatedDistance = 0; //0-15 16-20 21-25 26-30 31-35
+	distance =  *Data;
+	//printf("%d cm\n\r", distance);
+
+	switch(distance)
+	{
+	case 0 ... 15:
+		calculatedDistance = 5;
+		break;
+	case 16:
+		calculatedDistance = 4;
+		break;
+	case 17:
+		calculatedDistance = 3;
+		break;
+	case 18:
+		calculatedDistance = 2;
+		break;
+	case 19:
+		calculatedDistance = 1;
+		break;
+	case 20:
+		calculatedDistance = 0;
+		break;
+	default:
+		calculatedDistance = -1;
+		break;
+	}
+	if(YBalkLinks < calculatedDistance)
+	{
+		YBalkLinks ++;
+	}
+	else if(YBalkLinks > calculatedDistance)
+	{
+		YBalkLinks --;
+	}
+	YBalkLinks = calculatedDistance;
+
+}
+
+void getPlayer2Move(char* Button)
+{
+	inputbutton = *Button;
+
+		//printf("inputbutton=%d \n\r", inputbutton);
+		if (!(inputbutton & 0b01) && YBalkRechts < 6) // DENNIS BUTTONS
+		{
+			YBalkRechts++;
+		}
+		else if (!(inputbutton & 0b10) && YBalkRechts > -1) // DENNIS BUTTONS
+		{
+			YBalkRechts--;
+		}
+		YBalkRechts = 4; //debug, REMOVE
+
+
+
+}
+
+void drawGame()
+{
+	//color=GROEN
+    selectColour = 'g';
+	drawLine(XBalkLinks, YBalkLinks, XBalkLinks, YBalkLinks+2);
+	//color=BLUE
+    selectColour = 'b';
+	drawLine(XBalkRechts, YBalkRechts, XBalkRechts, YBalkRechts+2);
+	//Color=RED
+    selectColour = 'r';
+	drawPixel(BallX,BallY);
+	
+	for(int y = 0; y <= 7; ++y)
+	{
+		for(int x = 0; x <= 7; ++x)
+		{
+			int data = (colourArray[y][x].green << 16) + (colourArray[y][x].red << 8) + colourArray[y][x].blue;
+			WS2812_mWriteReg(WS2812ADR,((x*4)+(y*32)), data);
+		}
+	}
+}
+
+void clearArray()		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere variables..
+{
+	for(int y = 0; y <= 7; ++y)
+	{
+		for(int x = 0; x <= 7; ++x)
+		{
+			colourArray[y][x].blue = 0x00;
+			colourArray[y][x].green = 0x00;
+			colourArray[y][x].red = 0x00;
+		}
+	}
+}
+
+//Add more colisions, like ball on edge contact from below to up
+void hitDetect()
+{
+	bool above 	= FALSE;
+	bool center = FALSE;
+	bool below 	= FALSE;
+	//actually detecting algorithm
+
+	if(BallX == 1 || BallX == 6) //detecting collision with pads YBalkRechts YBalkLinks BallY
+	{
+		//---detecting collision with pads
+		for(int8_t count = -1; count <= 1; ++count)
+		{
+			if ((((YBalkRechts == BallY + count)	|| (YBalkRechts + 1 == BallY + count)	|| (YBalkRechts + 2 == BallY + count)) && BallX == 6)|| //center
+				(((YBalkLinks  == BallY + count)	|| (YBalkLinks  + 1 == BallY + count)	|| (YBalkLinks  + 2 == BallY + count)) && BallX == 1))
+			{
+				if(count == -1)
+					above = TRUE;
+				if(count == 0)
+					center = TRUE;
+				if(count == 1)
+					below = TRUE;
+			}
+		}
+		//--------------------------------
+
+		//--check which direction to go, dependent of y direction of ball and location hit on pad)
+
+		if(above == FALSE && center == FALSE && below == TRUE) 		//hit top of pad (going diagonal) (1)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case 0:
+				break;
+			case -1:
+				break;
+			default:
+				break;
+			}
+		}
+		else if (above == FALSE && center == TRUE && below == TRUE)	//hit top of pad(2)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case 0:
+				BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case -1:
+				break;
+			default:
+				break;
+			}
+		}
+		else if (above == TRUE && center == TRUE && below == TRUE)	//hit center(3)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case 0:
+				BallMoveX = BallMoveX * -1;
+				break;
+			case -1:
+				BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			default:
+				xil_printf("Hit center error\r\n");
+				break;
+			}
+		}
+		else if (above == TRUE && center == TRUE && below == FALSE)	//hit bottom of pad(4)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				break;
+			case 0:
+				BallMoveY = -1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			case -1:
+				BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			default:
+				break;
+			}
+		}
+		else if (above == TRUE && center == FALSE && below == FALSE)//hit bottom of pad (going diagonal)(5)
+		{
+			switch(BallMoveY)
+			{
+			case 1:
+				break;
+			case 0:
+				break;
+			case -1:
+				BallMoveY = 1;
+				BallMoveX = BallMoveX * -1;
+				break;
+			default:
+				break;
+			}
+		}
+	}
+	//--------------------------
+	if(BallY == 0 || BallY == 7)
+		BallMoveY = BallMoveY * -1;
+	if(BallX == 0 || BallX == 7)
+	{
+		xil_printf("RESTART\r\n");
+		startPositions();
+	}
+}
+
+void drawPixel(int X, int Y)
+{
+	if(X > 7)
+		X = 7;
+	if(X < 0)
+		X = 0;
+	if(Y > 7)
+		Y = 7;
+	if(Y < 0)
+		Y = 0;
+
+	switch (selectColour)
+	{
+		case 'r' : colourArray[Y][X].red = COLOUR_INTENSITY;
+				   break;
+		case 'g' : colourArray[Y][X].green = COLOUR_INTENSITY;
+				   break;
+		case 'b' : colourArray[Y][X].blue = COLOUR_INTENSITY;
+				   break;
+		default  : colourArray[Y][X].red = COLOUR_INTENSITY;
+			       colourArray[Y][X].green = COLOUR_INTENSITY;
+				   colourArray[Y][X].blue = COLOUR_INTENSITY;
+				   break;
+	}
+}
+
+void drawLine (int x1, int y1, int x2, int y2) 
+{      
+	int dx, dy, sx, sy, err, e2;
+
+	dx = abs (x2-x1);
+	dy = abs (y2-y1);
+	if (x1<x2) sx = 1;
+	   else sx = -1;
+	if (y1<y2) sy = 1;
+	   else sy = -1;
+	err = dx-dy;
+	do {
+	   drawPixel (x1, y1);
+	   if ((x1 == x2) && (y1 == y2))
+		  break;
+	   e2 = 2*err;
+	   if (e2 > -dy) {
+		  err = err - dy;
+			 x1 = x1+sx;
+	   }
+	   if (e2 < dx) {
+		  err = err + dx;
+			 y1 = y1 + sy;
+	   }
+	} while (1);
+		return;
+}
+
+void startGPIO()
+{
+	int Status;
+
+	//Init GPIOPL
+	Status = XGpio_Initialize(&Gpio, GPIO_BUTTONS);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	//Set data as input
+	XGpio_SetDataDirection(&Gpio, BUTTONS_CHANNEL, BUTTONS);
+
+	//Init PS
+	XGpioPs_Config *GPIOPSConfigPtr;
+	GPIOPSConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+	Status = XGpioPs_CfgInitialize(&GpioPS, GPIOPSConfigPtr,GPIOPSConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		printf("status error \n\r");
+		return XST_FAILURE;
+	}
+    printf("Starting GPIO PS\n\r");
+    Input_Pin = 0;
+	XGpioPs_SetDirectionPin(&GpioPS,Input_Pin,0);
+
+
+}
+

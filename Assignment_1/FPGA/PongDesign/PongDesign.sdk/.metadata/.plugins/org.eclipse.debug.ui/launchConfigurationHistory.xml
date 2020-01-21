@@ -8,7 +8,10 @@
 <mruHistory>
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;System Debugger using Debug_FreeRTOS_PongGame.elf on Local&quot;/&gt;&#13;&#10;"/>
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;System Debugger using Release_FreeRTOS_PongGame.elf on Local&quot;/&gt;&#13;&#10;"/>
+<<<<<<< HEAD
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;System Debugger using Debug_PongFunctionTests.elf on Local&quot;/&gt;&#13;&#10;"/>
+=======
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 </mruHistory>
 <favorites/>
 </launchGroup>
@@ -24,7 +27,10 @@
 <mruHistory>
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;System Debugger using Debug_FreeRTOS_PongGame.elf on Local&quot;/&gt;&#13;&#10;"/>
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;System Debugger using Release_FreeRTOS_PongGame.elf on Local&quot;/&gt;&#13;&#10;"/>
+<<<<<<< HEAD
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;System Debugger using Debug_PongFunctionTests.elf on Local&quot;/&gt;&#13;&#10;"/>
+=======
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 </mruHistory>
 <favorites/>
 </launchGroup>

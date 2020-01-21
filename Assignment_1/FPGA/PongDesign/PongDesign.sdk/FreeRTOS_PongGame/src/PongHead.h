@@ -6,6 +6,7 @@
 #include "stdint.h"
 #include "math.h"
 #include "time.h"
+#include "stdbool.h"
 
 /************************** Minized Includes *****************************/
 #include "WS2812.h"
@@ -33,36 +34,45 @@ u32 Input_Pin; /* Switch button */
 #define PLAYSPEEDOK 200000 // SUPA NORMAL
 #define true 1
 #define false 0
-
-/************************** Player1 Definitions *****************************/
-int distance;
-int scorePlayer1;
-
-/************************** Player2 Definitions *****************************/
-int scorePlayer2;
-char inputbutton;
-
-/************************** Pong Variable Definitions *****************************/
-int Speed;
-int YBalkLinks;
-int YBalkRechts;
-int BallX;
-int BallY; 
-int BallMoveX;
-int BallMoveY;
-int XBalkLinks;
-int XBalkRechts;
-int BalkHit;
-int scoreFlag;
-char tickFlag;
+#define COLOURARRAYWIDTH 8
+#define COLOURARRAYHEIGHT 8
 
 typedef struct pixelColour
 {
 	uint8_t green, red, blue;
 }pixelColour;
-struct pixelColour colourArray[8][8];
-char selectColour;
-int COLOUR_INTENSITY;
+
+typedef struct gameData
+{
+	/************************** Player1 Definitions *****************************/
+	int scorePlayer1;
+	/************************** Player2 Definitions *****************************/
+	int scorePlayer2;
+	/************************** Pong Variable Definitions *****************************/
+	int Speed;
+	int YBalkLinks;
+	int YBalkRechts;
+	int BallX;
+	int BallY;
+	int BallMoveX;
+	int BallMoveY;
+	int XBalkLinks;
+	int XBalkRechts;
+	int BalkHit;
+	int scoreFlag;
+
+	char selectColour;
+	int COLOUR_INTENSITY;
+
+	pixelColour colourArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH];
+}gameData;
+
+
+
+pixelColour colourArray[8][8];
+
+bool tickFlagGame;
+bool tickFlagController2;
 
 /************************** Function Prototypes ******************************/
 
@@ -75,7 +85,7 @@ int COLOUR_INTENSITY;
 * 			ballX and ballY random too?
 *
 ****************************************************************************/
-void startPositions();
+void startPositions(gameData* game);
 
 /****************************************************************************/
 /**
@@ -85,7 +95,7 @@ void startPositions();
 * @note		
 *
 ****************************************************************************/
-void updateGame();
+void updateGame(gameData* game);
 
 /****************************************************************************/
 /**
@@ -95,7 +105,7 @@ void updateGame();
 * @note
 *
 ****************************************************************************/
-void getPlayer1Move(u32* Data);
+void getPlayer1Move(u32* Data, gameData* game);
 
 /****************************************************************************/
 /**
@@ -104,7 +114,7 @@ void getPlayer1Move(u32* Data);
 * @note
 *
 ****************************************************************************/
-void getPlayer2Move();
+void getPlayer2Move(char* Button, gameData* game);
 
 /****************************************************************************/
 /**
@@ -114,7 +124,7 @@ void getPlayer2Move();
 *			de richting inverteren en niet doodgaan. The more the better..
 *
 ****************************************************************************/
-void hitDetect();
+void hitDetect(gameData* game);
 
 /****************************************************************************/
 /**
@@ -125,7 +135,7 @@ void hitDetect();
 * @note		
 *
 ****************************************************************************/
-void drawGame();
+void drawGame(gameData* game);
 
 /****************************************************************************/
 /**
@@ -134,7 +144,7 @@ void drawGame();
 * @note		
 *
 ****************************************************************************/
-void clearArray();
+void clearArray(gameData* game);
 
 /****************************************************************************/
 /**
@@ -144,7 +154,7 @@ void clearArray();
 * @note	
 *
 ****************************************************************************/
-void drawPixel(int X, int Y);
+void drawPixel(int X, int Y, gameData* game);
 
 /****************************************************************************/
 /**
@@ -153,7 +163,7 @@ void drawPixel(int X, int Y);
 * @note		
 *
 ****************************************************************************/
-void drawLine(int x1, int y1, int x2, int y2);
+void drawLine(int x1, int y1, int x2, int y2, gameData* game);
 
 
 /****************************************************************************/

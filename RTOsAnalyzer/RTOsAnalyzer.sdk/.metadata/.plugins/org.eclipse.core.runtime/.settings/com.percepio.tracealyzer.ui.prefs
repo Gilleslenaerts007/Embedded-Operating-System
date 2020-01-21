@@ -3,6 +3,7 @@ rtosType=FreeRTOS
 sameFileHandling=Do nothing
 traceBufferAddressExpression=RecorderDataPtr
 traceBufferSizeExpression=sizeof(*RecorderDataPtr)
+traceDirectory=D\:\\FreeRTOS_Traces
 traceName=FreeRTOS_Trace_1
 tracealyzerPath=C\:\\Program Files\\Percepio\\Tracealyzer 4
 tracealyzerPreviousPaths=C\:\\Program Files\\Percepio\\Tracealyzer 4

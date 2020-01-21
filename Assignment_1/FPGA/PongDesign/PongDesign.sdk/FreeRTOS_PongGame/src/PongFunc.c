@@ -1,260 +1,317 @@
 #include "PongHead.h"
 
-void startPositions()
+void startPositions(gameData* game)
 {
 	//srand((unsigned) time(0));
-    XBalkLinks = 0;
-    XBalkRechts = 7;
-    YBalkRechts= 3;
-    YBalkLinks = 3;
-    BallX=4;//rand(4)+2;		//X staat van links boven 0 naar Rechts 7
-	BallY=4;//rand(7); 			//Y Staat van boven 0 naar beneden 7
-	BallMoveX = 1;
-	BallMoveY = 0;
+    game->XBalkLinks = 0;
+    game->XBalkRechts = 7;
+    game->YBalkRechts= 3;
+    game->YBalkLinks = 3;
+    game->BallX=4;//rand(4)+2;		//X staat van links boven 0 naar Rechts 7
+	game->BallY=4;//rand(7); 			//Y Staat van boven 0 naar beneden 7
+	game->BallMoveX = 1;
+	game->BallMoveY = 0;
+	game->COLOUR_INTENSITY = 50;
 }
 
-void updateGame()
+void updateGame(gameData* game)
 {
-	hitDetect();
-	BallX = BallX + BallMoveX;
-    BallY = BallY + BallMoveY;
-    drawGame();
-    clearArray();
+	hitDetect(game);
+	game->BallX = game->BallX + game->BallMoveX;
+    game->BallY = game->BallY + game->BallMoveY;
+    drawGame(game);
+    clearArray(game);
 
     //Check for score
-	if (scoreFlag)
+	if (game->scoreFlag)
 	{
-		scoreFlag=0;
-		printf("------------ SCORE -----------\n\rPlayer1: %d\n\rPlayer2: %d\n\r", scorePlayer1, scorePlayer2);
+		game->scoreFlag=0;
+		printf("------------ SCORE -----------\n\rPlayer1: %d\n\rPlayer2: %d\n\r", game->scorePlayer1, game->scorePlayer2);
 		printf("Resetting positions");
-		clearArray();
-		startPositions();
-		drawGame();
+		clearArray(game);
+		startPositions(game);
+		drawGame(game);
 
-		if ( (scorePlayer1>=10) || (scorePlayer2>=10) )
+		if ( (game->scorePlayer1>=10) || (game->scorePlayer2>=10) )
 		{
 			//Wait for ps input next start?
-			scorePlayer1= 0;
-			scorePlayer2= 0;
+			game->scorePlayer1= 0;
+			game->scorePlayer2= 0;
 			sleep(5);
 			//while( (GPIOSPS_ReadPin) = 0 )
 		}
 
 		sleep(1);
-		clearArray();
+		clearArray(game);
 	}
 }
 
-void getPlayer1Move(u32* Data)
+void getPlayer1Move(u32* Data, gameData* game)
 {
-	static int oldDistance = 0;
-	distance =  *Data;
-	//printf("%d cm\n\r", distance);
-	/*
-	if(distance > 40)
+	static int calculatedDistance = 0;
+	int distance =  *Data;
+
+	switch(distance)
 	{
-		distance = 40;
+	case 0 ... 15:
+		calculatedDistance = 5;
+		break;
+	case 16:
+		calculatedDistance = 4;
+		break;
+	case 17:
+		calculatedDistance = 3;
+		break;
+	case 18:
+		calculatedDistance = 2;
+		break;
+	case 19:
+		calculatedDistance = 1;
+		break;
+	case 20:
+		calculatedDistance = 0;
+		break;
+	default:
+		calculatedDistance = -1;
+		break;
 	}
-	*/
-
-	if(distance < 26)
+	if(game->YBalkLinks < calculatedDistance)
 	{
-		distance = 26;
+		game->YBalkLinks ++;
 	}
-	YBalkLinks = 6 - ((distance / 2) - 32);
-
-	//printf("%d edit\n\r", distance);
-
-	//Naar boven
-	if(YBalkLinks > 0)
+	else if(game->YBalkLinks > calculatedDistance)
 	{
-		if (distance > oldDistance)
-		{
-			YBalkLinks--;
-		}
+		game->YBalkLinks --;
 	}
-
-	//naar onder
-	if(YBalkLinks < 5)
-	{
-		if (distance < oldDistance)
-		{
-			YBalkLinks++;
-		}
-	}
-
-	oldDistance = distance;
+	game->YBalkLinks = calculatedDistance;
 
 }
 
-void getPlayer2Move(char* Button)
+void getPlayer2Move(char* Button, gameData* game)
 {
-	inputbutton = *Button;
-	//printf("inputbutton=%d \n\r", inputbutton);
-	if (inputbutton & 0b01) //(!(inputbutton & 0b01)) // DENNIS BUTTONS
-	{
-		YBalkRechts++;
-	}
-	else if (inputbutton & 0b10) //(!(inputbutton & 0b10)) // DENNIS BUTTONS
-	{
-		YBalkRechts--;
-	}
+	char inputbutton = *Button;
 
+		if (!(inputbutton & 0b01) && game->YBalkRechts < 6) // DENNIS BUTTONS
+		{
+			game->YBalkRechts++;
+		}
+		else if (!(inputbutton & 0b10) && game->YBalkRechts > -1) // DENNIS BUTTONS
+		{
+			game->YBalkRechts--;
+		}
 }
 
-void drawGame()
+void drawGame(gameData* game)
 {
 	//color=GROEN
-    selectColour = 'g';
-	drawLine(XBalkLinks, YBalkLinks, XBalkLinks, YBalkLinks+2);
+    game->selectColour = 'g';
+	drawLine(game->XBalkLinks, game->YBalkLinks, game->XBalkLinks, game->YBalkLinks+2, game);
 	//color=BLUE
-    selectColour = 'b';
-	drawLine(XBalkRechts, YBalkRechts, XBalkRechts, YBalkRechts+2);
+    game->selectColour = 'b';
+	drawLine(game->XBalkRechts, game->YBalkRechts, game->XBalkRechts, game->YBalkRechts+2, game);
 	//Color=RED
-    selectColour = 'r';
-	drawPixel(BallX,BallY);
+    game->selectColour = 'r';
+	drawPixel(game->BallX,game->BallY, game);
 	
 	for(int y = 0; y <= 7; ++y)
 	{
 		for(int x = 0; x <= 7; ++x)
 		{
-			int data = (colourArray[y][x].green << 16) + (colourArray[y][x].red << 8) + colourArray[y][x].blue;
+			int data = (game->colourArray[y][x].green << 16) + (game->colourArray[y][x].red << 8) + game->colourArray[y][x].blue;
 			WS2812_mWriteReg(WS2812ADR,((x*4)+(y*32)), data);
 		}
 	}
 }
 
-void clearArray()		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere variables..
+void clearArray(gameData* game)		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere variables..
 {
 	for(int y = 0; y <= 7; ++y)
 	{
 		for(int x = 0; x <= 7; ++x)
 		{
-			colourArray[y][x].blue = 0x00;
-			colourArray[y][x].green = 0x00;
-			colourArray[y][x].red = 0x00;
+			game->colourArray[y][x].blue = 0x00;
+			game->colourArray[y][x].green = 0x00;
+			game->colourArray[y][x].red = 0x00;
 		}
 	}
 }
 
 //Add more colisions, like ball on edge contact from below to up
-void hitDetect()
+void hitDetect(gameData* game)
 {
-	//printf("BallMoveX=%d \n\rBallMoveY=%d\n\r", BallMoveX, BallMoveY);
+	//actually detecting algorithm
 
-    if (BallY == 7 || BallY == 0)
-    {
-        BallMoveY = BallMoveY * -1;
-    }
-
-	if ( (BallMoveY == 0) &&  (BallX == (XBalkRechts-1) || BallX == (XBalkLinks+1)) )
+	if(game->BallX == 1 || game->BallX == 6) //detecting collision with pads game->YBalkRechts game->YBalkLinks game->BallY
 	{
-	  if( BallMoveX == 1 )
+		bool above 	= FALSE;
+		bool center = FALSE;
+		bool below 	= FALSE;
+		//---detecting collision with pads
+		for(int8_t count = -1; count <= 1; ++count)
 		{
-			if (BallY == YBalkRechts)
+			if ((((game->YBalkRechts == game->BallY + count)	|| (game->YBalkRechts + 1 == game->BallY + count)	|| (game->YBalkRechts + 2 == game->BallY + count)) && game->BallX == 6)|| //center
+				(((game->YBalkLinks  == game->BallY + count)	|| (game->YBalkLinks  + 1 == game->BallY + count)	|| (game->YBalkLinks  + 2 == game->BallY + count)) && game->BallX == 1))
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = -1;
-				BalkHit++;
-			}
-			else if (BallY == YBalkRechts+1)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-				BalkHit++;
-			}
-
-			else if (BallY == YBalkRechts+2)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 1;
-				 BalkHit++;
+				if(count == -1)
+					above = TRUE;
+				if(count == 0)
+					center = TRUE;
+				if(count == 1)
+					below = TRUE;
 			}
 		}
+		//--------------------------------
 
-		else if ( BallMoveX == -1)
+		//--check which direction to go, dependent of y direction of ball and location hit on pad)
+		if(above == FALSE && center == FALSE && below == FALSE)
 		{
-			if (BallY == YBalkLinks)
+			//do nothing
+		}
+		if(above == FALSE && center == FALSE && below == TRUE) 		//hit top of pad (going diagonal) (1)
+		{
+			switch(game->BallMoveY)
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = -1;
-				 BalkHit++;
+			case 1:
+				//game->BallMoveY = 1;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			case 0:
+				break;
+			case -1:
+				break;
+			default:
+				break;
 			}
-			else if (BallY == YBalkLinks+1)
+		}
+		else if (above == FALSE && center == TRUE && below == TRUE)	//hit top of pad(2)
+		{
+			switch(game->BallMoveY)
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-				 BalkHit++;
+			case 1:
+				//game->BallMoveY = 1;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			case 0:
+				game->BallMoveY = -1;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			case -1:
+				break;
+			default:
+				break;
 			}
-			else if (BallY == YBalkLinks+2)
+		}
+		else if (above == TRUE && center == TRUE && below == TRUE)	//hit center(3)
+		{
+			switch(game->BallMoveY)
 			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 1;
-				 BalkHit++;}
+			case 1:
+				game->BallMoveY = 0;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			case 0:
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			case -1:
+				game->BallMoveY = 0;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			default:
+				xil_printf("Hit center error\r\n");
+				break;
+			}
+		}
+		else if (above == TRUE && center == TRUE && below == FALSE)	//hit bottom of pad(4)
+		{
+			switch(game->BallMoveY)
+			{
+			case 1:
+				break;
+			case 0:
+				game->BallMoveY = 1;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			case -1:
+				//game->BallMoveY = -1;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			default:
+				break;
+			}
+		}
+		else if (above == TRUE && center == FALSE && below == FALSE)//hit bottom of pad (going diagonal)(5)
+		{
+			switch(game->BallMoveY)
+			{
+			case 1:
+				break;
+			case 0:
+				break;
+			case -1:
+				//game->BallMoveY = -1;
+				game->BallMoveX = game->BallMoveX * -1;
+				break;
+			default:
+				break;
+			}
 		}
 	}
-	else if( (BallMoveY == 1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
+	//--------------------------
+	if(game->BallY == 0 || game->BallY == 7)    //check if hit top or bottom
+		game->BallMoveY = game->BallMoveY * -1;
+
+	if(game->BallX == 7)	//check if p1 has scored
 	{
-		//Rechts hits
-		if (BallY == YBalkRechts || BallY == YBalkRechts+1 || BallY == YBalkRechts+2)
-		{
-		BallMoveX = BallMoveX * -1;
-            BalkHit++;
-		}
-		else if (BallY == YBalkRechts+3 || BallY == YBalkRechts-1)
-		{
-		BallMoveX = BallMoveX * -1;
-		BallMoveY = 0;
-             BalkHit++;
-		}
+		game->scorePlayer1 ++;
+		xil_printf("P1 scored, score :%d\r\n", game->scorePlayer1);
+		startPositions(game);
 	}
-	else if( (BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
+	if(game->BallX == 0)	//check if p2 has scored
 	{
-		//Left hits
-		if (BallY == YBalkLinks || BallY == YBalkLinks+1 || BallY == YBalkLinks+2)
-		{
-		BallMoveX = BallMoveX * -1;
-            BalkHit++;
-		}
-		else if (BallY == YBalkLinks+3 || BallY == YBalkLinks-1)
-		{
-		BallMoveX = BallMoveX * -1;
-		BallMoveY = 0;
-             BalkHit++;
-		}
+		game->scorePlayer2 ++;
+		xil_printf("P2 scored, score: %d\r\n", game->scorePlayer2);
+		startPositions(game);
 	}
 
-    //Check for score
-    if (BallX == (XBalkRechts))
-    {
-    	scorePlayer1++;
-    	scoreFlag++;
-    }
-    else if (BallX == (XBalkLinks))
-    {
-    	scorePlayer2++;
-    	scoreFlag++;
-    }
+	if(game->scorePlayer1 >= 5 || game->scorePlayer2 >= 5)
+	{
+		xil_printf(	"-----SCOREBOARD-----\r\n"
+					"player 1: %d\r\n"
+					"player 2: %d\r\n"
+					,game->scorePlayer1, game->scorePlayer2);
+		game->scorePlayer1 = 0;
+		game->scorePlayer2 = 0;
+		sleep(2);
+	}
 }
 
-void drawPixel(int X, int Y)
+void drawPixel(int X, int Y, gameData* game)
 {
-	switch (selectColour)
+	if(X > 7)
+		X = 7;
+	if(X < 0)
+		X = 0;
+	if(Y > 7)
+		Y = 7;
+	if(Y < 0)
+		Y = 0;
+
+	switch (game->selectColour)
 	{
-		case 'r' : colourArray[Y][X].red = COLOUR_INTENSITY;
+		case 'r' : game->colourArray[Y][X].red = game->COLOUR_INTENSITY;
 				   break;
-		case 'g' : colourArray[Y][X].green = COLOUR_INTENSITY;
+		case 'g' : game->colourArray[Y][X].green = game->COLOUR_INTENSITY;
 				   break;
-		case 'b' : colourArray[Y][X].blue = COLOUR_INTENSITY;
+		case 'b' : game->colourArray[Y][X].blue = game->COLOUR_INTENSITY;
 				   break;
-		default  : colourArray[Y][X].red = COLOUR_INTENSITY;
-			       colourArray[Y][X].green = COLOUR_INTENSITY;
-				   colourArray[Y][X].blue = COLOUR_INTENSITY;
+		default  : game->colourArray[Y][X].red = game->COLOUR_INTENSITY;
+			       game->colourArray[Y][X].green = game->COLOUR_INTENSITY;
+				   game->colourArray[Y][X].blue = game->COLOUR_INTENSITY;
 				   break;
 	}
 }
 
-void drawLine (int x1, int y1, int x2, int y2) 
+void drawLine (int x1, int y1, int x2, int y2, gameData* game)
 {      
 	int dx, dy, sx, sy, err, e2;
 
@@ -266,7 +323,7 @@ void drawLine (int x1, int y1, int x2, int y2)
 	   else sy = -1;
 	err = dx-dy;
 	do {
-	   drawPixel (x1, y1);
+	   drawPixel (x1, y1, game);
 	   if ((x1 == x2) && (y1 == y2))
 		  break;
 	   e2 = 2*err;

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 23:28:19 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+=======
+23:41:17 **** Incremental Build of configuration Debug for project FreeRTOS_PongGame ****
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
+<<<<<<< HEAD
 23:28:19 Build Finished (took 197ms)
+=======
+23:41:17 Build Finished (took 198ms)
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 

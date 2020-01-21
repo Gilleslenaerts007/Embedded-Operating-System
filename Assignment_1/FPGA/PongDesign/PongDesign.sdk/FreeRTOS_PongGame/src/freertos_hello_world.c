@@ -27,6 +27,7 @@
     1 tab == 4 spaces!
 */
 
+
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -35,18 +36,13 @@
 /*user includes */
 #include "PongHead.h"
 
+/* Timer defines */
 #define TIMER_ID	1
-#define DELAY_10_SECONDS	10000UL
-#define DELAY_1_SECOND		1000UL
-#define DELAY_500_MILISECOND		500UL
-#define TIMER_CHECK_THRESHOLD	9
-#define COLOURARRAYWIDTH 8
-#define COLOURARRAYHEIGHT 8
+#define DELAY_50_MILISECOND		50UL
+#define TICKFLAGGAMEVAL 5    // * 50ms
+#define TICKFLAGCONTROLLER2 2 // * 50ms
 
-/*-----------------------------------------------------------*/
-
-/* The queue used by the Tx and Rx tasks, as described at the top of this
-file. */
+/* handles */
 static TaskHandle_t xgetPlayer1Input;
 static TaskHandle_t xgetPlayer2Input;
 static TaskHandle_t xgamePongTask;
@@ -58,6 +54,7 @@ static QueueHandle_t xQueueDebugInfo = NULL;
 
 static TimerHandle_t xTimerTickRate = NULL;
 
+<<<<<<< HEAD
 static void vTimerCallback( TimerHandle_t pxTimer );
 static void prvprintDebugInfo (void *pvParameters);
 static void prvgetPlayer1Input( void *pvParameters );
@@ -80,9 +77,23 @@ int main( void )
 	startGPIO();
 	startPositions();
 	updateGame();
+=======
+/* Function definitions */
+static void printDebugInfo (void *pvParameters);
+static void getPlayer1Input( void *pvParameters );
+static void getPlayer2Input( void *pvParameters );
+static void gamePongTask( void *pvParameters );
+static void vTimerCallback(TimerHandle_t pxTimer);
+static void cleanup(void);
 
+int main( void )
+{
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
+
+	startGPIO();
 	xil_printf( "Starting NeoPixel 8x8 Matrix: Pong Game by Gilles, Dennis and Jonas.\r\n" );
 
+<<<<<<< HEAD
 	xTaskCreate( 	prvgetPlayer1Input, 					/* The function that implements the task. */
 					( const char * ) "Player1Input", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
@@ -98,19 +109,42 @@ int main( void )
 					&xgetPlayer2Input );
 
 	xTaskCreate( 	prvgamePongTask,
+=======
+	/*Create all the tasks for the game*/
+	xTaskCreate( 	getPlayer1Input, 					/* The function that implements the task. */
+					( const char * ) "Player1Input", 	/* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 			/* The stack allocated to the task. */
+					NULL, 								/* The task parameter is not used, so set to NULL. */
+					tskIDLE_PRIORITY,					/* The task runs at the idle priority. */
+					&xgetPlayer1Input );				/* Pointer to task instance*/
+
+	xTaskCreate( 	getPlayer2Input,
+					( const char * ) "Player2Input",
+					configMINIMAL_STACK_SIZE,
+					NULL,
+					tskIDLE_PRIORITY,
+					&xgetPlayer2Input );
+
+	xTaskCreate( 	gamePongTask,
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 				    ( const char * ) "GamePongLogic",
 					configMINIMAL_STACK_SIZE,
 					NULL,
 					tskIDLE_PRIORITY +3,
 					&xgamePongTask );
 
+<<<<<<< HEAD
 	xTaskCreate(    prvprintDebugInfo,
+=======
+	xTaskCreate(    printDebugInfo,
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 				    ( const char * ) "printDebugInfo",
 					configMINIMAL_STACK_SIZE,
 					NULL,
 					tskIDLE_PRIORITY +4,
 					&xprintDebugInfo );
 
+	/*create all the queues for the game*/
 	xQueuePlayer1 = xQueueCreate(2, sizeof( u32) );
 	xQueuePlayer2 = xQueueCreate(2, sizeof( u32 ) );
 	xQueueDebugInfo = xQueueCreate(2, (COLOURARRAYHEIGHT*COLOURARRAYWIDTH)*3 ); //3 colour bytes * width and height
@@ -120,21 +154,14 @@ int main( void )
 	configASSERT( xQueuePlayer2 );
 	configASSERT( xQueueDebugInfo );
 
-	const TickType_t x5miliseconds = pdMS_TO_TICKS( DELAY_500_MILISECOND );
-
-	xTimerTickRate = xTimerCreate( (const char *) "tickRateTimer",
-							x5miliseconds,
-							pdFALSE,
-							(void *) TIMER_ID,
-							vTimerCallback);
-
-	/* Check the timer was created. */
+	//create timer ticks every 50ms, goes to vTimerCallBack fct, auto reload + configure
+	xTimerTickRate = xTimerCreate( (const char *) "tickRateTimer", pdMS_TO_TICKS( DELAY_50_MILISECOND ), pdTRUE,(void *) TIMER_ID, vTimerCallback);
 	configASSERT( xTimerTickRate );
-
 	xTimerStart( xTimerTickRate, 0 );
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
+
 
 	for( ;; );
 }
@@ -154,10 +181,11 @@ static void prvprintDebugInfo (void *pvParameters)
 		{
 			for(int y = 0; y < COLOURARRAYWIDTH; ++y)
 			{
-				xil_printf("%d,%d,%d;", debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].blue,
-										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].green,
-										debugArray[COLOURARRAYHEIGHT][COLOURARRAYWIDTH].red);
+				xil_printf("%d,%d,%d;", debugArray[x][y].blue,
+										debugArray[x][y].green,
+										debugArray[x][y].red);
 			}
+			xil_printf("\r\n");
 		}
 		xil_printf("\r\n");
 	}
@@ -166,12 +194,10 @@ static void prvprintDebugInfo (void *pvParameters)
 /*-----------------------------------------------------------*/
 static void prvgetPlayer1Input( void *pvParameters )
 {
-const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 int HCRS04Data;
 	for( ;; )
 	{
 		HCRS04Data = HCSR04_SENSOR_mReadReg(XPAR_HCSR04_SENSOR_0_S00_AXI_BASEADDR,HCSR04_SENSOR_S00_AXI_SLV_REG3_OFFSET);
-
 			xQueueSend( xQueuePlayer1,			/* The queue being written to. */
 					&HCRS04Data, /* The address of the data being sent. */
 					0UL );			/* The block time. */
@@ -181,12 +207,12 @@ int HCRS04Data;
 /*-----------------------------------------------------------*/
 static void prvgetPlayer2Input( void *pvParameters )
 {
-	char readinput;
+	int readinput;
 
 	for( ;; )
 	{
-		readinput = 0x00;
-		readinput = XGpio_DiscreteRead(&Gpio, BUTTONS_CHANNEL);
+			readinput = XGpio_DiscreteRead(&Gpio, BUTTONS_CHANNEL);
+
 
 		/* Block to wait for data arriving on the queue. */
 		xQueueSend( 	xQueuePlayer2,				/* The queue being read. */
@@ -200,40 +226,90 @@ static void prvgetPlayer2Input( void *pvParameters )
 static void prvgamePongTask( void *pvParameters )
 {
 
-	//pixelColour colourArray[COLOURARRAYWIDTH][COLOURARRAYHEIGHT];
+	gameData *game = (gameData*)malloc(sizeof(gameData)); //allocate on heap///-----NEEDS DELETE------
+	if(game == NULL)
+	{
+		xil_printf("Could not create gamedata heap mem, exiting!!!\r\n");
+		//implement exit fct;
+		while(1){}; //for now hang here
+	}
 
 	int movePlayer1, movePlayer2;
 	int dataArray = 0x4803;
 
+	startPositions(game);
+	updateGame(game);
+
 	for( ;; )
 	{
-		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueuePlayer1,				/* The queue being read. */
-						&movePlayer1,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
-		xQueueReceive( 	xQueuePlayer2,				/* The queue being read. */
-						&movePlayer2,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
 
+<<<<<<< HEAD
 
 		printf("playermove1:,%d  2:%d", movePlayer1, movePlayer2);
 		getPlayer1Move(&movePlayer1);
 		getPlayer1Move(&movePlayer2);
 		drawGame();
 		clearArray();
+=======
+		/* Block to wait for data arriving on the queue. */
+		xQueueReceive( 	xQueuePlayer1, &movePlayer1, portMAX_DELAY );
+		xQueueReceive( 	xQueuePlayer2, &movePlayer2, portMAX_DELAY );
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 
-		if(tickFlag)
+		if(tickFlagController2)
 		{
-			updateGame();
+			getPlayer1Move(&movePlayer1, game);
+			getPlayer2Move(&movePlayer2, game);
+			tickFlagController2 = 0;
 		}
-		tickFlag = 0;
+		drawGame(game);
+		xQueueSend( xQueueDebugInfo, game->colourArray, portMAX_DELAY);
+		clearArray(game);
+		if(tickFlagGame)
+		{
+			updateGame(game);
+			tickFlagGame = 0;
+		}
+	}
+	free(game);
+}
 
+<<<<<<< HEAD
 		xQueueSend( xQueueDebugInfo,			/* The queue being written to. */
 				&dataArray, /* The address of the data being sent. */
 				0UL );
 
+=======
+/*-----------------------------------------------------------*/
+static void vTimerCallback( TimerHandle_t pxTimer )
+{
+	static unsigned long ticks;    //248 days before overflow should be enough :p
+	static int prevtickFlagGame;
+	static int prevtickController2;
+
+	ticks ++;
+	if(ticks - prevtickFlagGame >= TICKFLAGGAMEVAL)
+	{
+		prevtickFlagGame = ticks;
+		tickFlagGame = 1;
+	}
+	if(ticks - prevtickController2 >= TICKFLAGCONTROLLER2)
+	{
+		prevtickController2 = ticks;
+		tickFlagController2 = 1;
+>>>>>>> 91b9525c071bc769c49c57c3422a0960740e07a5
 	}
 }
 
+/*-----------------------------------------------------------*/
+static void cleanup(void)
+{
 
+	vTaskDelete(xgetPlayer1Input);
+	vTaskDelete(xgetPlayer2Input);
+	vTaskDelete(xgamePongTask);
+	vTaskDelete(xprintDebugInfo);
+
+	xTimerDelete(xTimerTickRate, 0);
+}
 

@@ -13,9 +13,7 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "xgpio.h"
-#include "xgpiops.h"
 #include "sleep.h"
-#include "xil_printf.h"
 
 /************************** IP Block Definitions *****************************/
 #define WS2812ADR XPAR_WS2812_0_S00_AXI_BASEADDR
@@ -23,14 +21,10 @@
 #define BUTTONS_CHANNEL 1
 #define BUTTONS 0b11
 XGpio Gpio;
-XGpioPs GpioPS;
-
-u32 Input_Pin; /* Switch button */
 
 /************************** Standard Game Definitions *****************************/
 #define PLAYSPEEDFAST 50000 // SUPA SPEED
 #define PLAYSPEEDNORMAL 120000 // SUPA NORMAL
-#define PLAYSPEEDOK 200000 // SUPA NORMAL
 #define true 1
 #define false 0
 
@@ -39,27 +33,26 @@ int distance;
 int scorePlayer1;
 
 /************************** Player2 Definitions *****************************/
-int scorePlayer2;
 char inputbutton;
+int scorePlayer2;
 
 /************************** Pong Variable Definitions *****************************/
 int Speed;
-int YBalkLinks;
-int YBalkRechts;
+int BalkLinks;
+int BalkRechts;
 int BallX;
 int BallY; 
 int BallMoveX;
 int BallMoveY;
-int XBalkLinks;
-int XBalkRechts;
+int LokatieBalkL; 
+int LokatieBalkR;
 int BalkHit;
 int scoreFlag;
-char tickFlag;
 
-typedef struct pixelColour
+struct pixelColour
 {
 	uint8_t green, red, blue;
-}pixelColour;
+};
 struct pixelColour colourArray[8][8];
 char selectColour;
 int COLOUR_INTENSITY;
@@ -95,7 +88,7 @@ void updateGame();
 * @note
 *
 ****************************************************************************/
-void getPlayer1Move(u32* Data);
+void getPlayer1Move();
 
 /****************************************************************************/
 /**
