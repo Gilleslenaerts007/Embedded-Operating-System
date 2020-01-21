@@ -3,10 +3,10 @@
 void startPositions()
 {
 	//srand((unsigned) time(0));
-    XBalkLinks = 0;
-    XBalkRechts = 7;
-    YBalkRechts= 3;
-    YBalkLinks = 3;
+    LokatieBalkL = 0;
+    LokatieBalkR = 7;
+    BalkRechts= 3;
+    BalkLinks = 3;
     BallX=4;//rand(4)+2;		//X staat van links boven 0 naar Rechts 7
 	BallY=4;//rand(7); 			//Y Staat van boven 0 naar beneden 7
 	BallMoveX = 1;
@@ -45,41 +45,41 @@ void updateGame()
 	}
 }
 
-void getPlayer1Move(u32* Data)
+void getPlayer1Move()
 {
 	static int oldDistance = 0;
-	distance =  *Data;
+	distance=0;
+	distance =  HCSR04_SENSOR_mReadReg(XPAR_HCSR04_SENSOR_0_S00_AXI_BASEADDR,HCSR04_SENSOR_S00_AXI_SLV_REG3_OFFSET);
 	//printf("%d cm\n\r", distance);
-	/*
 	if(distance > 40)
 	{
 		distance = 40;
 	}
-	*/
-
+	/*
 	if(distance < 26)
 	{
 		distance = 26;
 	}
-	YBalkLinks = 6 - ((distance / 2) - 32);
-
+	BalkLinks = 6 - ((distance / 2) - 32);
+	*/
 	//printf("%d edit\n\r", distance);
 
+
 	//Naar boven
-	if(YBalkLinks > 0)
+	if(BalkLinks > 0)
 	{
 		if (distance > oldDistance)
 		{
-			YBalkLinks--;
+			BalkLinks--;
 		}
 	}
 
 	//naar onder
-	if(YBalkLinks < 5)
+	if(BalkLinks < 5)
 	{
 		if (distance < oldDistance)
 		{
-			YBalkLinks++;
+			BalkLinks++;
 		}
 	}
 
@@ -87,17 +87,17 @@ void getPlayer1Move(u32* Data)
 
 }
 
-void getPlayer2Move(char* Button)
+void getPlayer2Move()
 {
-	inputbutton = *Button;
-	//printf("inputbutton=%d \n\r", inputbutton);
-	if (inputbutton & 0b01) //(!(inputbutton & 0b01)) // DENNIS BUTTONS
+	inputbutton = 0x00;
+	inputbutton = XGpio_DiscreteRead(&Gpio, BUTTONS_CHANNEL);
+	if (inputbutton & 0b01)
 	{
-		YBalkRechts++;
+		BalkRechts++;
 	}
-	else if (inputbutton & 0b10) //(!(inputbutton & 0b10)) // DENNIS BUTTONS
+	else if (inputbutton & 0b10)
 	{
-		YBalkRechts--;
+		BalkRechts--;
 	}
 
 }
@@ -106,10 +106,10 @@ void drawGame()
 {
 	//color=GROEN
     selectColour = 'g';
-	drawLine(XBalkLinks, YBalkLinks, XBalkLinks, YBalkLinks+2);
+	drawLine(LokatieBalkL, BalkLinks, LokatieBalkL, BalkLinks+2);
 	//color=BLUE
     selectColour = 'b';
-	drawLine(XBalkRechts, YBalkRechts, XBalkRechts, YBalkRechts+2);
+	drawLine(LokatieBalkR, BalkRechts, LokatieBalkR, BalkRechts+2);
 	//Color=RED
     selectColour = 'r';
 	drawPixel(BallX,BallY);
@@ -140,97 +140,62 @@ void clearArray()		//Changed variable loop to 7, 0to7 = 8, met 8 clear je andere
 //Add more colisions, like ball on edge contact from below to up
 void hitDetect()
 {
-	//printf("BallMoveX=%d \n\rBallMoveY=%d\n\r", BallMoveX, BallMoveY);
+  if( BallMoveX == 1 && BallX == (LokatieBalkR-1) )
+	{
+		if (BallY == BalkRechts)
+		{
+		BallMoveX = BallMoveX * -1;
+		BallMoveY = -1;
+            BalkHit++;
+		}
+		else if (BallY == BalkRechts+1)
+		{
+		BallMoveX = BallMoveX * -1;
+		BallMoveY = 0;
+            BalkHit++;
+		}
+
+		else if (BallY == BalkRechts+2)
+		{
+		BallMoveX = BallMoveX * -1;
+		BallMoveY = 1;
+             BalkHit++;
+		}
+	}
+
+	else if ( BallMoveX == -1 && BallX == (LokatieBalkL+1))
+	{
+		if (BallY == BalkLinks)
+		{
+		BallMoveX = BallMoveX * -1;
+		BallMoveY = -1;
+             BalkHit++;
+		}
+		else if (BallY == BalkLinks+1)
+		{
+		BallMoveX = BallMoveX * -1;
+		BallMoveY = 0;
+             BalkHit++;
+		}
+		else if (BallY == BalkLinks+2)
+		{
+		BallMoveX = BallMoveX * -1;
+		BallMoveY = 1;
+             BalkHit++;}
+	}
 
     if (BallY == 7 || BallY == 0)
     {
         BallMoveY = BallMoveY * -1;
     }
 
-	if ( (BallMoveY == 0) &&  (BallX == (XBalkRechts-1) || BallX == (XBalkLinks+1)) )
-	{
-	  if( BallMoveX == 1 )
-		{
-			if (BallY == YBalkRechts)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = -1;
-				BalkHit++;
-			}
-			else if (BallY == YBalkRechts+1)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-				BalkHit++;
-			}
-
-			else if (BallY == YBalkRechts+2)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 1;
-				 BalkHit++;
-			}
-		}
-
-		else if ( BallMoveX == -1)
-		{
-			if (BallY == YBalkLinks)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = -1;
-				 BalkHit++;
-			}
-			else if (BallY == YBalkLinks+1)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 0;
-				 BalkHit++;
-			}
-			else if (BallY == YBalkLinks+2)
-			{
-			BallMoveX = BallMoveX * -1;
-			BallMoveY = 1;
-				 BalkHit++;}
-		}
-	}
-	else if( (BallMoveY == 1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
-	{
-		//Rechts hits
-		if (BallY == YBalkRechts || BallY == YBalkRechts+1 || BallY == YBalkRechts+2)
-		{
-		BallMoveX = BallMoveX * -1;
-            BalkHit++;
-		}
-		else if (BallY == YBalkRechts+3 || BallY == YBalkRechts-1)
-		{
-		BallMoveX = BallMoveX * -1;
-		BallMoveY = 0;
-             BalkHit++;
-		}
-	}
-	else if( (BallMoveY == -1) && ( (BallX == (XBalkRechts-1)) || (BallX == (XBalkLinks+1)) ) )
-	{
-		//Left hits
-		if (BallY == YBalkLinks || BallY == YBalkLinks+1 || BallY == YBalkLinks+2)
-		{
-		BallMoveX = BallMoveX * -1;
-            BalkHit++;
-		}
-		else if (BallY == YBalkLinks+3 || BallY == YBalkLinks-1)
-		{
-		BallMoveX = BallMoveX * -1;
-		BallMoveY = 0;
-             BalkHit++;
-		}
-	}
-
     //Check for score
-    if (BallX == (XBalkRechts))
+    if (BallX == (LokatieBalkR))
     {
     	scorePlayer1++;
     	scoreFlag++;
     }
-    else if (BallX == (XBalkLinks))
+    else if (BallX == (LokatieBalkL))
     {
     	scorePlayer2++;
     	scoreFlag++;
@@ -286,7 +251,6 @@ void startGPIO()
 {
 	int Status;
 
-	//Init GPIOPL
 	Status = XGpio_Initialize(&Gpio, GPIO_BUTTONS);
 	if (Status != XST_SUCCESS) {
 		xil_printf("Gpio Initialization Failed\r\n");
@@ -294,19 +258,6 @@ void startGPIO()
 	}
 	//Set data as input
 	XGpio_SetDataDirection(&Gpio, BUTTONS_CHANNEL, BUTTONS);
-
-	//Init PS
-	XGpioPs_Config *GPIOPSConfigPtr;
-	GPIOPSConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
-	Status = XGpioPs_CfgInitialize(&GpioPS, GPIOPSConfigPtr,GPIOPSConfigPtr->BaseAddr);
-	if (Status != XST_SUCCESS) {
-		printf("status error \n\r");
-		return XST_FAILURE;
-	}
-    printf("Starting GPIO PS\n\r");
-    Input_Pin = 0;
-	XGpioPs_SetDirectionPin(&GpioPS,Input_Pin,0);
-
 
 }
 
