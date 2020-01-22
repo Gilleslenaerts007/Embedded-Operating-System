@@ -2320,3 +2320,577 @@ arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.
  160300	   3416	  96240	 259956	  3f774	FreeRTOS_Eindoef2Trace.elf
 'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
 ' '
+13:37:29 **** Incremental Build of project FreeRTOS_Eindoef2Trace_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"include"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Compiling FreeRTOS"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+13:38:04 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:240:11: warning: implicit declaration of function 'getchar' [-Wimplicit-function-declaration]
+   input = getchar();
+           ^~~~~~~
+../src/freertos_hello_world.c:240:11: note: 'getchar' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:366:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:371:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:382:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:382:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:383:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:385:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:385:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/trcKernelPort.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/trcKernelPort.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/trcKernelPort.d" -MT"src/trcKernelPort.o" -o "src/trcKernelPort.o" "../src/trcKernelPort.c"
+'Finished building: ../src/trcKernelPort.c'
+' '
+'Building file: ../src/trcSnapshotRecorder.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/trcSnapshotRecorder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/trcSnapshotRecorder.d" -MT"src/trcSnapshotRecorder.o" -o "src/trcSnapshotRecorder.o" "../src/trcSnapshotRecorder.c"
+'Finished building: ../src/trcSnapshotRecorder.c'
+' '
+'Building file: ../src/trcStreamingRecorder.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/trcStreamingRecorder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/trcStreamingRecorder.d" -MT"src/trcStreamingRecorder.o" -o "src/trcStreamingRecorder.o" "../src/trcStreamingRecorder.c"
+'Finished building: ../src/trcStreamingRecorder.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/event_groups.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/event_groups.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/event_groups.d" -MT"freertos10_xilinx_v1_3/src/event_groups.o" -o "freertos10_xilinx_v1_3/src/event_groups.o" "../freertos10_xilinx_v1_3/src/event_groups.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/event_groups.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/heap_4.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/heap_4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/heap_4.d" -MT"freertos10_xilinx_v1_3/src/heap_4.o" -o "freertos10_xilinx_v1_3/src/heap_4.o" "../freertos10_xilinx_v1_3/src/heap_4.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/heap_4.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/inbyte.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/inbyte.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/inbyte.d" -MT"freertos10_xilinx_v1_3/src/inbyte.o" -o "freertos10_xilinx_v1_3/src/inbyte.o" "../freertos10_xilinx_v1_3/src/inbyte.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/inbyte.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/list.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/list.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/list.d" -MT"freertos10_xilinx_v1_3/src/list.o" -o "freertos10_xilinx_v1_3/src/list.o" "../freertos10_xilinx_v1_3/src/list.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/list.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/outbyte.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/outbyte.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/outbyte.d" -MT"freertos10_xilinx_v1_3/src/outbyte.o" -o "freertos10_xilinx_v1_3/src/outbyte.o" "../freertos10_xilinx_v1_3/src/outbyte.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/outbyte.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/port.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/port.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/port.d" -MT"freertos10_xilinx_v1_3/src/port.o" -o "freertos10_xilinx_v1_3/src/port.o" "../freertos10_xilinx_v1_3/src/port.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/port.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/portASM.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/portASM.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/portASM.d" -MT"freertos10_xilinx_v1_3/src/portASM.o" -o "freertos10_xilinx_v1_3/src/portASM.o" "../freertos10_xilinx_v1_3/src/portASM.S"
+'Finished building: ../freertos10_xilinx_v1_3/src/portASM.S'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/portZynq7000.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/portZynq7000.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/portZynq7000.d" -MT"freertos10_xilinx_v1_3/src/portZynq7000.o" -o "freertos10_xilinx_v1_3/src/portZynq7000.o" "../freertos10_xilinx_v1_3/src/portZynq7000.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/portZynq7000.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/port_asm_vectors.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/port_asm_vectors.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/port_asm_vectors.d" -MT"freertos10_xilinx_v1_3/src/port_asm_vectors.o" -o "freertos10_xilinx_v1_3/src/port_asm_vectors.o" "../freertos10_xilinx_v1_3/src/port_asm_vectors.S"
+'Finished building: ../freertos10_xilinx_v1_3/src/port_asm_vectors.S'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/queue.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/queue.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/queue.d" -MT"freertos10_xilinx_v1_3/src/queue.o" -o "freertos10_xilinx_v1_3/src/queue.o" "../freertos10_xilinx_v1_3/src/queue.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/queue.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/tasks.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/tasks.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/tasks.d" -MT"freertos10_xilinx_v1_3/src/tasks.o" -o "freertos10_xilinx_v1_3/src/tasks.o" "../freertos10_xilinx_v1_3/src/tasks.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/tasks.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/timers.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/timers.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/timers.d" -MT"freertos10_xilinx_v1_3/src/timers.o" -o "freertos10_xilinx_v1_3/src/timers.o" "../freertos10_xilinx_v1_3/src/timers.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/timers.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 160300	   3416	  96240	 259956	  3f774	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+13:38:33 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:39:24 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:41:52 **** Incremental Build of project FreeRTOS_Eindoef2Trace_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"include"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Compiling FreeRTOS"
+arm-none-eabi-ar: creating ../../../lib/libfreertos.a
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+13:42:27 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTimerCallback':
+../src/freertos_hello_world.c:101:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("2sec. Timer .. Led Toggle");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:119:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("5sec. Timer .. Gilles Lenaerts");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:126:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvSerialTask );
+                ^~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:127:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvPSButtonTask );
+                ^~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:128:16: warning: passing argument 1 of 'vTaskDelete' from incompatible pointer type [-Wincompatible-pointer-types]
+   vTaskDelete( prvRxTask );
+                ^~~~~~~~~
+In file included from ../src/freertos_hello_world.c:32:
+C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src/task.h:698:32: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} but argument is of type 'void (*)(void *)'
+ void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/freertos_hello_world.c:124:15: warning: unused variable 'cteq_event_string' [-Wunused-variable]
+   traceString cteq_event_string = xTraceRegisterString("30sec. Timer .. Ending & Cleaning Program");
+               ^~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c:96:14: warning: unused variable 'cteq_event_string_RX' [-Wunused-variable]
+  traceString cteq_event_string_RX = xTraceRegisterString("TimerCallBack");
+              ^~~~~~~~~~~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:144:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c:144:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/freertos_hello_world.c:144:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/freertos_hello_world.c:41:1:
++#include <stdio.h>
+ 
+../src/freertos_hello_world.c:144:2:
+  printf( "FreeRTOS\r\n" );
+  ^~~~~~
+../src/freertos_hello_world.c: In function 'prvSerialTask':
+../src/freertos_hello_world.c:240:11: warning: implicit declaration of function 'getchar' [-Wimplicit-function-declaration]
+   input = getchar();
+           ^~~~~~~
+../src/freertos_hello_world.c:240:11: note: 'getchar' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+../src/freertos_hello_world.c:232:18: warning: unused variable 'x1second' [-Wunused-variable]
+ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+                  ^~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../src/freertos_hello_world.c: In function 'startGPIO':
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:366:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:371:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:382:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("status error \n\r");
+   ^~~~~~
+../src/freertos_hello_world.c:382:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xgpiops.h:124,
+                 from ../src/freertos_hello_world.c:39:
+../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^~
+../src/freertos_hello_world.c:383:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/freertos_hello_world.c:358:6: note: declared here
+ void startGPIO()
+      ^~~~~~~~~
+../src/freertos_hello_world.c:385:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Starting GPIO PS\n\r");
+     ^~~~~~
+../src/freertos_hello_world.c:385:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building file: ../src/trcKernelPort.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/trcKernelPort.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/trcKernelPort.d" -MT"src/trcKernelPort.o" -o "src/trcKernelPort.o" "../src/trcKernelPort.c"
+'Finished building: ../src/trcKernelPort.c'
+' '
+'Building file: ../src/trcSnapshotRecorder.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/trcSnapshotRecorder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/trcSnapshotRecorder.d" -MT"src/trcSnapshotRecorder.o" -o "src/trcSnapshotRecorder.o" "../src/trcSnapshotRecorder.c"
+'Finished building: ../src/trcSnapshotRecorder.c'
+' '
+'Building file: ../src/trcStreamingRecorder.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"src/trcStreamingRecorder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/trcStreamingRecorder.d" -MT"src/trcStreamingRecorder.o" -o "src/trcStreamingRecorder.o" "../src/trcStreamingRecorder.c"
+'Finished building: ../src/trcStreamingRecorder.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/event_groups.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/event_groups.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/event_groups.d" -MT"freertos10_xilinx_v1_3/src/event_groups.o" -o "freertos10_xilinx_v1_3/src/event_groups.o" "../freertos10_xilinx_v1_3/src/event_groups.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/event_groups.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/heap_4.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/heap_4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/heap_4.d" -MT"freertos10_xilinx_v1_3/src/heap_4.o" -o "freertos10_xilinx_v1_3/src/heap_4.o" "../freertos10_xilinx_v1_3/src/heap_4.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/heap_4.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/inbyte.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/inbyte.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/inbyte.d" -MT"freertos10_xilinx_v1_3/src/inbyte.o" -o "freertos10_xilinx_v1_3/src/inbyte.o" "../freertos10_xilinx_v1_3/src/inbyte.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/inbyte.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/list.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/list.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/list.d" -MT"freertos10_xilinx_v1_3/src/list.o" -o "freertos10_xilinx_v1_3/src/list.o" "../freertos10_xilinx_v1_3/src/list.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/list.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/outbyte.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/outbyte.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/outbyte.d" -MT"freertos10_xilinx_v1_3/src/outbyte.o" -o "freertos10_xilinx_v1_3/src/outbyte.o" "../freertos10_xilinx_v1_3/src/outbyte.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/outbyte.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/port.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/port.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/port.d" -MT"freertos10_xilinx_v1_3/src/port.o" -o "freertos10_xilinx_v1_3/src/port.o" "../freertos10_xilinx_v1_3/src/port.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/port.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/portZynq7000.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/portZynq7000.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/portZynq7000.d" -MT"freertos10_xilinx_v1_3/src/portZynq7000.o" -o "freertos10_xilinx_v1_3/src/portZynq7000.o" "../freertos10_xilinx_v1_3/src/portZynq7000.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/portZynq7000.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/port_asm_vectors.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/port_asm_vectors.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/port_asm_vectors.d" -MT"freertos10_xilinx_v1_3/src/port_asm_vectors.o" -o "freertos10_xilinx_v1_3/src/port_asm_vectors.o" "../freertos10_xilinx_v1_3/src/port_asm_vectors.S"
+'Finished building: ../freertos10_xilinx_v1_3/src/port_asm_vectors.S'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/queue.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/queue.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/queue.d" -MT"freertos10_xilinx_v1_3/src/queue.o" -o "freertos10_xilinx_v1_3/src/queue.o" "../freertos10_xilinx_v1_3/src/queue.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/queue.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/tasks.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/tasks.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/tasks.d" -MT"freertos10_xilinx_v1_3/src/tasks.o" -o "freertos10_xilinx_v1_3/src/tasks.o" "../freertos10_xilinx_v1_3/src/tasks.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/tasks.c'
+' '
+'Building file: ../freertos10_xilinx_v1_3/src/timers.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\EOS\Embedded-Operating-System\eindoef2\eindoef2.sdk\FreeRTOS_Eindoef2Trace\freertos10_xilinx_v1_3\src" -c -fmessage-length=0 -MT"freertos10_xilinx_v1_3/src/timers.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/include -MMD -MP -MF"freertos10_xilinx_v1_3/src/timers.d" -MT"freertos10_xilinx_v1_3/src/timers.o" -o "freertos10_xilinx_v1_3/src/timers.o" "../freertos10_xilinx_v1_3/src/timers.c"
+'Finished building: ../freertos10_xilinx_v1_3/src/timers.c'
+' '
+'Building target: FreeRTOS_Eindoef2Trace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreeRTOS_Eindoef2Trace_bsp/ps7_cortexa9_0/lib -o "FreeRTOS_Eindoef2Trace.elf"  ./src/freertos_hello_world.o ./src/trcKernelPort.o ./src/trcSnapshotRecorder.o ./src/trcStreamingRecorder.o  ./freertos10_xilinx_v1_3/src/event_groups.o ./freertos10_xilinx_v1_3/src/heap_4.o ./freertos10_xilinx_v1_3/src/inbyte.o ./freertos10_xilinx_v1_3/src/list.o ./freertos10_xilinx_v1_3/src/outbyte.o ./freertos10_xilinx_v1_3/src/port.o ./freertos10_xilinx_v1_3/src/portASM.o ./freertos10_xilinx_v1_3/src/portZynq7000.o ./freertos10_xilinx_v1_3/src/port_asm_vectors.o ./freertos10_xilinx_v1_3/src/queue.o ./freertos10_xilinx_v1_3/src/tasks.o ./freertos10_xilinx_v1_3/src/timers.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreeRTOS_Eindoef2Trace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreeRTOS_Eindoef2Trace.elf  |tee "FreeRTOS_Eindoef2Trace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 160300	   3416	  96240	 259956	  3f774	FreeRTOS_Eindoef2Trace.elf
+'Finished building: FreeRTOS_Eindoef2Trace.elf.size'
+' '
+13:43:12 **** Incremental Build of configuration Debug for project FreeRTOS_Eindoef2Trace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

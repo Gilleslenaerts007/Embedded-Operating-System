@@ -1,0 +1,2 @@
+Check soundsensor clock speeds 100MHZ
+Neopixel WS2812 clock speeds 50MHZ
