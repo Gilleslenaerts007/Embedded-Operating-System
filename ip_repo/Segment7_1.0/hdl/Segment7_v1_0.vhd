@@ -16,7 +16,7 @@ entity Segment7_v1_0 is
 	);
 	port (
 		-- Users to add ports here
-        Seven_Segment : out STD_LOGIC_VECTOR (6 downto 0);
+        Seven_Segment : out STD_LOGIC_VECTOR (7 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -55,7 +55,7 @@ architecture arch_imp of Segment7_v1_0 is
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
 		);
 		port (
-		Seven_Segment : out STD_LOGIC_VECTOR (6 downto 0);
+		Seven_Segment : out STD_LOGIC_VECTOR (7 downto 0);
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
 		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);

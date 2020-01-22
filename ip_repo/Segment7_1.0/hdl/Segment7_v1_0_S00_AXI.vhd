@@ -16,7 +16,7 @@ entity Segment7_v1_0_S00_AXI is
 	);
 	port (
 		-- Users to add ports here
-         Seven_Segment : out STD_LOGIC_VECTOR (6 downto 0);
+         Seven_Segment : out STD_LOGIC_VECTOR (7 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -122,7 +122,7 @@ architecture arch_imp of Segment7_v1_0_S00_AXI is
     Port 
     ( 
         BCDin : in STD_LOGIC_VECTOR (3 downto 0);
-        Seven_Segment : out STD_LOGIC_VECTOR (6 downto 0)
+        Seven_Segment : out STD_LOGIC_VECTOR (7 downto 0)
     );
     end component;
 
